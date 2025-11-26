@@ -1,0 +1,32 @@
+{
+    "config": [
+        {
+            "id": 0,
+            "label": "projects",
+            "type": "regular",
+            "href": "/projects",
+            "icon": "ProjectsIcon"
+        },
+        {
+            "id": 1,
+            "label": "blog",
+            "type": "regular",
+            "href": "/blog",
+            "icon": "BlogIcon"
+        },
+        {
+            "id": 2,
+            "label": "github",
+            "type": "socials",
+            "href": "https://github.com/ricocatford",
+            "icon": "GithubIcon"
+        },
+        {
+            "id": 3,
+            "label": "linkedin",
+            "type": "socials",
+            "href": "https://www.linkedin.com/in/ricardo-albarenque",
+            "icon": "LinkedinIcon"
+        }
+    ]
+}
