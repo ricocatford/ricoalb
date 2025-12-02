@@ -9,14 +9,14 @@ import {
     useCallback,
 } from "react";
 import { useGlobalStore } from "@/providers/GlobalStoreProvider";
-import { NavType } from "@/types/NavType";
+import { NavLink } from "@/types/NavLink";
 
 type Translations = {
     [key: string]: string | Translations;
 };
 
 type CombinedTranslations = {
-    nav: NavType[];
+    nav: NavLink[];
     common: Translations;
 };
 
@@ -69,7 +69,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
                 fallbackLocale
             );
 
-            const navTranslations = await safeImport<NavType[]>(
+            const navTranslations = await safeImport<NavLink[]>(
                 locale,
                 "nav",
                 fallbackLocale
@@ -103,7 +103,7 @@ export const useTranslations = () => {
 
     const t = (key: string): string => {
         const keys = key.split(".");
-        let current: Translations | string | NavType[] | undefined =
+        let current: Translations | string | NavLink[] | undefined =
             translations.common;
 
         for (const k of keys) {

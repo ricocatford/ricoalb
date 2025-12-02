@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "label": "projects",
+        "label": "proyectos",
         "type": "main",
         "href": "/projects",
         "icon": "ProjectsIcon"

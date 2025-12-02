@@ -1,5 +1,6 @@
 import { useGlobalStore } from "@/providers/GlobalStoreProvider";
 import { useTranslations } from "@/providers/LanguageProvider";
+import styles from "@/assets/styles/components/navbar/Navbar.module.css";
 
 export const NavbarLinks = (): React.JSX.Element => {
     const { translations } = useTranslations();
@@ -7,7 +8,9 @@ export const NavbarLinks = (): React.JSX.Element => {
 
     return (
         <>
-            <button onClick={() => toggleTheme()}>Click</button>
+            <button onClick={() => toggleTheme()} className={styles.button}>
+                Click
+            </button>
         </>
     );
 };
