@@ -35,8 +35,8 @@ const safeImport = async <T,>(
     fallbackLocale: string
 ): Promise<T> => {
     try {
-        const module = await import(`@/locales/${locale}/${file}.json`);
-        return module.default as T;
+        const importedModule = await import(`@/locales/${locale}/${file}.json`);
+        return importedModule.default as T;
     } catch (error) {
         console.error(
             `Failed to load ${file} for locale: ${locale}. Falling back to ${fallbackLocale}.`,
