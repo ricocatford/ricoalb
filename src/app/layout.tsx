@@ -4,6 +4,7 @@ import { GlobalStoreProvider } from "@/providers/GlobalStoreProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { LanguageProvider } from "@/providers/LanguageProvider";
 import { Navbar } from "@/components/navbar/Navbar";
+import { Smoke } from "@/components/background/Smoke";
 import "@/assets/styles/globals.css";
 
 const inter = Inter({
@@ -34,8 +35,10 @@ export default function RootLayout({
                 <GlobalStoreProvider>
                     <ThemeProvider>
                         <LanguageProvider>
-                            <Navbar />
-                            <main className="appContainer">{children}</main>
+                            <Smoke>
+                                <Navbar />
+                                <main>{children}</main>
+                            </Smoke>
                         </LanguageProvider>
                     </ThemeProvider>
                 </GlobalStoreProvider>
