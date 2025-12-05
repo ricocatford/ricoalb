@@ -4,6 +4,7 @@ import { GlobalStoreProvider } from "@/providers/GlobalStoreProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { LanguageProvider } from "@/providers/LanguageProvider";
 import { Navbar } from "@/components/navbar/Navbar";
+import { BlobCursor } from "@/components/background/BlobCursor";
 import "@/assets/styles/globals.css";
 
 const inter = Inter({
@@ -34,6 +35,7 @@ export default function RootLayout({
                 <GlobalStoreProvider>
                     <ThemeProvider>
                         <LanguageProvider>
+                            <BlobCursor />
                             <Navbar />
                             <main className="appContainer">{children}</main>
                         </LanguageProvider>
