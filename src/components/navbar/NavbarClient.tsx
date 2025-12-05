@@ -2,17 +2,19 @@
 
 import { useTranslations } from "@/providers/LanguageProvider";
 import { IconKey, NavLink } from "@/types/NavLink";
-import BlogIcon from "../icons/BlogIcon";
-import ProjectsIcon from "../icons/ProjectsIcon";
-import GithubIcon from "../icons/GithubIcon";
-import LinkedinIcon from "../icons/LinkedinIcon";
+import { ProjectsIcon } from "../icons/ProjectsIcon";
+import { BlogIcon } from "../icons/BlogIcon";
+import { GithubIcon } from "../icons/GithubIcon";
+import { LinkedinIcon } from "../icons/LinkedinIcon";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
+import { DiscordIcon } from "../icons/DiscordIcon";
 
 const iconList: Record<IconKey, React.JSX.Element> = {
-    ProjectsIcon: <ProjectsIcon />,
-    BlogIcon: <BlogIcon />,
-    GithubIcon: <GithubIcon />,
-    LinkedinIcon: <LinkedinIcon />,
+    ProjectsIcon: <ProjectsIcon width={24} height={24} />,
+    BlogIcon: <BlogIcon width={24} height={24} />,
+    LinkedinIcon: <LinkedinIcon width={24} height={24} />,
+    GithubIcon: <GithubIcon width={24} height={24} />,
+    DiscordIcon: <DiscordIcon width={24} height={24} />,
 };
 
 export const NavbarClient = (): React.JSX.Element => {

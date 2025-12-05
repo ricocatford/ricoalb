@@ -1,9 +1,9 @@
-interface DarkIconProps extends React.SVGProps<SVGSVGElement> {
+interface LanguageIconProps extends React.SVGProps<SVGSVGElement> {
     width?: number;
     height?: number;
 }
 
-export const DarkIcon: React.FC<DarkIconProps> = ({
+export const LanguageIcon: React.FC<LanguageIconProps> = ({
     width = 32,
     height = 32,
     ...rest
@@ -21,9 +21,12 @@ export const DarkIcon: React.FC<DarkIconProps> = ({
             strokeLinejoin="round"
             {...rest}
         >
-            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
-            <path d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2" />
-            <path d="M19 11h2m-1 -1v2" />
+            <path d="M9 6.371c0 4.418 -2.239 6.629 -5 6.629" />
+            <path d="M4 6.371h7" />
+            <path d="M5 9c0 2.144 2.252 3.908 6 4" />
+            <path d="M12 20l4 -9l4 9" />
+            <path d="M19.1 18h-6.2" />
+            <path d="M6.694 3l.793 .582" />
         </svg>
     );
 };

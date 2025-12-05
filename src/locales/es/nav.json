@@ -15,16 +15,23 @@
     },
     {
         "id": 2,
+        "label": "linkedin",
+        "type": "socials",
+        "href": "https://www.linkedin.com/in/ricardo-albarenque",
+        "icon": "LinkedinIcon"
+    },
+    {
+        "id": 3,
         "label": "github",
         "type": "socials",
         "href": "https://github.com/ricocatford",
         "icon": "GithubIcon"
     },
     {
-        "id": 3,
-        "label": "linkedin",
+        "id": 4,
+        "label": "discord",
         "type": "socials",
-        "href": "https://www.linkedin.com/in/ricardo-albarenque",
-        "icon": "LinkedinIcon"
+        "href": "https://github.com/ricocatford",
+        "icon": "DiscordIcon"
     }
 ]

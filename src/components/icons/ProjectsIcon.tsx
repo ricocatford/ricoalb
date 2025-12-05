@@ -1,13 +1,11 @@
-import React from "react";
-
 interface ProjectsIconProps extends React.SVGProps<SVGSVGElement> {
     width?: number;
     height?: number;
 }
 
-const ProjectsIcon: React.FC<ProjectsIconProps> = ({
-    width = 20,
-    height = 20,
+export const ProjectsIcon: React.FC<ProjectsIconProps> = ({
+    width = 32,
+    height = 32,
     ...rest
 }) => {
     return (
@@ -18,17 +16,14 @@ const ProjectsIcon: React.FC<ProjectsIconProps> = ({
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.25"
             strokeLinecap="round"
             strokeLinejoin="round"
             {...rest}
         >
-            <path d="M12 12h.01" />
-            <path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-            <path d="M22 13a18.15 18.15 0 0 1-20 0" />
-            <rect width="20" height="14" x="2" y="6" rx="2" />
+            <path d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+            <path d="M6 8h.01" />
+            <path d="M9 8h.01" />
         </svg>
     );
 };
-
-export default ProjectsIcon;

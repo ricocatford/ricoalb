@@ -1,13 +1,11 @@
-import React from "react";
-
 interface BookIconProps extends React.SVGProps<SVGSVGElement> {
     width?: number;
     height?: number;
 }
 
-const BlogIcon: React.FC<BookIconProps> = ({
-    width = 20,
-    height = 20,
+export const BlogIcon: React.FC<BookIconProps> = ({
+    width = 32,
+    height = 32,
     ...rest
 }) => {
     return (
@@ -18,19 +16,16 @@ const BlogIcon: React.FC<BookIconProps> = ({
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.25"
             strokeLinecap="round"
             strokeLinejoin="round"
             {...rest}
         >
-            <path d="M12 7v14" />
-            <path d="M16 12h2" />
-            <path d="M16 8h2" />
-            <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z" />
-            <path d="M6 12h2" />
-            <path d="M6 8h2" />
+            <path d="M3 19a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+            <path d="M3 6a9 9 0 0 1 9 0a9 9 0 0 1 9 0" />
+            <path d="M3 6l0 13" />
+            <path d="M12 6l0 13" />
+            <path d="M21 6l0 13" />
         </svg>
     );
 };
-
-export default BlogIcon;
