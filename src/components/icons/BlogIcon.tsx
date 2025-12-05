@@ -1,6 +1,9 @@
 import React from "react";
 
-interface BookIconProps extends React.SVGProps<SVGSVGElement> {}
+interface BookIconProps extends React.SVGProps<SVGSVGElement> {
+    width?: number;
+    height?: number;
+}
 
 const BlogIcon: React.FC<BookIconProps> = ({
     width = 20,

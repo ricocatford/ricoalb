@@ -1,6 +1,9 @@
 import React from "react";
 
-interface DarkIconProps extends React.SVGProps<SVGSVGElement> {}
+interface DarkIconProps extends React.SVGProps<SVGSVGElement> {
+    width?: number;
+    height?: number;
+}
 
 const DarkIcon: React.FC<DarkIconProps> = ({
     width = 20,

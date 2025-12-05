@@ -1,6 +1,9 @@
 import React from "react";
 
-interface GlobeIconProps extends React.SVGProps<SVGSVGElement> {}
+interface GlobeIconProps extends React.SVGProps<SVGSVGElement> {
+    width?: number;
+    height?: number;
+}
 
 const GlobeIcon: React.FC<GlobeIconProps> = ({
     width = 20,

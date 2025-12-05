@@ -1,6 +1,9 @@
 import React from "react";
 
-interface LinkedinIconProps extends React.SVGProps<SVGSVGElement> {}
+interface LinkedinIconProps extends React.SVGProps<SVGSVGElement> {
+    width?: number;
+    height?: number;
+}
 
 const LinkedinIcon: React.FC<LinkedinIconProps> = ({
     width = 20,

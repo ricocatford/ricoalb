@@ -1,6 +1,9 @@
 import React from "react";
 
-interface ProjectsIconProps extends React.SVGProps<SVGSVGElement> {}
+interface ProjectsIconProps extends React.SVGProps<SVGSVGElement> {
+    width?: number;
+    height?: number;
+}
 
 const ProjectsIcon: React.FC<ProjectsIconProps> = ({
     width = 20,
