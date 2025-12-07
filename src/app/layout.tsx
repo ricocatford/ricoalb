@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Lexend_Giga } from "next/font/google";
 import { GlobalStoreProvider } from "@/providers/GlobalStoreProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { LanguageProvider } from "@/providers/LanguageProvider";
@@ -9,6 +9,11 @@ import "@/assets/styles/globals.css";
 
 const inter = Inter({
     variable: "--font-inter",
+    subsets: ["latin"],
+});
+
+const lexend = Lexend_Giga({
+    variable: "--font-lexend",
     subsets: ["latin"],
 });
 
@@ -31,7 +36,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable}`}>
+            <body className={`${inter.variable} ${lexend.variable}`}>
                 <GlobalStoreProvider>
                     <ThemeProvider>
                         <LanguageProvider>
