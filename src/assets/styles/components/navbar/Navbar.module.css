@@ -14,18 +14,34 @@
 
 .actionsContainer {
     display: flex;
-    align-items: center;
 }
 
-.linksList {
-    list-style: none;
+.linksContainer {
     display: flex;
     gap: 0.5rem;
 }
 
-.linkLabel {
+.mainLinkList {
+    list-style: none;
     display: flex;
-    gap: 0.25rem;
+    align-items: center;
+    gap: 1rem;
+}
+
+.mainLinkIcon {
+    display: none;
+}
+
+.socialLinkList {
+    list-style: none;
+    display: flex;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
     text-transform: capitalize;
 }
 

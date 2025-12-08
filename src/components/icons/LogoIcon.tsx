@@ -29,12 +29,8 @@ export const LogoIcon: React.FC<LogoIconProps> = ({
                 x2="100%"
                 y2="0%"
             >
-                <stop offset="0%" stop-color="#12cff3" stop-opacity="1"></stop>
-                <stop
-                    offset="100%"
-                    stop-color="#1d8ee4"
-                    stop-opacity="1"
-                ></stop>
+                <stop offset="0%" stopColor="#12cff3" stopOpacity="1"></stop>
+                <stop offset="100%" stopColor="#1d8ee4" stopOpacity="1"></stop>
             </linearGradient>
             <g stroke="none" fill="url(#929d9aad-787d-4962-af12-88787f9f6263)">
                 <path d="M78.268 32.181H57.521L47.148 50.146l10.373 17.966h20.747l10.373-17.966zM21.732 52.129L11.359 70.095l10.373 17.966h20.746l10.373-17.966-10.373-17.966zM42.478 47.871l10.373-17.966-10.373-17.966H21.732L11.359 29.905l10.373 17.966z"></path>

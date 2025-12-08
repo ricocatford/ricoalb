@@ -1,7 +1,6 @@
 import { NavbarLogo } from "./NavbarLogo";
-import { NavbarClient } from "./NavbarClient";
+import { NavbarActions } from "./NavbarActions";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
-import { NavbarTheme } from "./NavbarTheme";
 
 export const Navbar = (): React.JSX.Element => {
     return (
@@ -9,7 +8,7 @@ export const Navbar = (): React.JSX.Element => {
             <nav aria-label="Main navigation" className={styles.nav}>
                 <div className={styles.container}>
                     <NavbarLogo />
-                    <NavbarClient />
+                    <NavbarActions />
                 </div>
             </nav>
         </header>
