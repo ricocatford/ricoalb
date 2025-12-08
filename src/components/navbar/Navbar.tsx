@@ -1,6 +1,7 @@
 import { NavbarLogo } from "./NavbarLogo";
 import { NavbarClient } from "./NavbarClient";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
+import { NavbarTheme } from "./NavbarTheme";
 
 export const Navbar = (): React.JSX.Element => {
     return (

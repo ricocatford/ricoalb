@@ -12,10 +12,9 @@
     align-items: center;
 }
 
-.logoIcon {
-    transform-origin: center;
-    transform: rotate(180deg);
-    fill: url(#logoGradient);
+.actionsContainer {
+    display: flex;
+    align-items: center;
 }
 
 .linksList {
@@ -28,4 +27,9 @@
     display: flex;
     gap: 0.25rem;
     text-transform: capitalize;
+}
+
+.themeButton {
+    color: var(--foreground);
+    padding: 0.5rem;
 }

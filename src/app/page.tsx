@@ -1,3 +1,7 @@
 export default function HomePage(): React.JSX.Element {
-    return <></>;
+    return (
+        <>
+            <h1>Hello world!</h1>
+        </>
+    );
 }

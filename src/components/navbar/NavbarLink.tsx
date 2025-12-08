@@ -8,7 +8,6 @@ import { GithubIcon } from "../icons/GithubIcon";
 import { LinkedinIcon } from "../icons/LinkedinIcon";
 import { DiscordIcon } from "../icons/DiscordIcon";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
-import { NavbarTheme } from "./NavbarTheme";
 
 const iconList: Record<IconKey, React.JSX.Element> = {
     ProjectsIcon: <ProjectsIcon width={24} height={24} />,
@@ -18,12 +17,12 @@ const iconList: Record<IconKey, React.JSX.Element> = {
     DiscordIcon: <DiscordIcon width={24} height={24} />,
 };
 
-export const NavbarClient = (): React.JSX.Element => {
+export const NavbarLink = (): React.JSX.Element => {
     const { translations } = useTranslations();
     const navLinks: NavLink[] = translations.nav;
 
     return (
-        <div className={styles.actionsContainer}>
+        <div>
             <ul className={styles.linksList}>
                 {navLinks.map((link) => (
                     <li key={link.id} className={styles.linkLabel}>
@@ -32,7 +31,6 @@ export const NavbarClient = (): React.JSX.Element => {
                     </li>
                 ))}
             </ul>
-            <NavbarTheme />
         </div>
     );
 };
