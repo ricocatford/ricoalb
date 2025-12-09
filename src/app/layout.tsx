@@ -6,6 +6,7 @@ import { LanguageProvider } from "@/providers/LanguageProvider";
 import { Navbar } from "@/components/navbar/Navbar";
 import { Smoke } from "@/components/background/Smoke";
 import "@/assets/styles/globals.css";
+import { HydrationClient } from "@/components/HydrationClient";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -32,16 +33,18 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.variable}`}>
-                <GlobalStoreProvider>
-                    <ThemeProvider>
-                        <LanguageProvider>
-                            <Smoke>
-                                <Navbar />
-                                <main>{children}</main>
-                            </Smoke>
-                        </LanguageProvider>
-                    </ThemeProvider>
-                </GlobalStoreProvider>
+                <HydrationClient>
+                    <GlobalStoreProvider>
+                        <ThemeProvider>
+                            <LanguageProvider>
+                                <Smoke>
+                                    <Navbar />
+                                    <main>{children}</main>
+                                </Smoke>
+                            </LanguageProvider>
+                        </ThemeProvider>
+                    </GlobalStoreProvider>
+                </HydrationClient>
             </body>
         </html>
     );

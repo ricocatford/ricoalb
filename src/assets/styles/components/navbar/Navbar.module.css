@@ -22,10 +22,11 @@
 }
 
 .mainLinkList {
-    list-style: none;
     display: flex;
     align-items: center;
     gap: 1rem;
+
+    list-style: none;
 }
 
 .mainLinkIcon {
@@ -33,19 +34,31 @@
 }
 
 .socialLinkList {
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
-.link {
+.mainLink,
+.socialLink {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem;
+    padding: 0.5rem 0.625rem;
     text-transform: capitalize;
+    transition: all 0.25s ease-in-out;
+}
+
+.mainLink:hover,
+.socialLink:hover {
+    color: var(--foreground-highlight);
+}
+
+.socialLink:hover {
+    transform: translateY(-2px) scale(1.05);
 }
 
 .themeButton {
     color: var(--foreground);
-    padding: 0.5rem;
+    padding: 0.5rem 0.625rem;
 }

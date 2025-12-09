@@ -7,6 +7,7 @@
         hsl(40, 3%, 15%) 100%
     );
     --foreground: #dadada;
+    --foreground-highlight: #fff;
     --max-width: 1280px;
 }
 
@@ -18,7 +19,8 @@ html.light {
         hsl(220, 4%, 96%) 70%,
         hsl(240, 3%, 94%) 100%
     );
-    --foreground: #222222;
+    --foreground: #303030;
+    --foreground-highlight: #000;
 }
 
 * {

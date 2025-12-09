@@ -1,5 +1,6 @@
 import { NavbarLinks } from "./NavbarLinks";
 import { NavbarTheme } from "./NavbarTheme";
+import { NavbarLanguage } from "./NavbarLanguage";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
 
 export const NavbarActions = (): React.JSX.Element => {
@@ -8,6 +9,7 @@ export const NavbarActions = (): React.JSX.Element => {
             <div className={styles.actionsContainer}>
                 <NavbarLinks />
                 <NavbarTheme />
+                <NavbarLanguage />
             </div>
         </>
     );

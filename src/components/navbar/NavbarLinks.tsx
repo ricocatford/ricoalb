@@ -36,7 +36,7 @@ export const NavbarLinks = (): React.JSX.Element => {
             <ul className={styles.mainLinkList}>
                 {mainLinks.map((link) => (
                     <li key={link.id}>
-                        <Link href={link.href} className={styles.link}>
+                        <Link href={link.href} className={styles.mainLink}>
                             <span className={styles.mainLinkIcon}>
                                 {iconList[link.icon]}
                             </span>
@@ -48,7 +48,7 @@ export const NavbarLinks = (): React.JSX.Element => {
             <ul className={styles.socialLinkList}>
                 {socialLinks.map((link) => (
                     <li key={link.id}>
-                        <Link href={link.href} className={styles.link}>
+                        <Link href={link.href} className={styles.socialLink}>
                             <span className={styles.socialLinkIcon}>
                                 {iconList[link.icon]}
                             </span>

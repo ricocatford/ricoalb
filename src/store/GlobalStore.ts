@@ -1,5 +1,5 @@
 import { createStore } from "zustand";
-import { createJSONStorage, persist } from "zustand/middleware";
+import { createJSONStorage, persist, StateStorage } from "zustand/middleware";
 
 export type GlobalState = {
     theme: "dark" | "light";
@@ -36,11 +36,17 @@ export const createGlobalStore = (initState: GlobalState = defaultInitState) => 
             setLanguage: (language: "en" | "es") => set({ language })
         }),
             {
-                name: "global-storage", storage: createJSONStorage(() => localStorage), merge: (persisted, current) => ({
+                name: "global-storage",
+                storage: createJSONStorage(() =>
+                    (typeof window !== "undefined" ? localStorage : null) as StateStorage
+                ),
+
+                merge: (persisted, current) => ({
                     ...current,
                     ...defaultInitState,
                     ...(persisted as Partial<GlobalStore>),
                 }),
-            })
+            }
+        )
     )
 }
