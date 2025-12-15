@@ -1,8 +1,8 @@
 "use client";
 
 import { useGlobalStore } from "@/providers/GlobalStoreProvider";
-import { LightIcon } from "../icons/LightIcon";
-import { DarkIcon } from "../icons/DarkIcon";
+import { LightIcon } from "../icons/navbar/LightIcon";
+import { DarkIcon } from "../icons/navbar/DarkIcon";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
 
 export const NavbarTheme = (): React.JSX.Element => {

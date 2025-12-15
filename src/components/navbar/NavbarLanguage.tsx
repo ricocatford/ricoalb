@@ -1,7 +1,7 @@
 "use client";
 
 import { useGlobalStore } from "@/providers/GlobalStoreProvider";
-import { LanguageIcon } from "../icons/LanguageIcon";
+import { LanguageIcon } from "../icons/navbar/LanguageIcon";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
 
 export const NavbarLanguage = () => {

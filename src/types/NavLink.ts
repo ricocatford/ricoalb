@@ -1,4 +1,4 @@
-export type IconKey = "ProjectsIcon" | "BlogIcon" | "ContactIcon" | "LinkedinIcon" | "GithubIcon" | "DiscordIcon";
+export type IconKey = "ProjectsIcon" | "ServicesIcon" | "AboutIcon" | "BlogIcon" | "ContactIcon" | "LinkedinIcon" | "GithubIcon" | "DiscordIcon";
 
 export type NavLink = {
     id: number;

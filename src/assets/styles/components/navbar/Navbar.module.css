@@ -8,34 +8,35 @@
     padding: 0.25rem 1rem;
     max-width: var(--max-width);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 
 .actionsContainer {
     display: flex;
+    width: 100%;
 }
 
 .linksContainer {
     display: flex;
     gap: 0.5rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mainLinkList,
+.socialLinkList {
+    display: flex;
+    align-items: center;
+    list-style: none;
 }
 
 .mainLinkList {
-    display: flex;
-    align-items: center;
     gap: 1rem;
-
-    list-style: none;
 }
 
 .mainLinkIcon {
     display: none;
-}
-
-.socialLinkList {
-    display: flex;
-    list-style: none;
 }
 
 .mainLink,
@@ -45,7 +46,6 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem 0.625rem;
-    text-transform: capitalize;
     transition: all 0.25s ease-in-out;
 }
 

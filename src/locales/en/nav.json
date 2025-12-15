@@ -1,42 +1,56 @@
 [
     {
         "id": 0,
-        "label": "projects",
+        "label": "Projects",
         "type": "main",
         "href": "/projects",
         "icon": "ProjectsIcon"
     },
     {
         "id": 1,
-        "label": "blog",
+        "label": "Services",
+        "type": "main",
+        "href": "/services",
+        "icon": "ServicesIcon"
+    },
+    {
+        "id": 2,
+        "label": "About",
+        "type": "main",
+        "href": "/about",
+        "icon": "AboutIcon"
+    },
+    {
+        "id": 3,
+        "label": "Blog",
         "type": "main",
         "href": "/blog",
         "icon": "BlogIcon"
     },
     {
-        "id": 2,
-        "label": "contact",
+        "id": 4,
+        "label": "Contact",
         "type": "main",
         "href": "/contact",
         "icon": "ContactIcon"
     },
     {
-        "id": 3,
-        "label": "linkedin",
+        "id": 5,
+        "label": "LinkedIn",
         "type": "social",
         "href": "https://www.linkedin.com/in/ricardo-albarenque",
         "icon": "LinkedinIcon"
     },
     {
-        "id": 4,
-        "label": "github",
+        "id": 6,
+        "label": "GitHub",
         "type": "social",
         "href": "https://github.com/ricocatford",
         "icon": "GithubIcon"
     },
     {
-        "id": 5,
-        "label": "discord",
+        "id": 7,
+        "label": "Discord",
         "type": "social",
         "href": "https://github.com/ricocatford",
         "icon": "DiscordIcon"
