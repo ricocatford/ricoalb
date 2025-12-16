@@ -1,9 +1,9 @@
-interface MenuIconProps extends React.SVGProps<SVGSVGElement> {
+interface DropdownIconProps extends React.SVGProps<SVGSVGElement> {
     width?: number;
     height?: number;
 }
 
-export const MenuIcon: React.FC<MenuIconProps> = ({
+export const DropdownIcon: React.FC<DropdownIconProps> = ({
     width = 32,
     height = 32,
     ...rest
@@ -21,9 +21,7 @@ export const MenuIcon: React.FC<MenuIconProps> = ({
             strokeLinejoin="round"
             {...rest}
         >
-            <path d="M4 6l16 0" />
-            <path d="M4 12l16 0" />
-            <path d="M4 18l16 0" />
+            <path d="M6 9l6 6l6 -6" />
         </svg>
     );
 };

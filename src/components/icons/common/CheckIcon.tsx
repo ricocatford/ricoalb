@@ -1,9 +1,9 @@
-interface ExitIconProps extends React.SVGProps<SVGSVGElement> {
+interface CheckIconProps extends React.SVGProps<SVGSVGElement> {
     width?: number;
     height?: number;
 }
 
-export const ExitIcon: React.FC<ExitIconProps> = ({
+export const CheckIcon: React.FC<CheckIconProps> = ({
     width = 32,
     height = 32,
     ...rest
@@ -16,13 +16,12 @@ export const ExitIcon: React.FC<ExitIconProps> = ({
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="2"
+            strokeWidth="1.25"
             strokeLinecap="round"
             strokeLinejoin="round"
             {...rest}
         >
-            <path d="M18 6l-12 12" />
-            <path d="M6 6l12 12" />
+            <path d="M5 12l5 5l10 -10" />
         </svg>
     );
 };

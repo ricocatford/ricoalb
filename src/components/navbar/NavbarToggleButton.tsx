@@ -1,7 +1,7 @@
 "use client";
 
 import { MenuIcon } from "../icons/navbar/MenuIcon";
-import { ExitIcon } from "../icons/navbar/ExitIcon";
+import { ExitIcon } from "../icons/common/ExitIcon";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
 
 interface NavbarToggleButtonProps {

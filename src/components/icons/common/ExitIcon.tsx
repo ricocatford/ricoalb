@@ -1,9 +1,9 @@
-interface MenuIconProps extends React.SVGProps<SVGSVGElement> {
+interface ExitIconProps extends React.SVGProps<SVGSVGElement> {
     width?: number;
     height?: number;
 }
 
-export const MenuIcon: React.FC<MenuIconProps> = ({
+export const ExitIcon: React.FC<ExitIconProps> = ({
     width = 32,
     height = 32,
     ...rest
@@ -21,9 +21,8 @@ export const MenuIcon: React.FC<MenuIconProps> = ({
             strokeLinejoin="round"
             {...rest}
         >
-            <path d="M4 6l16 0" />
-            <path d="M4 12l16 0" />
-            <path d="M4 18l16 0" />
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
         </svg>
     );
 };
