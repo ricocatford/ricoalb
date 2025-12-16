@@ -54,5 +54,25 @@
         "type": "social",
         "href": "https://github.com/ricocatford",
         "icon": "DiscordIcon"
+    },
+    {
+        "id": 8,
+        "label": "Theme",
+        "type": "settings",
+        "icon": "ThemeIcon",
+        "options": [
+            { "id": 0, "label": "Dark", "value": "dark", "icon": "DarkIcon" },
+            { "id": 1, "label": "Light", "value": "light", "icon": "LightIcon" }
+        ]
+    },
+    {
+        "id": 9,
+        "label": "Language",
+        "type": "settings",
+        "icon": "LanguageIcon",
+        "options": [
+            { "id": 0, "label": "English", "value": "en" },
+            { "id": 1, "label": "Español", "value": "es" }
+        ]
     }
 ]

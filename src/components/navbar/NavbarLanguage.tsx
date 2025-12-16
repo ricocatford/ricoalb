@@ -1,5 +1,3 @@
-"use client";
-
 import { useGlobalStore } from "@/providers/GlobalStoreProvider";
 import { LanguageIcon } from "../icons/navbar/LanguageIcon";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
@@ -13,10 +11,12 @@ export const NavbarLanguage = () => {
     return (
         <button
             onClick={selectLanguage}
-            className={styles.themeButton}
+            className={styles.languageButton}
             aria-label={"Select language"}
         >
-            <LanguageIcon width={24} height={24} />
+            <span className={styles.languageButtonIcon}>
+                <LanguageIcon width={24} height={24} />
+            </span>
         </button>
     );
 };

@@ -8,6 +8,9 @@
     );
     --foreground: #dadada;
     --foreground-highlight: #fff;
+    --light-blue: #12cff3;
+    --marine-blue: #1d8ee4;
+    --nav-menu-background: hsla(0, 0%, 0%, 0.5);
     --max-width: 1280px;
 }
 
@@ -21,6 +24,7 @@ html.light {
     );
     --foreground: #303030;
     --foreground-highlight: #000;
+    --nav-menu-background: hsla(0, 0%, 100%, 0.5);
 }
 
 * {

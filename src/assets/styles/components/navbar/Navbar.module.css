@@ -1,6 +1,6 @@
 .nav {
-    backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.03);
 }
 
 .container {
@@ -12,7 +12,7 @@
     gap: 1rem;
 }
 
-.actionsContainer {
+.clientContainer {
     display: flex;
     width: 100%;
 }
@@ -52,13 +52,167 @@
 .mainLink:hover,
 .socialLink:hover {
     color: var(--foreground-highlight);
+    text-shadow: 0 0 20px var(--light-blue);
 }
 
 .socialLink:hover {
     transform: translateY(-2px) scale(1.05);
 }
 
+.socialLinkLabel {
+    display: none;
+}
+
+.actionsContainer {
+    display: flex;
+}
+
+.settingsContainer {
+    display: none;
+}
+
+.settingsIcon {
+    color: var(--foreground);
+}
+
 .themeButton {
+    display: none;
+}
+
+.themeButtonActive {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
     color: var(--foreground);
     padding: 0.5rem 0.625rem;
+}
+
+.optionLabel {
+    display: none;
+    font-size: 1rem;
+}
+
+.languageButton,
+.mobileButton {
+    color: var(--foreground);
+    padding: 0.5rem 0.625rem;
+}
+
+.themeButtonActive:hover,
+.languageButton:hover {
+    color: var(--foreground-highlight);
+}
+
+.mobileButton {
+    display: none;
+}
+
+/* -------------- MEDIA QUERIES -------------- */
+
+@media screen and (max-width: 1024px) {
+    .linksContainer {
+        justify-content: end;
+        gap: 0;
+    }
+
+    .mainLinkList {
+        gap: 0;
+    }
+
+    .mainLinkLabel {
+        display: none;
+    }
+
+    .mainLinkIcon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        justify-content: center;
+        position: relative;
+    }
+
+    .clientContainer {
+        display: none;
+    }
+
+    .clientContainerActive {
+        background: var(--nav-menu-background);
+        position: absolute;
+        top: 54px;
+        left: 0;
+        justify-content: start;
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        padding: 1rem;
+        z-index: 50;
+        min-height: calc(100vh - 54px);
+    }
+
+    .linksContainer {
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+    }
+
+    .actionsContainer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        width: 100%;
+    }
+
+    .settingsContainer {
+        display: flex;
+        gap: 1.25rem;
+        padding: 0.5rem 0.625rem;
+        width: 100%;
+    }
+
+    .optionsContainer {
+        display: none;
+    }
+
+    .optionsContainerActive {
+        display: flex;
+    }
+
+    .optionLabel {
+        display: block;
+    }
+
+    .mainLinkList,
+    .socialLinkList {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+        width: 100%;
+    }
+
+    .linkListItem {
+        width: 100%;
+    }
+
+    .mainLink,
+    .socialLink {
+        align-items: start;
+        gap: 1.25rem;
+        width: 100%;
+    }
+
+    .mainLinkLabel,
+    .socialLinkLabel {
+        display: block;
+    }
+
+    .mobileButton {
+        display: block;
+        position: absolute;
+        right: 1rem;
+    }
 }

@@ -1,19 +1,17 @@
-"use client";
-
+import Link from "next/link";
 import { useTranslations } from "@/providers/LanguageProvider";
-import { IconKey, NavLink } from "@/types/NavLink";
+import { LinkIconKey, NavConfig, NavLink } from "@/types/NavConfig";
 import { ProjectsIcon } from "../icons/navbar/ProjectsIcon";
+import { ServicesIcon } from "../icons/navbar/ServicesIcon";
+import { AboutIcon } from "../icons/navbar/AboutIcon";
 import { BlogIcon } from "../icons/navbar/BlogIcon";
 import { ContactIcon } from "../icons/navbar/ContactIcon";
 import { LinkedinIcon } from "../icons/navbar/LinkedinIcon";
 import { GithubIcon } from "../icons/navbar/GithubIcon";
 import { DiscordIcon } from "../icons/navbar/DiscordIcon";
-import Link from "next/link";
 import styles from "@/assets/styles/components/navbar/Navbar.module.css";
-import { ServicesIcon } from "../icons/navbar/ServicesIcon";
-import { AboutIcon } from "../icons/navbar/AboutIcon";
 
-const iconList: Record<IconKey, React.JSX.Element> = {
+const iconList: Record<LinkIconKey, React.JSX.Element> = {
     ProjectsIcon: <ProjectsIcon width={24} height={24} />,
     ServicesIcon: <ServicesIcon width={24} height={24} />,
     AboutIcon: <AboutIcon width={24} height={24} />,
@@ -24,14 +22,26 @@ const iconList: Record<IconKey, React.JSX.Element> = {
     DiscordIcon: <DiscordIcon width={24} height={24} />,
 };
 
-export const NavbarLinks = (): React.JSX.Element => {
-    const { translations } = useTranslations();
-    const navLinks: NavLink[] = translations.nav;
+interface NavbarLinksProps {
+    setIsToggled: (toggle: boolean) => void;
+}
 
-    const mainLinks: NavLink[] = navLinks.filter(
+const isNavLink = (item: NavConfig): item is NavLink => {
+    return item.type === "main" || item.type === "social";
+};
+
+export const NavbarLinks = ({
+    setIsToggled,
+}: NavbarLinksProps): React.JSX.Element => {
+    const { translations } = useTranslations();
+    const navConfig: NavConfig[] = translations.nav;
+
+    const navLinksOnly: NavLink[] = navConfig.filter(isNavLink);
+
+    const mainLinks: NavLink[] = navLinksOnly.filter(
         (link) => link.type === "main"
     );
-    const socialLinks: NavLink[] = navLinks.filter(
+    const socialLinks: NavLink[] = navLinksOnly.filter(
         (link) => link.type === "social"
     );
 
@@ -39,22 +49,35 @@ export const NavbarLinks = (): React.JSX.Element => {
         <div className={styles.linksContainer}>
             <ul className={styles.mainLinkList}>
                 {mainLinks.map((link) => (
-                    <li key={link.id}>
-                        <Link href={link.href} className={styles.mainLink}>
+                    <li key={link.id} className={styles.linkListItem}>
+                        <Link
+                            href={link.href}
+                            className={styles.mainLink}
+                            onClick={() => setIsToggled(false)}
+                        >
                             <span className={styles.mainLinkIcon}>
                                 {iconList[link.icon]}
                             </span>
-                            {link.label}
+                            <span className={styles.mainLinkLabel}>
+                                {link.label}
+                            </span>
                         </Link>
                     </li>
                 ))}
             </ul>
             <ul className={styles.socialLinkList}>
                 {socialLinks.map((link) => (
-                    <li key={link.id}>
-                        <Link href={link.href} className={styles.socialLink}>
+                    <li key={link.id} className={styles.linkListItem}>
+                        <Link
+                            href={link.href}
+                            className={styles.socialLink}
+                            onClick={() => setIsToggled(false)}
+                        >
                             <span className={styles.socialLinkIcon}>
                                 {iconList[link.icon]}
+                            </span>
+                            <span className={styles.socialLinkLabel}>
+                                {link.label}
                             </span>
                         </Link>
                     </li>
