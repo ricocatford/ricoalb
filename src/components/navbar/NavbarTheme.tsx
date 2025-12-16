@@ -1,18 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useGlobalStore } from "@/providers/GlobalStoreProvider";
 import { useTranslations } from "@/providers/LanguageProvider";
-import {
-    NavAction,
-    NavConfig,
-    NavThemeOption,
-    ThemeOptionIconKey,
-} from "@/types/NavConfig";
+import { NavAction, NavConfig, NavThemeOption } from "@/types/NavConfig";
 import { ThemeIcon } from "../icons/navbar/ThemeIcon";
 import { LightIcon } from "../icons/navbar/LightIcon";
 import { DarkIcon } from "../icons/navbar/DarkIcon";
-import styles from "@/assets/styles/components/navbar/Navbar.module.css";
 import { CheckIcon } from "../icons/common/CheckIcon";
 import { DropdownIcon } from "../icons/common/DropdownIcon";
+import styles from "@/assets/styles/components/navbar/Navbar.module.css";
 
 const isNavAction = (item: NavConfig): item is NavAction => {
     return item.type === "settings";
@@ -24,13 +19,26 @@ export const NavbarTheme = (): React.JSX.Element => {
     const setTheme = useGlobalStore((state) => state.setTheme);
     const [isToggled, setIsToggled] = useState<boolean>(false);
 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                setIsToggled(false);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        handleResize();
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     const { translations } = useTranslations();
     const navConfig: NavConfig[] = translations.nav;
 
     const navActions: NavAction[] = navConfig.filter(isNavAction);
 
     const themeConfig = navActions.find(
-        (action) => action.label === "Theme" || "Tema"
+        (action) => action.label === "Theme" || action.label === "Tema"
     );
 
     if (!themeConfig) return <></>;

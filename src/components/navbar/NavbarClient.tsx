@@ -1,13 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { NavbarLinks } from "./NavbarLinks";
 import { NavbarActions } from "./NavbarActions";
-import styles from "@/assets/styles/components/navbar/Navbar.module.css";
 import { NavbarToggleButton } from "./NavbarToggleButton";
+import styles from "@/assets/styles/components/navbar/Navbar.module.css";
 
 export const NavbarClient = (): React.JSX.Element => {
     const [isToggled, setIsToggled] = useState<boolean>(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth > 768) {
+                setIsToggled(false);
+            }
+        };
+
+        window.addEventListener("resize", handleResize);
+        handleResize();
+
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     const changeClassName = !isToggled
         ? styles.clientContainer
