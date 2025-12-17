@@ -6,7 +6,9 @@ export const NavbarLogo = (): React.JSX.Element => {
     return (
         <div className={styles.logoContainer}>
             <Link href="/">
-                <LogoIcon />
+                <span className={styles.logoIcon}>
+                    <LogoIcon />
+                </span>
             </Link>
         </div>
     );

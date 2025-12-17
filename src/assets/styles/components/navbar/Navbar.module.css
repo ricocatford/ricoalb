@@ -12,6 +12,15 @@
     gap: 1rem;
 }
 
+.logoIcon {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+}
+
+.logoIcon:hover {
+    filter: drop-shadow(0 0 8px var(--light-blue-transparent));
+}
+
 .clientContainer {
     display: flex;
     width: 100%;
@@ -56,6 +65,7 @@
 .mainLink:hover,
 .socialLink:hover {
     color: var(--foreground-highlight);
+    filter: drop-shadow(0 0 8px var(--light-blue-transparent));
 }
 
 .socialLinkLabel {
@@ -130,6 +140,7 @@
 .themeButton:hover,
 .languageButton:hover {
     color: var(--foreground-highlight);
+    filter: drop-shadow(0 0 8px var(--light-blue-transparent));
 }
 
 .mobileButton {
@@ -170,7 +181,7 @@
     .clientContainerActive {
         background: var(--nav-menu-background);
         position: absolute;
-        top: 54px;
+        top: 50px;
         left: 0;
         justify-content: start;
         display: flex;
@@ -180,7 +191,7 @@
         width: 100%;
         padding: 1rem;
         z-index: 50;
-        height: calc(100dvh - 54px);
+        height: calc(100dvh - 50px);
         pointer-events: auto;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;

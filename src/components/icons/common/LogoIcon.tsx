@@ -22,7 +22,7 @@ export const LogoIcon: React.FC<LogoIconProps> = ({
             {...rest}
         >
             <linearGradient
-                gradientTransform="rotate(30)"
+                gradientTransform="rotate(45)"
                 id="929d9aad-787d-4962-af12-88787f9f6263"
                 x1="0%"
                 y1="0%"

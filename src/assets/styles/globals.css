@@ -6,12 +6,13 @@
         hsl(220, 5%, 12%) 70%,
         hsl(40, 3%, 15%) 100%
     );
-    --foreground: #dadada;
-    --foreground-light: #d3d3d3;
-    --foreground-extra-light: #333333;
-    --foreground-highlight: #fff;
-    --light-blue: #12cff3;
-    --marine-blue: #1d8ee4;
+    --foreground: hsl(0, 0%, 85%);
+    --foreground-light: hsl(0, 0%, 83%);
+    --foreground-extra-light: hsl(0, 0%, 20%);
+    --foreground-highlight: hsl(0, 0%, 100%);
+    --light-blue: hsl(190, 90%, 51%);
+    --light-blue-transparent: hsla(190, 90%, 51%, 0.35);
+    --marine-blue: hsl(206, 79%, 50%);
     --nav-menu-background: hsla(0, 0%, 0%, 0.5);
     --max-width: 1280px;
 }
