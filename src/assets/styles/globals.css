@@ -7,7 +7,7 @@
         hsl(40, 3%, 15%) 100%
     );
     --foreground: hsl(0, 0%, 85%);
-    --foreground-light: hsl(0, 0%, 83%);
+    --foreground-light: hsl(0, 0%, 60%);
     --foreground-extra-light: hsl(0, 0%, 20%);
     --foreground-highlight: hsl(0, 0%, 100%);
     --light-blue: hsl(190, 90%, 51%);
@@ -25,9 +25,9 @@ html.light {
         hsl(220, 4%, 96%) 70%,
         hsl(240, 3%, 94%) 100%
     );
-    --foreground: #303030;
-    --foreground-light: #454545;
-    --foreground-extra-light: #cccccc;
+    --foreground: hsl(0, 0%, 15%);
+    --foreground-light: hsl(0, 0%, 40%);
+    --foreground-extra-light: hsl(0, 0%, 80%);
     --foreground-highlight: #000;
     --nav-menu-background: hsla(0, 0%, 100%, 0.5);
 }

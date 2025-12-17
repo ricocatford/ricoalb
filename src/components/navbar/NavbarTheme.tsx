@@ -55,7 +55,9 @@ export const NavbarTheme = (): React.JSX.Element => {
         );
     };
 
-    if (!themeConfig || !isThemeOptionArray(themeConfig.options)) return <></>;
+    if (!themeConfig || !isThemeOptionArray(themeConfig.options)) {
+        return <></>;
+    }
 
     return (
         <>
@@ -101,7 +103,7 @@ export const NavbarTheme = (): React.JSX.Element => {
                         : styles.optionsContainerActive
                 }
             >
-                {themeConfig.options.map((option: NavThemeOption) => {
+                {themeConfig.options.map((option) => {
                     return (
                         <button
                             key={option.id}

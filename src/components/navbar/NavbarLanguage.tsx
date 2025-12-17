@@ -51,17 +51,14 @@ export const NavbarLanguage = (): React.JSX.Element => {
         );
     };
 
-    if (!languageConfig || !isLanguageOptionArray(languageConfig.options))
+    if (!languageConfig || !isLanguageOptionArray(languageConfig.options)) {
         return <></>;
+    }
 
     return (
         <>
             <button
-                onClick={() =>
-                    currentLanguage === "en"
-                        ? setLanguage("es")
-                        : setLanguage("en")
-                }
+                onClick={() => setIsToggled(!isToggled)}
                 className={styles.settingButton}
                 aria-label="Select Language"
             >
@@ -94,7 +91,7 @@ export const NavbarLanguage = (): React.JSX.Element => {
                         : styles.optionsContainerActive
                 }
             >
-                {languageConfig.options.map((option: NavLanguageOption) => {
+                {languageConfig.options.map((option) => {
                     return (
                         <button
                             key={option.id}
