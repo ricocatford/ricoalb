@@ -15,7 +15,7 @@ export type NavAction = {
     label: string;
     type: "settings";
     icon: ActionIconKey;
-    options: NavThemeOption[];
+    options: NavThemeOption[] | NavLanguageOption[];
 }
 
 export type ThemeOptionIconKey = "DarkIcon" | "LightIcon";

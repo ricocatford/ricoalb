@@ -45,6 +45,8 @@ export const NavbarLinks = ({
         (link) => link.type === "social"
     );
 
+    if (!navLinksOnly) return <></>;
+
     return (
         <div className={styles.linksContainer}>
             <ul className={styles.mainLinkList}>

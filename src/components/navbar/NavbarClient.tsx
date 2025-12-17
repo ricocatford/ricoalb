@@ -30,10 +30,7 @@ export const NavbarClient = (): React.JSX.Element => {
         <>
             <div className={changeClassName}>
                 <NavbarLinks setIsToggled={setIsToggled} />
-                <NavbarActions
-                    isToggled={isToggled}
-                    setIsToggled={setIsToggled}
-                />
+                <NavbarActions />
             </div>
             <NavbarToggleButton
                 isToggled={isToggled}
