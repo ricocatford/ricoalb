@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect, useCallback } from "react";
 import { Renderer } from "@/types/Renderer";
-import styles from "@/assets/styles/components/background/Smoke.module.css";
+import styles from "@/assets/styles/components/layout/background/Smoke.module.css";
 
 const EXTERNAL_SHADER_SOURCE: string = `#version 300 es
 /*********

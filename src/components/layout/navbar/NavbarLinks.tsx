@@ -9,7 +9,7 @@ import { ContactIcon } from "../icons/navbar/ContactIcon";
 import { LinkedinIcon } from "../icons/navbar/LinkedinIcon";
 import { GithubIcon } from "../icons/navbar/GithubIcon";
 import { DiscordIcon } from "../icons/navbar/DiscordIcon";
-import styles from "@/assets/styles/components/navbar/Navbar.module.css";
+import styles from "@/assets/styles/components/layout/navbar/Navbar.module.css";
 
 const iconList: Record<LinkIconKey, React.JSX.Element> = {
     ProjectsIcon: <ProjectsIcon width={24} height={24} />,

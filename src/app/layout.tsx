@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { HydrationClient } from "@/components/HydrationClient";
 import { GlobalStoreProvider } from "@/providers/GlobalStoreProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { LanguageProvider } from "@/providers/LanguageProvider";
-import { Navbar } from "@/components/navbar/Navbar";
-import { Smoke } from "@/components/background/Smoke";
+import { Smoke } from "@/components/layout/background/Smoke";
+import { Navbar } from "@/components/layout/navbar/Navbar";
 import "@/assets/styles/globals.css";
-import { HydrationClient } from "@/components/HydrationClient";
 
 const inter = Inter({
     variable: "--font-inter",

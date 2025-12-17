@@ -1,12 +1,11 @@
 :root {
     --background: linear-gradient(
         -45deg,
-        hsl(0, 0%, 0%) 0%,
+        hsl(0, 0%, 3%) 0%,
         hsl(240, 4%, 8%) 30%,
-        hsl(220, 5%, 12%) 70%,
-        hsl(40, 3%, 15%) 100%
+        hsl(220, 5%, 12%) 70%
     );
-    --foreground: hsl(0, 0%, 85%);
+    --foreground: hsl(0, 0%, 75%);
     --foreground-light: hsl(0, 0%, 60%);
     --foreground-extra-light: hsl(0, 0%, 20%);
     --foreground-highlight: hsl(0, 0%, 100%);
@@ -20,15 +19,14 @@
 html.light {
     --background: linear-gradient(
         135deg,
-        hsl(0, 0%, 100%) 0%,
-        hsl(210, 5%, 98%) 30%,
-        hsl(220, 4%, 96%) 70%,
-        hsl(240, 3%, 94%) 100%
+        hsl(0, 0%, 97%) 0%,
+        hsl(210, 5%, 92%) 30%,
+        hsl(220, 4%, 90%) 70%
     );
-    --foreground: hsl(0, 0%, 15%);
+    --foreground: hsl(0, 0%, 25%);
     --foreground-light: hsl(0, 0%, 40%);
     --foreground-extra-light: hsl(0, 0%, 80%);
-    --foreground-highlight: #000;
+    --foreground-highlight: hsl(0, 0%, 0%);
     --nav-menu-background: hsla(0, 0%, 100%, 0.5);
 }
 
@@ -64,4 +62,14 @@ button {
     font-family: "Inter", Arial, Helvetica, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: var(--max-width);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0%;
+    gap: 1rem;
 }

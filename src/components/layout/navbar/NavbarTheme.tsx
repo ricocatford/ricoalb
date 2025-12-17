@@ -7,14 +7,17 @@ import {
     NavLanguageOption,
     NavThemeOption,
 } from "@/types/NavConfig";
-import { LanguageIcon } from "../icons/navbar/LanguageIcon";
-import { DropdownIcon } from "../icons/common/DropdownIcon";
-import styles from "@/assets/styles/components/navbar/Navbar.module.css";
+import { ThemeIcon } from "../icons/navbar/ThemeIcon";
+import { LightIcon } from "../icons/navbar/LightIcon";
+import { DarkIcon } from "../icons/navbar/DarkIcon";
 import { CheckIcon } from "../icons/common/CheckIcon";
+import { DropdownIcon } from "../icons/common/DropdownIcon";
+import styles from "@/assets/styles/components/layout/navbar/Navbar.module.css";
 
-export const NavbarLanguage = (): React.JSX.Element => {
-    const currentLanguage = useGlobalStore((state) => state.language);
-    const setLanguage = useGlobalStore((state) => state.setLanguage);
+export const NavbarTheme = (): React.JSX.Element => {
+    const currentTheme = useGlobalStore((state) => state.theme);
+    const toggleTheme = useGlobalStore((state) => state.toggleTheme);
+    const setTheme = useGlobalStore((state) => state.setTheme);
     const [isToggled, setIsToggled] = useState<boolean>(false);
 
     useEffect(() => {
@@ -38,31 +41,40 @@ export const NavbarLanguage = (): React.JSX.Element => {
     };
 
     const navActions: NavAction[] = navConfig.filter(isNavAction);
-    const languageConfig = navActions.find(
-        (action) => action.label === "Language" || action.label === "Idioma"
+
+    const themeConfig = navActions.find(
+        (action) => action.label === "Theme" || action.label === "Tema"
     );
 
-    const isLanguageOptionArray = (
-        options: NavLanguageOption[] | NavThemeOption[]
-    ): options is NavLanguageOption[] => {
+    const isThemeOptionArray = (
+        options: NavThemeOption[] | NavLanguageOption[]
+    ): options is NavThemeOption[] => {
         return (
             options.length > 0 &&
-            (options[0].value === "en" || options[0].value === "es")
+            (options[0].value === "dark" || options[0].value === "light")
         );
     };
 
-    if (!languageConfig || !isLanguageOptionArray(languageConfig.options)) {
+    if (!themeConfig || !isThemeOptionArray(themeConfig.options)) {
         return <></>;
     }
 
     return (
         <>
             <button
-                onClick={() => setIsToggled(!isToggled)}
                 className={styles.settingButton}
-                aria-label="Select Language"
+                onClick={toggleTheme}
+                aria-label="Toggle Theme"
             >
-                <LanguageIcon width={24} height={24} />
+                {currentTheme === "dark" ? (
+                    <span>
+                        <LightIcon width={24} height={24} />
+                    </span>
+                ) : (
+                    <span>
+                        <DarkIcon width={24} height={24} />
+                    </span>
+                )}
             </button>
             <div
                 className={styles.settingsContainer}
@@ -70,9 +82,9 @@ export const NavbarLanguage = (): React.JSX.Element => {
             >
                 <div className={styles.settingsWrapper}>
                     <span className={styles.settingsIcon}>
-                        <LanguageIcon width={24} height={24} />
+                        <ThemeIcon width={24} height={24} />
                     </span>
-                    <span>{languageConfig.label}</span>
+                    <span>{themeConfig.label}</span>
                 </div>
                 <span
                     className={
@@ -91,17 +103,17 @@ export const NavbarLanguage = (): React.JSX.Element => {
                         : styles.optionsContainerActive
                 }
             >
-                {languageConfig.options.map((option) => {
+                {themeConfig.options.map((option) => {
                     return (
                         <button
                             key={option.id}
-                            onClick={() => setLanguage(option.value)}
+                            onClick={() => setTheme(option.value)}
                             className={styles.optionButton}
-                            aria-label="Select Language"
+                            aria-label="Select Theme"
                         >
                             <span
                                 className={
-                                    currentLanguage === option.value
+                                    currentTheme === option.value
                                         ? styles.optionIconActive
                                         : styles.optionIconInactive
                                 }

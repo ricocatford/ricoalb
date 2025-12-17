@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { NavbarLinks } from "./NavbarLinks";
 import { NavbarActions } from "./NavbarActions";
 import { NavbarToggleButton } from "./NavbarToggleButton";
-import styles from "@/assets/styles/components/navbar/Navbar.module.css";
+import styles from "@/assets/styles/components/layout/navbar/Navbar.module.css";
 
 export const NavbarClient = (): React.JSX.Element => {
     const [isToggled, setIsToggled] = useState<boolean>(false);

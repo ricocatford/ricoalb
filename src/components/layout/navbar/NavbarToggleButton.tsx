@@ -2,7 +2,7 @@
 
 import { MenuIcon } from "../icons/navbar/MenuIcon";
 import { ExitIcon } from "../icons/common/ExitIcon";
-import styles from "@/assets/styles/components/navbar/Navbar.module.css";
+import styles from "@/assets/styles/components/layout/navbar/Navbar.module.css";
 
 interface NavbarToggleButtonProps {
     isToggled: boolean;
