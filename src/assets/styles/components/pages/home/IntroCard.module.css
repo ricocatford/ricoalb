@@ -94,7 +94,7 @@
     display: flex;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1280px) {
     .header {
         flex-direction: column;
         gap: 0.5rem;
@@ -109,12 +109,14 @@
 
 @media screen and (max-width: 576px) {
     .container {
-        gap: 1.5rem;
+        min-height: 80vh;
+        justify-content: space-between;
     }
 
     .header {
         flex-direction: column;
         gap: 0.5rem;
+        margin-top: 2rem;
     }
 
     .button,
