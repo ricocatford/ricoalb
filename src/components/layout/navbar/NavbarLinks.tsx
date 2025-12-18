@@ -71,6 +71,7 @@ export const NavbarLinks = ({
                 {socialLinks.map((link) => (
                     <li key={link.id} className={styles.linkListItem}>
                         <Link
+                            target="_blank"
                             href={link.href}
                             className={styles.socialLink}
                             onClick={() => setIsToggled(false)}
