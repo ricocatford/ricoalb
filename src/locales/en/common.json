@@ -2,7 +2,80 @@
     "home": {
         "sections": [
             {
-                "id": 0
+                "id": 0,
+                "type": "intro",
+                "heading": "Ricardo Albarenque",
+                "subheading": "Full-Stack <highlight>Developer</highlight>",
+                "location": "Asturias, Spain",
+                "paragraph": "I'm dedicated to crafting <bold>clean</bold>, <bold>scalable code</bold> and translating designs into a <bold>pixel-perfect</bold> experience. Outside of development, I love getting behind the drum kit!",
+                "button": { "icon": "DownloadIcon", "label": "Download Resume" }
+            },
+            {
+                "id": 1,
+                "type": "about",
+                "label": "about",
+                "info": "Read more",
+                "isLink": true,
+                "href": "/about"
+            },
+            {
+                "id": 2,
+                "type": "projects",
+                "label": "projects",
+                "info": "Portfolio",
+                "isLink": true,
+                "href": "/projects",
+                "heading": "My Work"
+            },
+            {
+                "id": 3,
+                "type": "blog",
+                "label": "blog",
+                "info": "Start reading",
+                "isLink": true,
+                "href": "/blog"
+            },
+            {
+                "id": 4,
+                "type": "services",
+                "label": "services",
+                "info": "What I offer",
+                "isLink": true,
+                "href": "/services",
+                "services": [
+                    { "id": 0, "label": "Backend", "icon": "BackendIcon" },
+                    { "id": 1, "label": "Frontend", "icon": "FrontendIcon" },
+                    { "id": 2, "label": "SEO", "icon": "SEOIcon" },
+                    { "id": 3, "label": "Design", "icon": "DesignIcon" }
+                ]
+            },
+            {
+                "id": 5,
+                "type": "socials",
+                "label": "socials",
+                "info": "Let's connect",
+                "socials": [
+                    { "id": 0, "icon": "LinkedinIcon" },
+                    { "id": 1, "icon": "GithubIcon" },
+                    { "id": 2, "icon": "DiscordIcon" }
+                ]
+            },
+            {
+                "id": 6,
+                "type": "stats",
+                "stats": [
+                    { "id": 0, "label": "Years of Experience", "value": "3+" },
+                    { "id": 1, "label": "Projects completed", "value": "5" },
+                    { "id": 2, "label": "Satisfied customers", "value": "2" }
+                ]
+            },
+            {
+                "id": 7,
+                "type": "contact",
+                "isLink": true,
+                "href": "/contact",
+                "heading": "Let's work <highlight>together!</highlight>",
+                "paragraph": "Have a challenging <bold>problem</bold> or an exciting <bold>idea</bold> that needs a clean, scalable solution? I'm eager to connect with clients and fellow developers. Let’s start turning <bold>concepts into reality</bold>."
             }
         ]
     }

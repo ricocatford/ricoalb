@@ -1,1 +1,82 @@
-{ "home": { "hero": { "heading": "Hola mundo" } } }
+{
+    "home": {
+        "sections": [
+            {
+                "id": 0,
+                "type": "intro",
+                "heading": "Ricardo Albarenque",
+                "subheading": "<highlight>Desarrollador</highlight> Full-Stack",
+                "location": "Asturias, España",
+                "paragraph": "Me dedico a crear <bold>código limpio</bold> y <bold>escalable</bold> y a traducir diseños en una experiencia <bold>pixel-perfect</bold>. Cuando no estoy programando, disfruto tocando la batería.",
+                "button": { "icon": "DownloadIcon", "label": "Descargar CV" }
+            },
+            {
+                "id": 1,
+                "type": "about",
+                "label": "acerca de",
+                "info": "Leer más",
+                "isLink": true,
+                "href": "/about"
+            },
+            {
+                "id": 2,
+                "type": "projects",
+                "label": "proyectos",
+                "info": "Portafolio",
+                "isLink": true,
+                "href": "/projects",
+                "heading": "Mi trabajo"
+            },
+            {
+                "id": 3,
+                "type": "blog",
+                "label": "blog",
+                "info": "Empieza leyendo",
+                "isLink": true,
+                "href": "/blog"
+            },
+            {
+                "id": 4,
+                "type": "services",
+                "label": "servicios",
+                "info": "Lo que ofrezco",
+                "isLink": true,
+                "href": "/services",
+                "services": [
+                    { "id": 0, "label": "Backend", "icon": "BackendIcon" },
+                    { "id": 1, "label": "Frontend", "icon": "FrontendIcon" },
+                    { "id": 2, "label": "SEO", "icon": "SEOIcon" },
+                    { "id": 3, "label": "Diseño", "icon": "DesignIcon" }
+                ]
+            },
+            {
+                "id": 5,
+                "type": "socials",
+                "label": "redes sociales",
+                "info": "Conectemos",
+                "socials": [
+                    { "id": 0, "icon": "LinkedinIcon" },
+                    { "id": 1, "icon": "GithubIcon" },
+                    { "id": 2, "icon": "DiscordIcon" }
+                ]
+            },
+            {
+                "id": 6,
+                "type": "stats",
+                "stats": [
+                    { "id": 0, "label": "Años de Experiencia", "value": "3+" },
+                    { "id": 1, "label": "Proyectos completados", "value": "5" },
+                    { "id": 2, "label": "Clientes satisfechos", "value": "2" }
+                ]
+            },
+            {
+                "id": 7,
+                "type": "contact",
+                "isLink": true,
+                "href": "/contact",
+                "heading": "Trabajemos <highlight>juntos.</highlight>",
+                "paragraph": "¿Tiene un <bold>problema</bold> desafiante o una <bold>idea</bold> emocionante que necesita una solución limpia y escalable? Estoy deseando conectar tanto con clientes como con otros desarrolladores. Empecemos a convertir los <bold>conceptos en realidad</bold>."
+            }
+        ]
+    }
+}
