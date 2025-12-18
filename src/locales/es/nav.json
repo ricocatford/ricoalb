@@ -67,7 +67,7 @@
     },
     {
         "id": 9,
-        "label": "Language",
+        "label": "Idioma",
         "type": "settings",
         "icon": "LanguageIcon",
         "options": [

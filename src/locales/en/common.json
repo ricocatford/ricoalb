@@ -1,3 +1,9 @@
 {
-    "home": { "hero": { "heading": "Hello world" } }
+    "home": {
+        "sections": [
+            {
+                "id": 0
+            }
+        ]
+    }
 }
