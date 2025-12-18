@@ -8,7 +8,7 @@
                 "subheading": "Full-Stack <highlight>Developer</highlight>",
                 "location": "Asturias, Spain",
                 "paragraph": "I'm dedicated to crafting <bold>clean</bold>, <bold>scalable code</bold> and translating designs into a <bold>pixel-perfect</bold> experience. Outside of development, I love getting behind the drum kit!",
-                "button": { "icon": "DownloadIcon", "label": "Download Resume" }
+                "button": { "label": "Download Resume", "href": "#" }
             },
             {
                 "id": 1,

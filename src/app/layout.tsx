@@ -1,12 +1,12 @@
+import "@/assets/styles/globals.css";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
-import { HydrationClient } from "@/components/HydrationClient";
+import { HydrationClient } from "@/components/layout/HydrationClient";
 import { GlobalStoreProvider } from "@/providers/GlobalStoreProvider";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import { LanguageProvider } from "@/providers/LanguageProvider";
 import { Smoke } from "@/components/layout/background/Smoke";
 import { Navbar } from "@/components/layout/navbar/Navbar";
-import "@/assets/styles/globals.css";
 
 const inter = Inter({
     variable: "--font-inter",

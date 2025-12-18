@@ -1,0 +1,21 @@
+.container {
+    background: var(--card-background);
+    backdrop-filter: blur(20px);
+    border-radius: 2rem;
+    padding: 0.5rem;
+    grid-row: span 1;
+}
+
+.containerRegular {
+    grid-column: span 1;
+}
+
+.containerWide {
+    grid-column: span 2;
+}
+
+@media screen and (max-width: 1024px) {
+    .containerWide {
+        grid-column: span 1;
+    }
+}

@@ -10,9 +10,11 @@
     },
     "dependencies": {
         "gsap": "^3.13.0",
+        "i18next": "^25.7.3",
         "next": "^16.0.7",
         "react": "^19.2.1",
         "react-dom": "^19.2.1",
+        "react-i18next": "^16.5.0",
         "zustand": "^5.0.8"
     },
     "devDependencies": {

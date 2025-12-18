@@ -8,7 +8,7 @@
                 "subheading": "<highlight>Desarrollador</highlight> Full-Stack",
                 "location": "Asturias, España",
                 "paragraph": "Me dedico a crear <bold>código limpio</bold> y <bold>escalable</bold> y a traducir diseños en una experiencia <bold>pixel-perfect</bold>. Cuando no estoy programando, disfruto tocando la batería.",
-                "button": { "icon": "DownloadIcon", "label": "Descargar CV" }
+                "button": { "label": "Descargar CV", "href": "#" }
             },
             {
                 "id": 1,

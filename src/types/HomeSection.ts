@@ -21,6 +21,7 @@ export type IntroSection = HomeSection & {
     button: {
         icon: string;
         label: string;
+        href: string;
     }
 }
 
@@ -84,3 +85,7 @@ export type Section =
     SocialsSection |
     StatsSection |
     ContactSection;
+
+export type HomeData = {
+    sections: Section[];
+};
