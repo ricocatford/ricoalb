@@ -12,7 +12,7 @@
     --light-blue: hsl(190, 90%, 51%);
     --light-blue-transparent: hsla(190, 90%, 51%, 0.35);
     --marine-blue: hsl(206, 79%, 50%);
-    --nav-menu-background: hsla(0, 0%, 0%, 0.9);
+    --nav-menu-background: hsla(0, 0%, 0%, 0.12);
     --max-width: 1280px;
 }
 
@@ -27,7 +27,7 @@ html.light {
     --foreground-light: hsl(0, 0%, 40%);
     --foreground-extra-light: hsl(0, 0%, 80%);
     --foreground-highlight: hsl(0, 0%, 10%);
-    --nav-menu-background: hsla(0, 0%, 100%, 0.9);
+    --nav-menu-background: hsla(0, 0%, 100%, 0.12);
 }
 
 * {
