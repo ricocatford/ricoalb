@@ -59,9 +59,15 @@ void main() {
 	O=vec4(col,1);
 }`;
 
-export const Smoke: React.FC<{ children: React.ReactNode }> = ({
+interface SmokeProps {
+    children: React.ReactNode;
+    nav: React.ReactNode;
+}
+
+export const Smoke: React.FC<SmokeProps> = ({
     children,
-}) => {
+    nav,
+}): React.ReactNode => {
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const rendererRef = useRef<Renderer | null>(null);
     const animationFrameId = useRef<number | null>(null);
@@ -116,6 +122,7 @@ export const Smoke: React.FC<{ children: React.ReactNode }> = ({
     return (
         <div className={styles.backgroundContainer}>
             <canvas ref={canvasRef} className={styles.animatedCanvas} />
+            <div className={styles.navWrapper}>{nav}</div>
             <div className={styles.container}>{children}</div>
         </div>
     );

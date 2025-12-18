@@ -37,8 +37,7 @@ export default function RootLayout({
                     <GlobalStoreProvider>
                         <ThemeProvider>
                             <LanguageProvider>
-                                <Smoke>
-                                    <Navbar />
+                                <Smoke nav={<Navbar />}>
                                     <main>{children}</main>
                                 </Smoke>
                             </LanguageProvider>
