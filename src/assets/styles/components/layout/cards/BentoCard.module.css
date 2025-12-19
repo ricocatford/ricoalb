@@ -1,10 +1,16 @@
 .container {
+    position: relative;
     background: var(--card-background);
     backdrop-filter: blur(20px);
     border-radius: 2rem;
-    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
     grid-row: span 1;
     animation: var(--animation-slide-in-down) 1s;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 0px transparent;
 }
 
 .containerRegular {
@@ -15,8 +21,65 @@
     grid-column: span 2;
 }
 
+.link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.container:has(.link:hover) {
+    box-shadow: 0 0 20px var(--light-blue-transparent);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.labelContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: var(--foreground-light);
+    text-transform: uppercase;
+    letter-spacing: -0.05rem;
+    font-size: 0.8725rem;
+}
+
+.info {
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+
+.icon {
+    color: var(--foreground-light);
+}
+
 @media screen and (max-width: 1024px) {
     .containerWide {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .containerWide {
+        grid-column: span 2;
+    }
+
+    .containerRegular {
+        grid-column: span 1;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .containerWide,
+    .containerRegular {
         grid-column: span 1;
     }
 }

@@ -1,11 +1,11 @@
 import "@/lib/i18nClient";
 import { Trans } from "react-i18next";
+import Link from "next/link";
 import { BentoCard } from "@/components/layout/cards/BentoCard";
 import { IntroSection } from "@/types/HomeSection";
-import styles from "@/assets/styles/components/pages/home/IntroCard.module.css";
 import { LocationIcon } from "@/components/layout/icons/common/LocationIcon";
-import Link from "next/link";
 import { DownloadIcon } from "@/components/layout/icons/common/DownloadIcon";
+import styles from "@/assets/styles/components/pages/home/IntroCard.module.css";
 
 interface IntroCardProps {
     section: IntroSection;
@@ -26,7 +26,7 @@ export const IntroCard = ({ section }: IntroCardProps) => {
 
     return (
         <BentoCard variant="wide">
-            <div className={styles.container}>
+            <section className={styles.container}>
                 <header className={styles.header}>
                     <div className={styles.headingsContainer}>
                         <h1 className={styles.heading}>{section.heading}</h1>
@@ -56,7 +56,7 @@ export const IntroCard = ({ section }: IntroCardProps) => {
                         </span>
                     </div>
                 </Link>
-            </div>
+            </section>
         </BentoCard>
     );
 };

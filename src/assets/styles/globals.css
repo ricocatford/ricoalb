@@ -5,12 +5,12 @@
     --foreground-extra-light: hsl(0, 0%, 20%);
     --foreground-highlight: hsl(0, 0%, 90%);
     --background-gradient: linear-gradient(
-        45deg,
+        135deg,
         hsl(0, 0%, 10%),
         hsl(0, 0%, 15%)
     );
-    --light-blue: hsl(190, 90%, 51%);
-    --light-blue-transparent: hsla(190, 90%, 51%, 0.35);
+    --light-blue: hsl(190, 98%, 42%);
+    --light-blue-transparent: hsla(190, 98%, 42%, 0.35);
     --marine-blue: hsl(206, 79%, 50%);
     --nav-menu-background: hsl(0, 0%, 10%);
     --card-background: hsla(0, 0%, 0%, 0.12);
@@ -26,7 +26,7 @@ html.light {
     --foreground-extra-light: hsl(0, 0%, 80%);
     --foreground-highlight: hsl(0, 0%, 10%);
     --background-gradient: linear-gradient(
-        45deg,
+        135deg,
         hsl(0, 0%, 90%),
         hsl(0, 0%, 85%)
     );

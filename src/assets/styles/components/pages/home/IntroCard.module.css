@@ -109,8 +109,7 @@
 
 @media screen and (max-width: 576px) {
     .container {
-        min-height: 80vh;
-        justify-content: space-between;
+        gap: 2rem;
     }
 
     .header {
