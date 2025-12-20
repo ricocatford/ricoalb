@@ -1,3 +1,3 @@
 export default function AboutPage(): React.JSX.Element {
-    return <></>;
+    return <div className="container"></div>;
 }

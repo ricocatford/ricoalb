@@ -79,6 +79,7 @@ button {
     flex-direction: column;
     flex: 1 1 0%;
     gap: 1rem;
+    min-height: calc(100vh - (56px + 264px));
 }
 
 @media screen and (max-width: 768px) {

@@ -1,3 +1,3 @@
 export default function ProjectsPage(): React.JSX.Element {
-    return <></>;
+    return <div className="container"></div>;
 }

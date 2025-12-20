@@ -85,6 +85,10 @@
 }
 
 @media screen and (max-width: 768px) {
+    .container {
+        padding-bottom: 5rem;
+    }
+
     .logoCopyrightContainer {
         gap: 0.5rem;
         flex: 0 0 100%;
