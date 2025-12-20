@@ -78,5 +78,11 @@
                 "paragraph": "Have a challenging <bold>problem</bold> or an exciting <bold>idea</bold> that needs a clean, scalable solution? I'm eager to connect with clients and fellow developers. Let’s start turning <bold>concepts into reality</bold>."
             }
         ]
+    },
+    "footer": {
+        "copyrightText": "© 2026 All rights reserved.",
+        "attribution": "Content and Design by Ricardo Albarenque.",
+        "mainLinksHeading": "Site",
+        "socialLinksHeading": "Socials"
     }
 }

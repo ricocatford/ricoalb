@@ -78,5 +78,11 @@
                 "paragraph": "¿Tiene un <bold>problema</bold> desafiante o una <bold>idea</bold> emocionante que necesita una solución limpia y escalable? Estoy deseando conectar tanto con clientes como con otros desarrolladores. Empecemos a convertir los <bold>conceptos en realidad</bold>."
             }
         ]
+    },
+    "footer": {
+        "copyrightText": "© 2026 Todos los derechos reservados.",
+        "attribution": "Contenido y Diseño por Ricardo Albarenque.",
+        "mainLinksHeading": "Sitio",
+        "socialLinksHeading": "Redes Sociales"
     }
 }

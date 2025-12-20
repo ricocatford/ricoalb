@@ -4,7 +4,7 @@ import styles from "@/assets/styles/components/layout/navbar/Navbar.module.css";
 
 export const NavbarLogo = (): React.JSX.Element => {
     return (
-        <div className={styles.logoContainer}>
+        <div>
             <Link href="/">
                 <span className={styles.logoIcon}>
                     <LogoIcon />

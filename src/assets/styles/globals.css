@@ -12,6 +12,7 @@
     --light-blue: hsl(190, 98%, 42%);
     --light-blue-transparent: hsla(190, 98%, 42%, 0.35);
     --marine-blue: hsl(206, 79%, 50%);
+    --nav-background-transparent: hsla(0, 0%, 10%, 0.6);
     --nav-menu-background: hsl(0, 0%, 10%);
     --card-background: hsla(0, 0%, 0%, 0.12);
     --box-shadow: hsla(0, 0%, 80%, 0.6);
@@ -30,6 +31,7 @@ html.light {
         hsl(0, 0%, 90%),
         hsl(0, 0%, 85%)
     );
+    --nav-background-transparent: hsla(0, 0%, 90%, 0.6);
     --nav-menu-background: hsl(0, 0%, 90%);
     --card-background: hsla(0, 0%, 100%, 0.12);
     --box-shadow: hsla(0, 0%, 20%, 0.6);

@@ -7,6 +7,7 @@ import { ThemeProvider } from "@/providers/ThemeProvider";
 import { LanguageProvider } from "@/providers/LanguageProvider";
 import { Smoke } from "@/components/layout/background/Smoke";
 import { Navbar } from "@/components/layout/navbar/Navbar";
+import { Footer } from "@/components/layout/footer/Footer";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -39,6 +40,7 @@ export default function RootLayout({
                             <LanguageProvider>
                                 <Smoke nav={<Navbar />}>
                                     <main>{children}</main>
+                                    <Footer />
                                 </Smoke>
                             </LanguageProvider>
                         </ThemeProvider>
