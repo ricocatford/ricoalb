@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useGlobalStore } from "@/providers/GlobalStoreProvider";
 import { useTranslations } from "@/providers/LanguageProvider";
 import {
@@ -15,19 +15,37 @@ import { CheckIcon } from "../icons/common/CheckIcon";
 export const NavbarLanguage = (): React.JSX.Element => {
     const currentLanguage = useGlobalStore((state) => state.language);
     const setLanguage = useGlobalStore((state) => state.setLanguage);
+    const optionsContainerRef = useRef<HTMLDivElement>(null);
     const [isToggled, setIsToggled] = useState<boolean>(false);
 
     useEffect(() => {
+        const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+            if (
+                window.innerWidth > 768 &&
+                optionsContainerRef.current &&
+                !optionsContainerRef.current.contains(event.target as Node)
+            ) {
+                setIsToggled(false);
+            }
+        };
+
         const handleResize = () => {
             if (window.innerWidth > 768) {
                 setIsToggled(false);
             }
         };
 
+        document.addEventListener("mousedown", handleClickOutside);
+        document.addEventListener("touchstart", handleClickOutside);
         window.addEventListener("resize", handleResize);
+
         handleResize();
 
-        return () => window.removeEventListener("resize", handleResize);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+            document.removeEventListener("touchstart", handleClickOutside);
+            window.removeEventListener("resize", handleResize);
+        };
     }, []);
 
     const { translations } = useTranslations();
@@ -49,6 +67,14 @@ export const NavbarLanguage = (): React.JSX.Element => {
             options.length > 0 &&
             (options[0].value === "en" || options[0].value === "es")
         );
+    };
+
+    const handleLanguageSelect = (value: "en" | "es") => {
+        setLanguage(value);
+
+        setTimeout(() => {
+            setIsToggled(false);
+        }, 150);
     };
 
     if (!languageConfig || !isLanguageOptionArray(languageConfig.options)) {
@@ -90,12 +116,13 @@ export const NavbarLanguage = (): React.JSX.Element => {
                         ? styles.optionsContainer
                         : styles.optionsContainerActive
                 }
+                ref={optionsContainerRef}
             >
                 {languageConfig.options.map((option) => {
                     return (
                         <button
                             key={option.id}
-                            onClick={() => setLanguage(option.value)}
+                            onClick={() => handleLanguageSelect(option.value)}
                             className={styles.optionButton}
                             aria-label="Select Language"
                         >

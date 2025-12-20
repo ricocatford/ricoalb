@@ -133,13 +133,6 @@
     padding: 0.5rem 0.625rem;
 }
 
-.optionsContainerActive {
-    display: flex;
-    flex-direction: column;
-    background: var(--background);
-    border-radius: 0.5rem;
-}
-
 .optionIconActive {
     color: var(--foreground-light);
 }
