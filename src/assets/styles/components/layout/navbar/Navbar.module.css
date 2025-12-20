@@ -97,19 +97,29 @@
 }
 
 .optionsContainer {
-    display: none;
-}
-
-.optionsContainerActive {
-    position: absolute;
-    top: 58px;
-    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    transform: translateY(-10px);
     display: flex;
     flex-direction: column;
     background: var(--background);
     border-radius: 0.5rem;
     min-width: 180px;
     box-shadow: 0 0 8px var(--light-blue-transparent);
+    position: absolute;
+    top: 58px;
+    right: 0;
+    z-index: 100;
+}
+
+.optionsContainerActive {
+    opacity: 1;
+    visibility: visible;
+    max-height: 500px;
+    transform: translateY(0);
 }
 
 .settingButton,
@@ -237,9 +247,15 @@
         padding: 0.75rem 0.625rem;
     }
 
-    .optionsContainerActive {
+    .optionsContainer {
         position: static;
         width: 100%;
+        box-shadow: none; /* Usually cleaner on mobile accordions */
+        transform: none; /* Slide down instead of fade/float */
+    }
+
+    .optionsContainerActive {
+        max-height: 500px;
     }
 
     .optionLabel {

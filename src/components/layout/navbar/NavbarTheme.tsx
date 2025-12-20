@@ -55,6 +55,14 @@ export const NavbarTheme = (): React.JSX.Element => {
         );
     };
 
+    const handleThemeSelect = (value: "dark" | "light") => {
+        setTheme(value);
+
+        setTimeout(() => {
+            setIsToggled(false);
+        }, 150);
+    };
+
     if (!themeConfig || !isThemeOptionArray(themeConfig.options)) {
         return <></>;
     }
@@ -97,17 +105,15 @@ export const NavbarTheme = (): React.JSX.Element => {
                 </span>
             </div>
             <div
-                className={
-                    !isToggled
-                        ? styles.optionsContainer
-                        : styles.optionsContainerActive
-                }
+                className={`${styles.optionsContainer} ${
+                    isToggled ? styles.optionsContainerActive : ""
+                }`}
             >
                 {themeConfig.options.map((option) => {
                     return (
                         <button
                             key={option.id}
-                            onClick={() => setTheme(option.value)}
+                            onClick={() => handleThemeSelect(option.value)}
                             className={styles.optionButton}
                             aria-label="Select Theme"
                         >

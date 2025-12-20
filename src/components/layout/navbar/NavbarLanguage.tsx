@@ -111,11 +111,9 @@ export const NavbarLanguage = (): React.JSX.Element => {
                 </span>
             </div>
             <div
-                className={
-                    !isToggled
-                        ? styles.optionsContainer
-                        : styles.optionsContainerActive
-                }
+                className={`${styles.optionsContainer} ${
+                    isToggled ? styles.optionsContainerActive : ""
+                }`}
                 ref={optionsContainerRef}
             >
                 {languageConfig.options.map((option) => {
