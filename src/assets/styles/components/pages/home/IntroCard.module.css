@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
+    padding: 1rem;
     gap: 2rem;
 }
 
@@ -109,7 +109,7 @@
 
 @media screen and (max-width: 576px) {
     .container {
-        gap: 2rem;
+        padding: 0.5rem;
     }
 
     .header {

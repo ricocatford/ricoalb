@@ -30,6 +30,8 @@
             {
                 "id": 3,
                 "type": "stats",
+                "label": "estadísticas",
+                "info": "Impacto generado",
                 "stats": [
                     { "id": 0, "label": "Años de experiencia", "value": "3" },
                     { "id": 1, "label": "Proyectos completados", "value": "5" },

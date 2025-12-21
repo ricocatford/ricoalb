@@ -1,6 +1,7 @@
 import { BentoCard } from "@/components/layout/cards/BentoCard";
 import { StatsSection } from "@/types/HomeSection";
 import styles from "@/assets/styles/components/pages/home/StatsCard.module.css";
+import cardStyles from "@/assets/styles/components/layout/cards/BentoCard.module.css";
 
 interface StatsCardProps {
     section: StatsSection;
@@ -20,6 +21,12 @@ export const StatsCard = ({ section }: StatsCardProps) => {
                     ))}
                 </dl>
             </div>
+            <footer className={cardStyles.footer}>
+                <div className={cardStyles.labelContainer}>
+                    <span className={cardStyles.label}>{section.label}</span>
+                    <span className={cardStyles.info}>{section.info}</span>
+                </div>
+            </footer>
         </BentoCard>
     );
 };

@@ -34,8 +34,15 @@ export type ProjectsSection = HomeSection & LabelSection & LinkSection & {
     heading: string;
 }
 
-export type BlogSection = HomeSection & LabelSection & LinkSection & {
-    type: "blog";
+export type StatItem = {
+    id: number;
+    label: string;
+    value: string;
+}
+
+export type StatsSection = HomeSection & LabelSection & {
+    type: "stats";
+    stats: StatItem[];
 }
 
 export type ServiceIconKey = "UIUXIcon" | "DesignIcon" | "FrontendIcon" | "BackendIcon" | "SEOIcon";
@@ -62,15 +69,8 @@ export type SocialsSection = HomeSection & LabelSection & {
     socials: SocialItem[];
 }
 
-export type StatItem = {
-    id: number;
-    label: string;
-    value: string;
-}
-
-export type StatsSection = HomeSection & {
-    type: "stats";
-    stats: StatItem[];
+export type BlogSection = HomeSection & LabelSection & LinkSection & {
+    type: "blog";
 }
 
 export type ContactSection = HomeSection & LinkSection & {

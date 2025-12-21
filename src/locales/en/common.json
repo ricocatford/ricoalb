@@ -30,6 +30,8 @@
             {
                 "id": 3,
                 "type": "stats",
+                "label": "stats",
+                "info": "Impact delivered",
                 "stats": [
                     { "id": 0, "label": "Years of experience", "value": "3" },
                     { "id": 1, "label": "Projects completed", "value": "5" },
