@@ -44,10 +44,36 @@
                 "isLink": true,
                 "href": "/services",
                 "services": [
-                    { "id": 0, "label": "Backend", "icon": "BackendIcon" },
-                    { "id": 1, "label": "Frontend", "icon": "FrontendIcon" },
-                    { "id": 2, "label": "SEO", "icon": "SEOIcon" },
-                    { "id": 3, "label": "Diseño", "icon": "DesignIcon" }
+                    {
+                        "id": 0,
+                        "label": "Estrategia UI/UX",
+                        "icon": "UIUXIcon",
+                        "info": "<bold>Descubrimiento</bold>: Resolviendo el <bold>porqué</bold> y el <bold>cómo</bold>."
+                    },
+                    {
+                        "id": 1,
+                        "label": "Diseño Visual",
+                        "icon": "DesignIcon",
+                        "info": "<bold>Estética</bold>: La <bold>apariencia</bold> y la <bold>sensación</bold>."
+                    },
+                    {
+                        "id": 2,
+                        "label": "Desarrollo Frontend",
+                        "icon": "FrontendIcon",
+                        "info": "<bold>Interacción</bold>: Haciéndolo <bold>realidad</bold>."
+                    },
+                    {
+                        "id": 3,
+                        "label": "Desarrollo Backend",
+                        "icon": "BackendIcon",
+                        "info": "<bold>Lógica</bold>: El <bold>motor</bold> bajo el capó."
+                    },
+                    {
+                        "id": 4,
+                        "label": "SEO y Crecimiento",
+                        "icon": "SEOIcon",
+                        "info": "<bold>Éxito</bold>: Logrando que el sitio sea <bold>visto</bold>."
+                    }
                 ]
             },
             {

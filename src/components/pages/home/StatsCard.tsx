@@ -14,8 +14,8 @@ export const StatsCard = ({ section }: StatsCardProps) => {
                 <dl className={styles.statsList}>
                     {section.stats.map((stat) => (
                         <div key={stat.id} className={styles.statItem}>
-                            <dd className={styles.statLabel}>{stat.label}</dd>
-                            <dt className={styles.statValue}>{stat.value}</dt>
+                            <dt className={styles.statLabel}>{stat.label}</dt>
+                            <dd className={styles.statValue}>{stat.value}</dd>
                         </div>
                     ))}
                 </dl>

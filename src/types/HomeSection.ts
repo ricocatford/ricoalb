@@ -38,10 +38,13 @@ export type BlogSection = HomeSection & LabelSection & LinkSection & {
     type: "blog";
 }
 
+export type ServiceIconKey = "UIUXIcon" | "DesignIcon" | "FrontendIcon" | "BackendIcon" | "SEOIcon";
+
 export type ServiceItem = {
     id: number;
     label: string;
-    icon: string;
+    icon: ServiceIconKey;
+    info: string;
 }
 
 export type ServicesSection = HomeSection & LabelSection & LinkSection & {
