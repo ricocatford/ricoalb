@@ -2,15 +2,20 @@ import Link from "next/link";
 import { BentoCard } from "@/components/layout/cards/BentoCard";
 import { ServiceIconKey, ServicesSection } from "@/types/HomeSection";
 import { LinkIcon } from "@/components/layout/icons/common/LinkIcon";
+import { UIUXIcon } from "@/components/layout/icons/services/UIUXIcon";
+import { DesignIcon } from "@/components/layout/icons/services/DesignIcon";
+import { FrontendIcon } from "@/components/layout/icons/services/FrontendIcon";
+import { BackendIcon } from "@/components/layout/icons/services/BackendIcon";
+import { SEOIcon } from "@/components/layout/icons/services/SEOIcon";
 import styles from "@/assets/styles/components/pages/home/ServicesCard.module.css";
 import cardStyles from "@/assets/styles/components/layout/cards/BentoCard.module.css";
 
 const iconList: Record<ServiceIconKey, React.JSX.Element> = {
-    UIUXIcon: <></>,
-    DesignIcon: <></>,
-    FrontendIcon: <></>,
-    BackendIcon: <p>b</p>,
-    SEOIcon: <></>,
+    UIUXIcon: <UIUXIcon width={48} height={48} />,
+    DesignIcon: <DesignIcon width={48} height={48} />,
+    FrontendIcon: <FrontendIcon width={48} height={48} />,
+    BackendIcon: <BackendIcon width={48} height={48} />,
+    SEOIcon: <SEOIcon width={48} height={48} />,
 };
 interface ServicesCardProps {
     section: ServicesSection;
