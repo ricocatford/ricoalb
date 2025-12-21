@@ -66,13 +66,13 @@
                         "id": 3,
                         "label": "Backend Development",
                         "icon": "BackendIcon",
-                        "info": "<bold>Logic</bold>: The <bold>engine</bold> under the hood."
+                        "info": "<bold>Logic</bold>: All the internal <bold>engineering</bold>."
                     },
                     {
                         "id": 4,
                         "label": "SEO & Growth",
                         "icon": "SEOIcon",
-                        "info": "<bold>Success/bold>: Getting the site <bold>seen</bold>."
+                        "info": "<bold>Success</bold>: Getting the site <bold>seen</bold>."
                     }
                 ]
             },

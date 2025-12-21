@@ -1,3 +1,6 @@
+import "@/lib/i18nClient";
+import { Trans } from "react-i18next";
+import { useState } from "react";
 import Link from "next/link";
 import { BentoCard } from "@/components/layout/cards/BentoCard";
 import { ServiceIconKey, ServicesSection } from "@/types/HomeSection";
@@ -22,12 +25,33 @@ interface ServicesCardProps {
 }
 
 export const ServicesCard = ({ section }: ServicesCardProps) => {
+    const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+    const renderRichText = (content: string) => (
+        <Trans
+            defaults={content}
+            components={{
+                bold: <span className={styles.bold} />,
+            }}
+        >
+            {content}
+        </Trans>
+    );
+
     return (
         <BentoCard variant="wide">
-            <section className={styles.container}>
+            <section
+                className={styles.container}
+                onMouseLeave={() => setActiveIndex(null)}
+            >
                 <dl className={styles.servicesList}>
-                    {section.services.map((service) => (
-                        <div key={service.id} className={styles.serviceItem}>
+                    {section.services.map((service, index) => (
+                        <div
+                            key={service.id}
+                            className={styles.serviceItem}
+                            style={{ "--index": index } as React.CSSProperties}
+                            onMouseEnter={() => setActiveIndex(index)}
+                        >
                             <dt className={styles.serviceLabel}>
                                 {service.label}
                             </dt>
@@ -37,6 +61,13 @@ export const ServicesCard = ({ section }: ServicesCardProps) => {
                         </div>
                     ))}
                 </dl>
+                <div className={styles.serviceInfoContainer}>
+                    {activeIndex !== null && (
+                        <p className={styles.serviceInfo} key={activeIndex}>
+                            {renderRichText(section.services[activeIndex].info)}
+                        </p>
+                    )}
+                </div>
             </section>
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
