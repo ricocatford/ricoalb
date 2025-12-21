@@ -43,6 +43,11 @@ export const ServicesCard = ({ section }: ServicesCardProps) => {
             <section
                 className={styles.container}
                 onMouseLeave={() => setActiveIndex(null)}
+                onTouchStart={(e) => {
+                    if (e.target === e.currentTarget) {
+                        setActiveIndex(null);
+                    }
+                }}
             >
                 <dl className={styles.servicesList}>
                     {section.services.map((service, index) => (
@@ -51,6 +56,9 @@ export const ServicesCard = ({ section }: ServicesCardProps) => {
                             className={styles.serviceItem}
                             style={{ "--index": index } as React.CSSProperties}
                             onMouseEnter={() => setActiveIndex(index)}
+                            onTouchStart={(e) => {
+                                setActiveIndex(index);
+                            }}
                         >
                             <dt className={styles.serviceLabel}>
                                 {service.label}

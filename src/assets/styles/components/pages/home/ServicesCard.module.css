@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .servicesList {
@@ -47,6 +47,7 @@
 }
 
 .serviceInfo {
+    letter-spacing: -0.025rem;
     animation: var(--animation-reveal-element) 0.5s ease-out forwards;
     -webkit-font-smoothing: antialiased;
 }
