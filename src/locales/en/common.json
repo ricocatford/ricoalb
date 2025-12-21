@@ -58,13 +58,13 @@
                     },
                     {
                         "id": 2,
-                        "label": "Frontend Dev",
+                        "label": "Frontend Development",
                         "icon": "FrontendIcon",
                         "info": "<bold>Interaction</bold>: Making it <bold>real</bold>."
                     },
                     {
                         "id": 3,
-                        "label": "Backend Dev",
+                        "label": "Backend Development",
                         "icon": "BackendIcon",
                         "info": "<bold>Logic</bold>: The <bold>engine</bold> under the hood."
                     },

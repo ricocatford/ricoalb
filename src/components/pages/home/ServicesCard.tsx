@@ -11,11 +11,11 @@ import styles from "@/assets/styles/components/pages/home/ServicesCard.module.cs
 import cardStyles from "@/assets/styles/components/layout/cards/BentoCard.module.css";
 
 const iconList: Record<ServiceIconKey, React.JSX.Element> = {
-    UIUXIcon: <UIUXIcon width={48} height={48} />,
-    DesignIcon: <DesignIcon width={48} height={48} />,
-    FrontendIcon: <FrontendIcon width={48} height={48} />,
-    BackendIcon: <BackendIcon width={48} height={48} />,
-    SEOIcon: <SEOIcon width={48} height={48} />,
+    UIUXIcon: <UIUXIcon width={40} height={40} />,
+    DesignIcon: <DesignIcon width={40} height={40} />,
+    FrontendIcon: <FrontendIcon width={40} height={40} />,
+    BackendIcon: <BackendIcon width={40} height={40} />,
+    SEOIcon: <SEOIcon width={40} height={40} />,
 };
 interface ServicesCardProps {
     section: ServicesSection;
