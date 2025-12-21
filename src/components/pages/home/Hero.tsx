@@ -38,9 +38,9 @@ export const Hero = (): React.JSX.Element => {
                                     section={section}
                                 />
                             );
-                        case "blog":
+                        case "stats":
                             return (
-                                <BlogCard key={section.id} section={section} />
+                                <StatsCard key={section.id} section={section} />
                             );
                         case "services":
                             return (
@@ -56,9 +56,9 @@ export const Hero = (): React.JSX.Element => {
                                     section={section}
                                 />
                             );
-                        case "stats":
+                        case "blog":
                             return (
-                                <StatsCard key={section.id} section={section} />
+                                <BlogCard key={section.id} section={section} />
                             );
                         case "contact":
                             return (

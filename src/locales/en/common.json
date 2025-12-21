@@ -29,11 +29,12 @@
             },
             {
                 "id": 3,
-                "type": "blog",
-                "label": "blog",
-                "info": "Start reading",
-                "isLink": true,
-                "href": "/blog"
+                "type": "stats",
+                "stats": [
+                    { "id": 0, "label": "Years of Experience", "value": "3" },
+                    { "id": 1, "label": "Projects completed", "value": "5" },
+                    { "id": 2, "label": "Satisfied customers", "value": "2" }
+                ]
             },
             {
                 "id": 4,
@@ -62,12 +63,11 @@
             },
             {
                 "id": 6,
-                "type": "stats",
-                "stats": [
-                    { "id": 0, "label": "Years of Experience", "value": "3+" },
-                    { "id": 1, "label": "Projects completed", "value": "5" },
-                    { "id": 2, "label": "Satisfied customers", "value": "2" }
-                ]
+                "type": "blog",
+                "label": "blog",
+                "info": "Start reading",
+                "isLink": true,
+                "href": "/blog"
             },
             {
                 "id": 7,
