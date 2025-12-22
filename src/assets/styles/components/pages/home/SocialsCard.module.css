@@ -1,8 +1,43 @@
 .container {
     display: flex;
     flex-direction: column;
+    height: 100%;
     padding: 1rem;
     gap: 2rem;
+}
+
+.socialLinkList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    height: 100%;
+}
+
+.socialIconContainer {
+    background: var(--background-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 64px;
+    height: 64px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+}
+
+.socialIcon {
+    color: var(--foreground-light);
+    transition: all 0.5s ease;
+}
+
+.socialLink:hover .socialIconContainer {
+    box-shadow: 0 0 20px var(--light-blue-transparent);
+}
+
+.socialLink:hover .socialIcon {
+    color: var(--foreground);
 }
 
 @media screen and (max-width: 576px) {

@@ -84,9 +84,21 @@
                 "label": "redes sociales",
                 "info": "Conectemos",
                 "socials": [
-                    { "id": 0, "icon": "LinkedinIcon" },
-                    { "id": 1, "icon": "GithubIcon" },
-                    { "id": 2, "icon": "DiscordIcon" }
+                    {
+                        "id": 0,
+                        "icon": "LinkedinIcon",
+                        "href": "https://www.linkedin.com/in/ricardo-albarenque"
+                    },
+                    {
+                        "id": 1,
+                        "icon": "GithubIcon",
+                        "href": "https://github.com/ricocatford"
+                    },
+                    {
+                        "id": 2,
+                        "icon": "DiscordIcon",
+                        "href": "https://github.com/ricocatford"
+                    }
                 ]
             },
             {

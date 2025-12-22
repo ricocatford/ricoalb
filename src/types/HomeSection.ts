@@ -59,9 +59,12 @@ export type ServicesSection = HomeSection & LabelSection & LinkSection & {
     services: ServiceItem[];
 }
 
+export type SocialIconKey = "LinkedinIcon" | "GithubIcon" | "DiscordIcon";
+
 export type SocialItem = {
     id: number;
-    icon: string;
+    icon: SocialIconKey;
+    href: string;
 }
 
 export type SocialsSection = HomeSection & LabelSection & {
