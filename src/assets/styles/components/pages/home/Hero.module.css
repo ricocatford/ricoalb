@@ -1,17 +1,48 @@
 .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "intro intro about projects"
+        "stats services services socials"
+        "blog blog contact contact";
     gap: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
     .grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "intro about"
+            "projects services"
+            "stats socials"
+            "blog contact";
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-areas:
+            "intro intro"
+            "about projects"
+            "services services"
+            "stats socials"
+            "blog blog"
+            "contact contact";
     }
 }
 
 @media screen and (max-width: 576px) {
     .grid {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        grid-template-areas:
+            "intro"
+            "about"
+            "projects"
+            "services"
+            "stats"
+            "socials"
+            "blog"
+            "contact";
     }
 }

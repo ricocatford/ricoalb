@@ -8,18 +8,12 @@
     justify-content: space-between;
     gap: 2rem;
     padding: 1rem;
-    grid-row: span 1;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
     animation: var(--animation-slide-in-down) 1s;
     transition: all 0.5s ease-in-out;
     box-shadow: 0 0 0px transparent;
-}
-
-.containerRegular {
-    grid-column: span 1;
-}
-
-.containerWide {
-    grid-column: span 2;
 }
 
 .container:has(.link:hover) {
@@ -49,27 +43,4 @@
 
 .icon {
     color: var(--foreground-light);
-}
-
-@media screen and (max-width: 1024px) {
-    .containerWide {
-        grid-column: span 1;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .containerWide {
-        grid-column: span 2;
-    }
-
-    .containerRegular {
-        grid-column: span 1;
-    }
-}
-
-@media screen and (max-width: 576px) {
-    .containerWide,
-    .containerRegular {
-        grid-column: span 1;
-    }
 }

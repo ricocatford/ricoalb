@@ -1,21 +1,16 @@
 import styles from "@/assets/styles/components/layout/cards/BentoCard.module.css";
 
 interface BentoCardProps {
-    variant: "regular" | "wide";
+    gridArea: string;
     children: React.ReactNode;
 }
 
 export const BentoCard = ({
-    variant,
+    gridArea,
     children,
 }: BentoCardProps): React.JSX.Element => {
-    const variantStyles = {
-        regular: styles.containerRegular,
-        wide: styles.containerWide,
-    };
-
     return (
-        <article className={`${styles.container} ${variantStyles[variant]}`}>
+        <article className={styles.container} style={{ gridArea: gridArea }}>
             {children}
         </article>
     );

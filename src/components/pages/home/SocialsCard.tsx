@@ -18,7 +18,7 @@ interface SocialsCardProps {
 
 export const SocialsCard = ({ section }: SocialsCardProps) => {
     return (
-        <BentoCard variant="regular">
+        <BentoCard gridArea={section.type}>
             <section className={styles.container}>
                 <ul className={styles.socialLinkList}>
                     {section.socials.map((social) => (

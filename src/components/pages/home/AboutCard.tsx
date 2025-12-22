@@ -12,7 +12,7 @@ interface AboutCardProps {
 
 export const AboutCard = ({ section }: AboutCardProps) => {
     return (
-        <BentoCard variant="regular">
+        <BentoCard gridArea={section.type}>
             <section className={styles.container}>
                 <div className={styles.logoContainer}>
                     <span className={styles.logoIcon}>

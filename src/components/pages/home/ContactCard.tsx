@@ -25,7 +25,7 @@ export const ContactCard = ({ section }: ContactCardProps) => {
     );
 
     return (
-        <BentoCard variant="wide">
+        <BentoCard gridArea={section.type}>
             <section className={styles.container}>
                 <header>
                     <h2 className={styles.heading}>

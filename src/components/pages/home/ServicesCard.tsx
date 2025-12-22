@@ -39,7 +39,7 @@ export const ServicesCard = ({ section }: ServicesCardProps) => {
     );
 
     return (
-        <BentoCard variant="wide">
+        <BentoCard gridArea={section.type}>
             <section
                 className={styles.container}
                 onMouseLeave={() => setActiveIndex(null)}

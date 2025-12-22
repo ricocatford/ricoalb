@@ -8,9 +8,8 @@ interface StatsCardProps {
 }
 
 export const StatsCard = ({ section }: StatsCardProps) => {
-    console.log("Section stats: ", section.stats);
     return (
-        <BentoCard variant="regular">
+        <BentoCard gridArea={section.type}>
             <div className={styles.container}>
                 <dl className={styles.statsList}>
                     {section.stats.map((stat) => (

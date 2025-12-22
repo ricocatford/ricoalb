@@ -11,7 +11,7 @@ interface ProjectsCardProps {
 
 export const ProjectsCard = ({ section }: ProjectsCardProps) => {
     return (
-        <BentoCard variant="regular">
+        <BentoCard gridArea={section.type}>
             <section className={styles.container}></section>
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
