@@ -1,8 +1,10 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    justify-content: space-between;
     gap: 1rem;
+    padding: 1rem;
+    height: 100%;
 }
 
 .servicesList {
@@ -65,13 +67,21 @@
     }
 
     .serviceItem {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: row-reverse;
+        justify-content: start;
+        gap: 1rem;
         width: 100%;
     }
 
     .serviceLabel {
+        max-width: none;
+        font-size: 1rem;
         text-align: left;
+    }
+
+    .serviceIcon svg {
+        width: 28px !important;
+        height: 28px !important;
     }
 
     .serviceInfoContainer {
