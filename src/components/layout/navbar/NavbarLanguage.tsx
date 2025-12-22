@@ -9,8 +9,8 @@ import {
 } from "@/types/NavConfig";
 import { LanguageIcon } from "../icons/navbar/LanguageIcon";
 import { DropdownIcon } from "../icons/common/DropdownIcon";
-import styles from "@/assets/styles/components/layout/navbar/Navbar.module.css";
 import { CheckIcon } from "../icons/common/CheckIcon";
+import styles from "@/assets/styles/components/layout/navbar/Navbar.module.css";
 
 export const NavbarLanguage = (): React.JSX.Element => {
     const currentLanguage = useGlobalStore((state) => state.language);

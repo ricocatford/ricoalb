@@ -59,7 +59,7 @@
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 0.625rem;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease;
 }
 
 .mainLink:hover,
@@ -129,6 +129,7 @@
     gap: 1.25rem;
     color: var(--foreground);
     padding: 0.5rem 0.625rem;
+    transition: all 0.25s ease;
 }
 
 .settingButton:hover {
