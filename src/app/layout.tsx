@@ -18,7 +18,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
     title: "Ricardo Albarenque",
-    description: "Full-Stack Developer",
+    description:
+        "Full-Stack Developer specializing in high-performance Next.js applications and modern web architecture.",
     keywords: [
         "Ricardo Albarenque",
         "Full-Stack Developer",
@@ -30,6 +31,11 @@ export const metadata: Metadata = {
         "Vercel",
         "Web Development Portfolio",
     ],
+    openGraph: {
+        title: "Ricardo Albarenque | Full-Stack Developer",
+        description: "Building scalable and modern web experiences.",
+        type: "website",
+    },
 };
 
 export const viewport: Viewport = {
