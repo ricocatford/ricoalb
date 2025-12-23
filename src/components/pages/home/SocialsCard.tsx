@@ -36,7 +36,7 @@ export const SocialsCard = ({ section }: SocialsCardProps) => {
             </section>
             <footer className={cardStyles.footer}>
                 <div className={cardStyles.labelContainer}>
-                    <span className={cardStyles.label}>{section.label}</span>
+                    <h2 className={cardStyles.label}>{section.label}</h2>
                     <span className={cardStyles.info}>{section.info}</span>
                 </div>
             </footer>

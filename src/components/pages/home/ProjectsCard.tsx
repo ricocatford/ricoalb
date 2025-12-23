@@ -12,13 +12,13 @@ interface ProjectsCardProps {
 export const ProjectsCard = ({ section }: ProjectsCardProps) => {
     return (
         <BentoCard gridArea={section.type}>
-            <section className={styles.container}></section>
+            <section className={styles.container}>
+                <h3 className={styles.heading}>{section.heading}</h3>
+            </section>
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
                     <div className={cardStyles.labelContainer}>
-                        <span className={cardStyles.label}>
-                            {section.label}
-                        </span>
+                        <h2 className={cardStyles.label}>{section.label}</h2>
                         <span className={cardStyles.info}>{section.info}</span>
                     </div>
                     <span className={cardStyles.icon}>

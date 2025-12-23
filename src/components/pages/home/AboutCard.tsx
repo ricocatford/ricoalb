@@ -23,9 +23,9 @@ export const AboutCard = ({ section }: AboutCardProps) => {
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
                     <div className={cardStyles.labelContainer}>
-                        <span className={cardStyles.label}>
+                        <h2 className={cardStyles.label}>
                             {section.label}
-                        </span>
+                        </h2>
                         <span className={cardStyles.info}>{section.info}</span>
                     </div>
                     <span className={cardStyles.icon}>

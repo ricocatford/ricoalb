@@ -33,6 +33,7 @@
 .label {
     color: var(--foreground-light);
     text-transform: uppercase;
+    font-weight: 400;
     font-size: 0.8725rem;
 }
 

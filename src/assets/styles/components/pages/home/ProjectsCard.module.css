@@ -5,6 +5,25 @@
     gap: 2rem;
 }
 
+.heading {
+    color: var(--foreground);
+    background: linear-gradient(
+        0deg,
+        var(--foreground),
+        var(--foreground-extra-light)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    letter-spacing: -0.05rem;
+    line-height: 0.95;
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+}
+
 @media screen and (max-width: 576px) {
     .container {
         padding: 0.5rem;
