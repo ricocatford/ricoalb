@@ -25,7 +25,7 @@ export const IntroCard = ({ section }: IntroCardProps) => {
     );
 
     return (
-        <BentoCard variant="wide" gridArea={section.type}>
+        <BentoCard gridArea={section.type}>
             <section className={styles.container}>
                 <header className={styles.header}>
                     <div className={styles.headingsContainer}>
