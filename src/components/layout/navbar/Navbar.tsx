@@ -5,7 +5,11 @@ import styles from "@/assets/styles/components/layout/navbar/Navbar.module.css";
 export const Navbar = (): React.JSX.Element => {
     return (
         <header>
-            <nav aria-label="Main navigation" className={styles.nav}>
+            <nav
+                aria-label="Main navigation"
+                role="navigation"
+                className={styles.nav}
+            >
                 <div className={styles.container}>
                     <NavbarLogo />
                     <NavbarClient />

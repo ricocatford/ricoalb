@@ -26,7 +26,7 @@ export const ContactCard = ({ section }: ContactCardProps) => {
 
     return (
         <BentoCard gridArea={section.type}>
-            <section className={styles.container}>
+            <div className={styles.container}>
                 <header>
                     <h2 className={styles.heading}>
                         {renderRichText(section.heading)}
@@ -35,7 +35,7 @@ export const ContactCard = ({ section }: ContactCardProps) => {
                 <p className={styles.paragraph}>
                     {renderRichText(section.paragraph)}
                 </p>
-            </section>
+            </div>
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
                     <div></div>

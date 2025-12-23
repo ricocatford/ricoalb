@@ -12,7 +12,7 @@ interface BlogCardProps {
 export const BlogCard = ({ section }: BlogCardProps) => {
     return (
         <BentoCard gridArea={section.type}>
-            <section className={styles.container}></section>
+            <div className={styles.container}></div>
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
                     <div className={cardStyles.labelContainer}>

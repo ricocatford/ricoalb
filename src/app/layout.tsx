@@ -60,7 +60,7 @@ export default function RootLayout({
                         <ThemeProvider>
                             <LanguageProvider>
                                 <Smoke nav={<Navbar />}>
-                                    <main>{children}</main>
+                                    <main role="main">{children}</main>
                                     <Footer />
                                 </Smoke>
                             </LanguageProvider>

@@ -13,19 +13,17 @@ interface AboutCardProps {
 export const AboutCard = ({ section }: AboutCardProps) => {
     return (
         <BentoCard gridArea={section.type}>
-            <section className={styles.container}>
+            <div className={styles.container}>
                 <div className={styles.logoContainer}>
                     <span className={styles.logoIcon}>
                         <LogoIcon width={96} height={96} />
                     </span>
                 </div>
-            </section>
+            </div>
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
                     <div className={cardStyles.labelContainer}>
-                        <h2 className={cardStyles.label}>
-                            {section.label}
-                        </h2>
+                        <h2 className={cardStyles.label}>{section.label}</h2>
                         <span className={cardStyles.info}>{section.info}</span>
                     </div>
                     <span className={cardStyles.icon}>

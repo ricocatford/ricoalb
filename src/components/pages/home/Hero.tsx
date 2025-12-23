@@ -19,7 +19,7 @@ export const Hero = (): React.JSX.Element => {
     if (!data) return <></>;
 
     return (
-        <section className="container">
+        <section role="region" className="container">
             <div className={styles.grid}>
                 {data.sections.map((section: Section) => {
                     switch (section.type) {

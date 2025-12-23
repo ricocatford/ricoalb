@@ -26,7 +26,7 @@ export const IntroCard = ({ section }: IntroCardProps) => {
 
     return (
         <BentoCard gridArea={section.type}>
-            <section className={styles.container}>
+            <div className={styles.container}>
                 <header className={styles.header}>
                     <div className={styles.headingsContainer}>
                         <h1 className={styles.heading}>{section.heading}</h1>
@@ -56,7 +56,7 @@ export const IntroCard = ({ section }: IntroCardProps) => {
                         </span>
                     </div>
                 </Link>
-            </section>
+            </div>
         </BentoCard>
     );
 };

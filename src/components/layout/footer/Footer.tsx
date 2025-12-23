@@ -5,7 +5,7 @@ import { FooterLinks } from "./FooterLinks";
 
 export const Footer = (): React.JSX.Element => {
     return (
-        <footer className={styles.footer}>
+        <footer role="contentinfo" className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.logoCopyrightContainer}>
                     <FooterLogo />

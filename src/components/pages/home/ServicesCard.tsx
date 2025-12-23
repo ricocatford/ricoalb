@@ -40,7 +40,7 @@ export const ServicesCard = ({ section }: ServicesCardProps) => {
 
     return (
         <BentoCard gridArea={section.type}>
-            <section
+            <div
                 className={styles.container}
                 onMouseLeave={() => setActiveIndex(null)}
                 onTouchStart={(e) => {
@@ -76,7 +76,7 @@ export const ServicesCard = ({ section }: ServicesCardProps) => {
                         </p>
                     )}
                 </div>
-            </section>
+            </div>
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
                     <div className={cardStyles.labelContainer}>

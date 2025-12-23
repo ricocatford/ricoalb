@@ -19,7 +19,7 @@ interface SocialsCardProps {
 export const SocialsCard = ({ section }: SocialsCardProps) => {
     return (
         <BentoCard gridArea={section.type}>
-            <section className={styles.container}>
+            <div className={styles.container}>
                 <ul className={styles.socialLinkList}>
                     {section.socials.map((social) => (
                         <li key={social.id} className={styles.socialLink}>
@@ -33,7 +33,7 @@ export const SocialsCard = ({ section }: SocialsCardProps) => {
                         </li>
                     ))}
                 </ul>
-            </section>
+            </div>
             <footer className={cardStyles.footer}>
                 <div className={cardStyles.labelContainer}>
                     <h2 className={cardStyles.label}>{section.label}</h2>
