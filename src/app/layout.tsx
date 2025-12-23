@@ -1,5 +1,7 @@
 import "@/assets/styles/globals.css";
 import type { Metadata, Viewport } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import { HydrationClient } from "@/components/layout/HydrationClient";
 import { GlobalStoreProvider } from "@/providers/GlobalStoreProvider";
@@ -17,6 +19,17 @@ const inter = Inter({
 export const metadata: Metadata = {
     title: "Ricardo Albarenque",
     description: "Full-Stack Developer",
+    keywords: [
+        "Ricardo Albarenque",
+        "Full-Stack Developer",
+        "Software Engineer",
+        "Next.js Developer",
+        "React Expert",
+        "TypeScript",
+        "Node.js",
+        "Vercel",
+        "Web Development Portfolio",
+    ],
 };
 
 export const viewport: Viewport = {
@@ -34,6 +47,8 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${inter.variable}`}>
+                <Analytics />
+                <SpeedInsights />
                 <HydrationClient>
                     <GlobalStoreProvider>
                         <ThemeProvider>
