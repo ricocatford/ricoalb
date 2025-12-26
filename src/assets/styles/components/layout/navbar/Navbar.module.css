@@ -251,8 +251,8 @@
     .optionsContainer {
         position: static;
         width: 100%;
-        box-shadow: none; /* Usually cleaner on mobile accordions */
-        transform: none; /* Slide down instead of fade/float */
+        box-shadow: none;
+        transform: none;
     }
 
     .optionsContainerActive {
