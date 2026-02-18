@@ -36,6 +36,9 @@ export const metadata: Metadata = {
         description: "Building scalable and modern web experiences.",
         type: "website",
     },
+    verification: {
+        google: "KmepN_3fOW7gfltSjq5HpdIdpMtbq43w_GNcIWXSLUA",
+    },
 };
 
 export const viewport: Viewport = {
