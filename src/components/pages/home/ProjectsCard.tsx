@@ -16,7 +16,7 @@ export const ProjectsCard = ({ section }: ProjectsCardProps) => {
             <div className={styles.container}>
                 <h3 className={styles.heading}>{section.heading}</h3>
             </div>
-            {/* <Carousel /> */}
+            <Carousel />
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
                     <div className={cardStyles.labelContainer}>

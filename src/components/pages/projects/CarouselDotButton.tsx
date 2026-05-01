@@ -53,7 +53,6 @@ export const DotButton: React.FC<Props> = ({
     return (
         <button
             type="button"
-            // Use a data-attribute for cleaner styling
             data-selected={isSelected}
             className={className}
             {...restProps}

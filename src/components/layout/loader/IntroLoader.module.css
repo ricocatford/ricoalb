@@ -1,0 +1,43 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: background-color 0.3s ease;
+}
+
+.logoContainer {
+    background: var(--background-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 134px;
+    height: 134px;
+    box-shadow: 0 0 30px var(--light-blue-transparent);
+    animation: growGlow 2.5s infinite ease-in-out;
+}
+
+@keyframes growGlow {
+    0%,
+    100% {
+        box-shadow: 0 0 30px var(--light-blue-transparent);
+    }
+    50% {
+        box-shadow:
+            0 0 60px var(--light-blue-transparent),
+            0 0 100px var(--light-blue-transparent);
+    }
+}
+
+.logoIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

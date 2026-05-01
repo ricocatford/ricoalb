@@ -1,7 +1,12 @@
-// src/components/HydrationClient.tsx
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import {
+    useGlobalStore,
+    GlobalStoreContext,
+} from "@/providers/GlobalStoreProvider";
+import { IntroLoader } from "./loader/IntroLoader";
+import styles from "@/assets/styles/components/HydrationClient.module.css";
 
 interface HydrationClientProps {
     children: React.ReactNode;
@@ -10,13 +15,45 @@ interface HydrationClientProps {
 export function HydrationClient({ children }: HydrationClientProps) {
     const [hasMounted, setHasMounted] = useState(false);
 
+    const store = useContext(GlobalStoreContext);
+
+    const isLoading = useGlobalStore((state) => state.isLoading);
+    const finishLoading = useGlobalStore((state) => state.finishLoading);
+
     useEffect(() => {
         setHasMounted(true);
-    }, []);
+
+        if (!store) return;
+
+        const unsub = store.persist.onFinishHydration(() => {
+            setTimeout(() => {
+                finishLoading();
+            }, 600);
+        });
+
+        if (store.persist.hasHydrated()) {
+            setTimeout(() => {
+                finishLoading();
+            }, 600);
+        }
+
+        return () => unsub();
+    }, [finishLoading, store]);
 
     if (!hasMounted) {
-        return null;
+        return <IntroLoader />;
     }
 
-    return <>{children}</>;
+    return (
+        <>
+            {isLoading && <IntroLoader />}
+            <div
+                className={`${styles.container} ${
+                    isLoading ? styles.hidden : styles.visible
+                }`}
+            >
+                {children}
+            </div>
+        </>
+    );
 }

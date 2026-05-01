@@ -61,7 +61,7 @@ void main() {
 
 interface SmokeProps {
     children: React.ReactNode;
-    nav: React.ReactNode;
+    nav?: React.ReactNode;
 }
 
 export const Smoke: React.FC<SmokeProps> = ({
