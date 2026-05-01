@@ -1,7 +1,7 @@
 .container {
     position: relative;
     background: var(--card-background);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(8px);
     border-radius: 2rem;
     display: flex;
     flex-direction: column;

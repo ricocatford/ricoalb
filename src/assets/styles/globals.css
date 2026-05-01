@@ -14,7 +14,7 @@
     --marine-blue: hsl(206, 79%, 50%);
     --nav-background-transparent: hsla(0, 0%, 10%, 0.6);
     --nav-menu-background: hsl(0, 0%, 10%);
-    --card-background: hsla(0, 0%, 0%, 0.12);
+    --card-background: hsla(0, 0%, 0%, 0.2);
     --box-shadow: hsla(0, 0%, 80%, 0.6);
     --max-width: 1280px;
     --animation-slide-in-down: slideInDown;
@@ -34,7 +34,7 @@ html.light {
     );
     --nav-background-transparent: hsla(0, 0%, 90%, 0.6);
     --nav-menu-background: hsl(0, 0%, 90%);
-    --card-background: hsla(0, 0%, 100%, 0.12);
+    --card-background: hsla(0, 0%, 100%, 0.2);
     --box-shadow: hsla(0, 0%, 20%, 0.6);
 }
 
@@ -81,6 +81,109 @@ button {
     flex: 1 1 0%;
     gap: 1rem;
     min-height: calc(100vh - (56px + 264px));
+}
+
+.embla {
+    width: 100%;
+    max-width: 48rem;
+    margin: auto;
+    --slide-height: 4rem;
+    --slide-spacing: 1rem;
+    --slide-size: 80%;
+}
+
+.embla__viewport {
+    overflow: hidden;
+}
+
+.embla__container {
+    display: flex;
+    touch-action: pan-y pinch-zoom;
+    margin-left: calc(var(--slide-spacing) * -1);
+}
+
+.embla__slide {
+    transform: translate3d(0, 0, 0);
+    flex: 0 0 var(--slide-size);
+    min-width: 0;
+    padding-left: var(--slide-spacing);
+}
+
+.embla__slide__number {
+    font-size: 4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: var(--slide-height);
+    user-select: none;
+}
+
+.embla__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 1.8rem;
+}
+
+.embla__dots {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-right: calc((2.6rem - 1.4rem) / 2 * -1);
+}
+
+.embla__dot {
+    -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    touch-action: manipulation;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+}
+
+.embla__dot:before,
+.embla__dot:after {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    content: "";
+}
+
+.embla__dot:before {
+    border: 0.2rem solid #fff;
+}
+
+.embla__dot:after {
+    border: 0.2rem solid #fff;
+    opacity: 0;
+}
+
+.embla__dot--selected:after {
+    opacity: 1;
+    background: red;
+}
+
+.embla__slide__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    text-align: center;
 }
 
 @media screen and (max-width: 768px) {

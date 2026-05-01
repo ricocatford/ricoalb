@@ -119,6 +119,85 @@
             }
         ]
     },
+    "portfolio": {
+        "projects": [
+            {
+                "id": 0,
+                "name": "PulseFlow",
+                "description": "AI-native scraping engine that monitors web signals and triggers LLM-summarized alerts.",
+                "stack": [
+                    "Next.js",
+                    "TypeScript",
+                    "TailwindCSS",
+                    "ShadcnUI",
+                    "Supabase",
+                    "Prisma",
+                    "Inngest",
+                    "Google Gemini"
+                ],
+                "image_url": "../public/portfolio/pulseflow_thumbnail.png",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "Live",
+                        "href": "https://pulseflow-sigma.vercel.app/login"
+                    },
+                    {
+                        "id": 1,
+                        "label": "GitHub Repository",
+                        "href": "https://github.com/ricocatford/pulseflow"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "Coinmaster",
+                "description": "A dynamic cryptocurrency dashboard with real-time data, interactive graphs, asset tracking, and SSR for performance.",
+                "stack": ["Next.js", "TypeScript", "Zustand", "REST API"],
+                "image_url": "../public/portfolio/coinmaster_thumbnail.png",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "Live",
+                        "href": "https://coinmaster-delta.vercel.app"
+                    },
+                    {
+                        "id": 1,
+                        "label": "GitHub Repository",
+                        "href": "https://github.com/ricocatford/coinmaster"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "Blackdog Shop",
+                "description": "An eCommerce platform with image uploads, secure payment integration, and an admin panel for inventory control.",
+                "stack": ["Django", "MongoDB", "AWS S3", "Stripe API"],
+                "image_url": "../public/portfolio/blackdog_thumbnail.png",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "GitHub Repository",
+                        "href": "https://github.com/ricocatford/black-dog-shop"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "PizzaHub",
+                "description": "RESTful API using hexagonal architecture and JWT-based authentication. Includes complete order management.",
+                "stack": ["Nest.js", "TypeScript", "MySQL", "Docker"],
+                "image_url": "../public/portfolio/pizzahub_thumbnail.png",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "GitHub Repository",
+                        "href": "https://github.com/ricocatford/shop-backend"
+                    }
+                ]
+            }
+        ]
+    },
     "footer": {
         "copyrightText": "© 2026 All rights reserved.",
         "attribution": "Content and Design by Ricardo Albarenque.",

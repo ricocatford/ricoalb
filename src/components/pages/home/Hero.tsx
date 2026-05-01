@@ -3,7 +3,6 @@
 import { useTranslations } from "@/providers/LanguageProvider";
 import { HomeData, Section } from "@/types/HomeSection";
 import { IntroCard } from "./IntroCard";
-import styles from "@/assets/styles/components/pages/home/Hero.module.css";
 import { AboutCard } from "./AboutCard";
 import { ProjectsCard } from "./ProjectsCard";
 import { BlogCard } from "./BlogCard";
@@ -11,6 +10,7 @@ import { ServicesCard } from "./ServicesCard";
 import { SocialsCard } from "./SocialsCard";
 import { StatsCard } from "./StatsCard";
 import { ContactCard } from "./ContactCard";
+import styles from "@/assets/styles/components/pages/home/Hero.module.css";
 
 export const Hero = (): React.JSX.Element => {
     const { translations } = useTranslations();
