@@ -40,8 +40,19 @@
     color: var(--foreground);
 }
 
+@media screen and (max-width: 1024px) {
+    .socialLinkList {
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
 @media screen and (max-width: 576px) {
     .container {
         padding: 0.5rem;
+    }
+
+    .socialLinkList {
+        gap: 1.5rem;
     }
 }
