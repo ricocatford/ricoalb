@@ -3,7 +3,7 @@ import { EmblaCarouselType } from "embla-carousel";
 
 export const useDotButton = (emblaApi: EmblaCarouselType | undefined) => {
     const [selectedIndex, setSelectedIndex] = useState(0);
-    const [scrollSnaps, setScrollSnaps] = useState([]);
+    const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
     const onDotButtonClick = useCallback(
         (index: number) => {
@@ -13,12 +13,12 @@ export const useDotButton = (emblaApi: EmblaCarouselType | undefined) => {
         [emblaApi]
     );
 
-    const onInit = useCallback((emblaApi) => {
-        setScrollSnaps(emblaApi.scrollSnapList());
+    const onInit = useCallback((api: EmblaCarouselType) => {
+        setScrollSnaps(api.scrollSnapList());
     }, []);
 
-    const onSelect = useCallback((emblaApi) => {
-        setSelectedIndex(emblaApi.selectedScrollSnap());
+    const onSelect = useCallback((api: EmblaCarouselType) => {
+        setSelectedIndex(api.selectedScrollSnap());
     }, []);
 
     useEffect(() => {
@@ -28,10 +28,16 @@ export const useDotButton = (emblaApi: EmblaCarouselType | undefined) => {
         onSelect(emblaApi);
 
         emblaApi
-            .on("reinit", onInit)
-            .on("reinit", onSelect)
-            .on("scroll", onSelect)
+            .on("reInit", onInit)
+            .on("reInit", onSelect)
             .on("select", onSelect);
+
+        return () => {
+            emblaApi
+                .off("reInit", onInit)
+                .off("reInit", onSelect)
+                .off("select", onSelect);
+        };
     }, [emblaApi, onInit, onSelect]);
 
     return {

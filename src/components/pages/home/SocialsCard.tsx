@@ -8,9 +8,9 @@ import cardStyles from "@/assets/styles/components/layout/cards/BentoCard.module
 import Link from "next/link";
 
 const iconList: Record<SocialIconKey, React.JSX.Element> = {
-    LinkedinIcon: <LinkedinIcon width={40} height={40} />,
-    GithubIcon: <GithubIcon width={40} height={40} />,
-    DiscordIcon: <DiscordIcon width={40} height={40} />,
+    LinkedinIcon: <LinkedinIcon width={32} height={32} />,
+    GithubIcon: <GithubIcon width={32} height={32} />,
+    DiscordIcon: <DiscordIcon width={32} height={32} />,
 };
 interface SocialsCardProps {
     section: SocialsSection;
