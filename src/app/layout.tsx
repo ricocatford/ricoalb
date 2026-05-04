@@ -56,7 +56,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${inter.variable}`}>
+            <body className={inter.variable}>
                 <Analytics />
                 <SpeedInsights />
                 <GlobalStoreProvider>

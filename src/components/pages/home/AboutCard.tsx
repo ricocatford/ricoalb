@@ -15,6 +15,7 @@ export const AboutCard = ({ section }: AboutCardProps) => {
         <BentoCard gridArea={section.type}>
             <div className={styles.container}>
                 <div className={styles.logoContainer}>
+                    <div className={styles.snake}></div>
                     <span className={styles.logoIcon}>
                         <LogoIcon width={96} height={96} />
                     </span>

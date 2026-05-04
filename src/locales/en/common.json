@@ -198,6 +198,42 @@
             }
         ]
     },
+    "services": {
+        "heading": "Services",
+        "paragraph": "I combine technical logic with user-focused design to create high performance, seamless products.",
+        "list": [
+            {
+                "id": 0,
+                "icon": "UIUXIcon",
+                "heading": "UI/UX Strategy",
+                "paragraph": "I design intuitive flows that actually make sense. I focus on bridging the gap between user needs and your business goals through smart, accessible wireframing."
+            },
+            {
+                "id": 1,
+                "icon": "DesignIcon",
+                "heading": "Visual Design",
+                "paragraph": "Making things look pretty is just the start. I create bold, cohesive brand identities and interfaces that capture attention while keeping accessibility at the forefront."
+            },
+            {
+                "id": 2,
+                "icon": "FrontendIcon",
+                "heading": "Frontend Development",
+                "paragraph": "I build fast, responsive, and pixel-perfect interfaces. Using modern frameworks, I ensure your site looks stunning and works flawlessly on every single screen size."
+            },
+            {
+                "id": 3,
+                "icon": "BackendIcon",
+                "heading": "Backend Development",
+                "paragraph": "I develop robust APIs and scalable databases to ensure your application handles data securely and performs at lightning speed."
+            },
+            {
+                "id": 4,
+                "icon": "SEOIcon",
+                "heading": "SEO & Growth",
+                "paragraph": "Visibility is everything. I optimize your technical SEO and performance metrics to help you climb search rankings and turn casual visitors into loyal customers."
+            }
+        ]
+    },
     "footer": {
         "copyrightText": "© 2026 All rights reserved.",
         "attribution": "Content and Design by Ricardo Albarenque.",

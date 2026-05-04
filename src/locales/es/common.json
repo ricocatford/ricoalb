@@ -198,6 +198,42 @@
             }
         ]
     },
+    "services": {
+        "heading": "Servicios",
+        "paragraph": "Combino la lógica técnica con un diseño centrado en el usuario para crear productos fluidos y de alto rendimiento.",
+        "list": [
+            {
+                "id": 0,
+                "icon": "UIUXIcon",
+                "heading": "Estrategia UI/UX",
+                "paragraph": "Diseño flujos intuitivos que realmente tienen sentido. Me enfoco en conectar las necesidades del usuario con tus objetivos de negocio mediante wireframing inteligente y accesible."
+            },
+            {
+                "id": 1,
+                "icon": "DesignIcon",
+                "heading": "Diseño Visual",
+                "paragraph": "Hacer cosas bonitas es solo el comienzo. Creo identidades de marca e interfaces audaces que captan la atención, manteniendo siempre la accesibilidad como prioridad."
+            },
+            {
+                "id": 2,
+                "icon": "FrontendIcon",
+                "heading": "Desarrollo Frontend",
+                "paragraph": "Construyo interfaces rápidas, responsivas y pixel-perfect. Uso frameworks modernos para que tu sitio se vea increíble y funcione impecable en cualquier tamaño de pantalla."
+            },
+            {
+                "id": 3,
+                "icon": "BackendIcon",
+                "heading": "Desarrollo Backend",
+                "paragraph": "Desarrollo APIs robustas y bases de datos escalables para que tu aplicación maneje datos de forma segura y vuele en rendimiento."
+            },
+            {
+                "id": 4,
+                "icon": "SEOIcon",
+                "heading": "SEO y Crecimiento",
+                "paragraph": "La visibilidad lo es todo. Optimizo tu SEO técnico y métricas de rendimiento para ayudarte a escalar posiciones y convertir visitantes en clientes leales."
+            }
+        ]
+    },
     "footer": {
         "copyrightText": "© 2026 Todos los derechos reservados.",
         "attribution": "Contenido y Diseño por Ricardo Albarenque.",
