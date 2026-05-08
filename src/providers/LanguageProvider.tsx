@@ -10,10 +10,7 @@ import {
 } from "react";
 import { useGlobalStore } from "@/providers/GlobalStoreProvider";
 import { NavConfig } from "@/types/NavConfig";
-
-type Translations = {
-    [key: string]: string | Translations;
-};
+import { Translations } from "@/types/Translations";
 
 type CombinedTranslations = {
     nav: NavConfig[];

@@ -50,7 +50,6 @@ export class Renderer {
         gl.compileShader(shader);
         if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
             console.error(`Shader Error (${type === gl.VERTEX_SHADER ? 'Vertex' : 'Fragment'}):`, gl.getShaderInfoLog(shader));
-            // In a real app, you might throw an error or handle it more gracefully
         }
         return shader;
     }

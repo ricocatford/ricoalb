@@ -1,11 +1,19 @@
 "use client";
 
 import { useTranslations } from "@/providers/LanguageProvider";
+import { asTranslations } from "@/lib/asTranslations";
 import styles from "@/assets/styles/components/pages/services/ServicesHeader.module.css";
+
+interface ServicesTranslations {
+    heading: string;
+    paragraph: string;
+}
 
 export const ServicesHeader = (): React.JSX.Element => {
     const { translations } = useTranslations();
-    const servicesData = translations.common?.services;
+    const servicesData = asTranslations<ServicesTranslations>(
+        translations.common?.services
+    );
 
     return (
         <div className={styles.container}>
