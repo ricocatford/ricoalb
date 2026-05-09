@@ -18,10 +18,10 @@ export const ServicesList = (): React.JSX.Element => {
     }
 
     return (
-        <dl className={styles.list}>
-            {servicesList.map((service) => (
-                <ServiceCard key={service.id} service={service} />
+        <div className={styles.list}>
+            {servicesList.map((service, index) => (
+                <ServiceCard key={service.id} service={service} index={index} />
             ))}
-        </dl>
+        </div>
     );
 };

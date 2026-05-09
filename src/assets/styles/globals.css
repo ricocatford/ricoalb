@@ -2,7 +2,7 @@
     --background: hsl(0, 0%, 5%);
     --foreground: hsl(0, 0%, 75%);
     --foreground-light: hsl(0, 0%, 60%);
-    --foreground-extra-light: hsl(0, 0%, 20%);
+    --foreground-extra-light: hsl(0, 0%, 15%);
     --foreground-highlight: hsl(0, 0%, 90%);
     --background-gradient: linear-gradient(
         135deg,
@@ -12,9 +12,21 @@
     --light-blue: hsl(190, 98%, 42%);
     --light-blue-transparent: hsla(190, 98%, 42%, 0.35);
     --marine-blue: hsl(206, 79%, 50%);
-    --nav-background-transparent: hsla(0, 0%, 10%, 0.6);
+    --nav-background-transparent: hsla(0, 0%, 10%, 0.7);
     --nav-menu-background: hsl(0, 0%, 10%);
-    --card-background: hsla(0, 0%, 0%, 0.2);
+    --card-background: radial-gradient(
+        circle at 50% 150%,
+        hsl(0, 0%, 25%, 0.3),
+        hsl(0, 0%, 15%, 0.3)
+    );
+    --card-header-background: linear-gradient(
+        145deg,
+        hsl(190, 98, 42%, 0.05),
+        hsl(206, 79%, 50%, 0.05)
+    );
+    --card-header-border: hsl(190, 98, 42%, 0.1);
+    --card-icon-background: hsl(206, 79, 50%, 0.15);
+    --card-icon: hsl(190, 98%, 42%);
     --box-shadow: hsla(0, 0%, 80%, 0.6);
     --max-width: 1280px;
     --animation-slide-in-down: slideInDown;
@@ -32,9 +44,16 @@ html.light {
         hsl(0, 0%, 90%),
         hsl(0, 0%, 85%)
     );
-    --nav-background-transparent: hsla(0, 0%, 90%, 0.6);
+    --nav-background-transparent: hsla(0, 0%, 90%, 0.7);
     --nav-menu-background: hsl(0, 0%, 90%);
-    --card-background: hsla(0, 0%, 100%, 0.2);
+    --card-background: radial-gradient(
+        circle at 50% 150%,
+        hsl(0, 0%, 95%, 0.3),
+        hsl(0, 0%, 75%, 0.3)
+    );
+    --card-header-border: hsl(206, 79, 50%, 0.1);
+    --card-icon-background: hsl(190, 98%, 42%, 0.15);
+    --card-icon: hsl(206, 79%, 50%);
     --box-shadow: hsla(0, 0%, 20%, 0.6);
 }
 

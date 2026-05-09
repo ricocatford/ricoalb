@@ -1,7 +1,8 @@
 .container {
     position: relative;
-    background: var(--card-background);
-    backdrop-filter: blur(8px);
+    background-image: var(--card-background);
+    border: 1px solid var(--foreground-extra-light);
+    backdrop-filter: blur(4px);
     border-radius: 2rem;
     display: flex;
     flex-direction: column;
@@ -14,6 +15,14 @@
     animation: var(--animation-slide-in-down) 1s;
     transition: all 0.5s ease-in-out;
     box-shadow: 0 0 0px transparent;
+}
+
+.container::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    z-index: -1;
+    background: var(--card-background);
 }
 
 .container:has(.link:hover) {
@@ -34,11 +43,11 @@
     color: var(--foreground-light);
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 0.8725rem;
+    font-size: 0.8rem;
 }
 
 .info {
-    font-size: 1.125rem;
+    font-size: 0.95rem;
 }
 
 .icon {

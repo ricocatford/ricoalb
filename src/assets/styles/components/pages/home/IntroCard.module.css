@@ -74,8 +74,8 @@
     width: fit-content;
     padding: 0.75rem 2rem;
     gap: 0.5rem;
-    background: var(--foreground);
-    border: 1px solid var(--foreground);
+    background: var(--foreground-highlight);
+    border: 1px solid var(--foreground-highlight);
     border-radius: 1.25rem;
     transition: all 0.3s ease;
     box-shadow: 0 0 15px var(--box-shadow);
@@ -86,8 +86,8 @@
 }
 
 .button:hover .buttonContainer {
-    background: var(--foreground-highlight);
-    border: 1px solid var(--foreground-highlight);
+    background: var(--foreground-light);
+    border: 1px solid var(--foreground-light);
 }
 
 .buttonIcon {

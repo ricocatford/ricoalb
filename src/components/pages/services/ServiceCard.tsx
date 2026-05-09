@@ -16,18 +16,27 @@ const iconList: Record<ServiceIconKey, React.JSX.Element> = {
 
 interface ServiceCardProps {
     service: Service;
+    index: number;
 }
 
 export const ServiceCard = ({
     service,
+    index,
 }: ServiceCardProps): React.JSX.Element => {
     return (
-        <div className={styles.card}>
-            <dd className={styles.iconContainer}>
-                <span className={styles.icon}>{iconList[service.icon]}</span>
-            </dd>
-            <dt className={styles.heading}>{service.heading}</dt>
-            <dd className={styles.paragraph}>{service.paragraph}</dd>
+        <div
+            className={styles.card}
+            style={{ "--index": index } as React.CSSProperties}
+        >
+            <div className={styles.header}>
+                <h2 className={styles.heading}>{service.heading}</h2>
+                <div className={styles.iconContainer}>
+                    <span className={styles.icon}>
+                        {iconList[service.icon]}
+                    </span>
+                </div>
+            </div>
+            <p className={styles.paragraph}>{service.paragraph}</p>
         </div>
     );
 };

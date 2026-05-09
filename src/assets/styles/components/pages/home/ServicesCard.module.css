@@ -24,7 +24,7 @@
     opacity: 0;
     transform: translateY(-2rem);
     animation: var(--animation-slide-in-down) 0.75s ease forwards;
-    animation-delay: calc(var(--index) * 0.15s);
+    animation-delay: calc(var(--index) * 0.2s);
 }
 
 .serviceLabel {

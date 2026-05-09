@@ -10,7 +10,7 @@
     background: linear-gradient(
         0deg,
         var(--foreground-highlight),
-        var(--foreground-extra-light)
+        var(--foreground-light)
     );
     -webkit-background-clip: text;
     background-clip: text;
