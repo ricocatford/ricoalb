@@ -45,8 +45,7 @@
 .location {
     color: var(--foreground-light);
     text-transform: uppercase;
-    font-size: 0.8725rem;
-    letter-spacing: -0.025rem;
+    font-size: 0.8rem;
 }
 
 .paragraph {

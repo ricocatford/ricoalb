@@ -16,7 +16,7 @@ export const ExitIcon: React.FC<ExitIconProps> = ({
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            strokeWidth="1.25"
+            strokeWidth="1"
             strokeLinecap="round"
             strokeLinejoin="round"
             {...rest}

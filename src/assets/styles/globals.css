@@ -21,8 +21,8 @@
     );
     --card-header-background: linear-gradient(
         145deg,
-        hsl(190, 98, 42%, 0.05),
-        hsl(206, 79%, 50%, 0.05)
+        hsl(190, 98, 42%, 0.08),
+        hsl(206, 79%, 50%, 0.08)
     );
     --card-header-border: hsl(190, 98, 42%, 0.1);
     --card-icon-background: hsl(206, 79, 50%, 0.15);
