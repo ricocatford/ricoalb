@@ -14,7 +14,6 @@
                 "id": 1,
                 "type": "about",
                 "label": "about",
-                "info": "Read more",
                 "isLink": true,
                 "href": "/about"
             },
@@ -22,7 +21,6 @@
                 "id": 2,
                 "type": "projects",
                 "label": "projects",
-                "info": "Portfolio",
                 "isLink": true,
                 "href": "/projects",
                 "heading": "My Work"
@@ -31,7 +29,6 @@
                 "id": 3,
                 "type": "stats",
                 "label": "stats",
-                "info": "Impact delivered",
                 "stats": [
                     { "id": 0, "label": "Years of experience", "value": "3" },
                     { "id": 1, "label": "Projects completed", "value": "5" },
@@ -42,7 +39,6 @@
                 "id": 4,
                 "type": "services",
                 "label": "services",
-                "info": "What I offer",
                 "isLink": true,
                 "href": "/services",
                 "services": [
@@ -82,7 +78,6 @@
                 "id": 5,
                 "type": "socials",
                 "label": "socials",
-                "info": "Let's connect",
                 "socials": [
                     {
                         "id": 0,
@@ -105,13 +100,13 @@
                 "id": 6,
                 "type": "blog",
                 "label": "blog",
-                "info": "Start reading",
                 "isLink": true,
                 "href": "/blog"
             },
             {
                 "id": 7,
                 "type": "contact",
+                "label": "contact",
                 "isLink": true,
                 "href": "/contact",
                 "heading": "Let's work <highlight>together!</highlight>",
@@ -206,31 +201,31 @@
                 "id": 0,
                 "icon": "UIUXIcon",
                 "heading": "UI/UX Strategy",
-                "paragraph": "I design intuitive flows that actually make sense. I focus on bridging the gap between user needs and your business goals through smart, accessible wireframing."
+                "paragraph": "I map out flows that just make sense — no confusion, no dead ends. Good UX is invisible, and that's exactly the point."
             },
             {
                 "id": 1,
                 "icon": "DesignIcon",
                 "heading": "Visual Design",
-                "paragraph": "Making things look pretty is just the start. I create bold, cohesive brand identities and interfaces that capture attention while keeping accessibility at the forefront."
+                "paragraph": "Clean, bold, and built to last. I craft interfaces and brand identities that actually look like someone cared."
             },
             {
                 "id": 2,
                 "icon": "FrontendIcon",
                 "heading": "Frontend Development",
-                "paragraph": "I build fast, responsive, and pixel-perfect interfaces. Using modern frameworks, I ensure your site looks stunning and works flawlessly on every single screen size."
+                "paragraph": "Fast, responsive, pixel-perfect. I turn designs into real code that works great on every screen."
             },
             {
                 "id": 3,
                 "icon": "BackendIcon",
                 "heading": "Backend Development",
-                "paragraph": "I develop robust APIs and scalable databases to ensure your application handles data securely and performs at lightning speed."
+                "paragraph": "Solid APIs, clean databases, zero drama. I build the stuff users never see but always rely on."
             },
             {
                 "id": 4,
                 "icon": "SEOIcon",
                 "heading": "SEO & Growth",
-                "paragraph": "Visibility is everything. I optimize your technical SEO and performance metrics to help you climb search rankings and turn casual visitors into loyal customers."
+                "paragraph": "Great products deserve to be found. I handle the technical SEO so you show up where it matters."
             }
         ]
     },

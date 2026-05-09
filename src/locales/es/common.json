@@ -14,7 +14,6 @@
                 "id": 1,
                 "type": "about",
                 "label": "acerca de",
-                "info": "Leer más",
                 "isLink": true,
                 "href": "/about"
             },
@@ -22,7 +21,6 @@
                 "id": 2,
                 "type": "projects",
                 "label": "proyectos",
-                "info": "Portafolio",
                 "isLink": true,
                 "href": "/projects",
                 "heading": "Mi trabajo"
@@ -31,7 +29,6 @@
                 "id": 3,
                 "type": "stats",
                 "label": "estadísticas",
-                "info": "Impacto generado",
                 "stats": [
                     { "id": 0, "label": "Años de experiencia", "value": "3" },
                     { "id": 1, "label": "Proyectos completados", "value": "5" },
@@ -42,7 +39,6 @@
                 "id": 4,
                 "type": "services",
                 "label": "servicios",
-                "info": "Lo que ofrezco",
                 "isLink": true,
                 "href": "/services",
                 "services": [
@@ -82,7 +78,6 @@
                 "id": 5,
                 "type": "socials",
                 "label": "redes sociales",
-                "info": "Conectemos",
                 "socials": [
                     {
                         "id": 0,
@@ -105,13 +100,13 @@
                 "id": 6,
                 "type": "blog",
                 "label": "blog",
-                "info": "Empieza leyendo",
                 "isLink": true,
                 "href": "/blog"
             },
             {
                 "id": 7,
                 "type": "contact",
+                "label": "contacto",
                 "isLink": true,
                 "href": "/contact",
                 "heading": "Trabajemos <highlight>juntos.</highlight>",
@@ -206,31 +201,31 @@
                 "id": 0,
                 "icon": "UIUXIcon",
                 "heading": "Estrategia UI/UX",
-                "paragraph": "Diseño flujos intuitivos que realmente tienen sentido. Me enfoco en conectar las necesidades del usuario con tus objetivos de negocio mediante wireframing inteligente y accesible."
+                "paragraph": "Diseño flujos que tienen sentido desde el primer clic — sin confusión ni callejones sin salida. El buen UX no se nota, y eso es justo lo que busco."
             },
             {
                 "id": 1,
                 "icon": "DesignIcon",
                 "heading": "Diseño Visual",
-                "paragraph": "Hacer cosas bonitas es solo el comienzo. Creo identidades de marca e interfaces audaces que captan la atención, manteniendo siempre la accesibilidad como prioridad."
+                "paragraph": "Limpio, atrevido y con personalidad. Creo interfaces e identidades de marca que parecen hechas con cariño — porque lo están."
             },
             {
                 "id": 2,
                 "icon": "FrontendIcon",
                 "heading": "Desarrollo Frontend",
-                "paragraph": "Construyo interfaces rápidas, responsivas y pixel-perfect. Uso frameworks modernos para que tu sitio se vea increíble y funcione impecable en cualquier tamaño de pantalla."
+                "paragraph": "Rápido, responsivo y pixel-perfect. Convierto diseños en código real que funciona bien en cualquier pantalla."
             },
             {
                 "id": 3,
                 "icon": "BackendIcon",
                 "heading": "Desarrollo Backend",
-                "paragraph": "Desarrollo APIs robustas y bases de datos escalables para que tu aplicación maneje datos de forma segura y vuele en rendimiento."
+                "paragraph": "APIs sólidas, bases de datos limpias, cero dramas. Construyo lo que el usuario no ve pero en lo que siempre confía."
             },
             {
                 "id": 4,
                 "icon": "SEOIcon",
                 "heading": "SEO y Crecimiento",
-                "paragraph": "La visibilidad lo es todo. Optimizo tu SEO técnico y métricas de rendimiento para ayudarte a escalar posiciones y convertir visitantes en clientes leales."
+                "paragraph": "Los buenos productos merecen ser encontrados. Me encargo del SEO técnico para que aparezcas donde importa."
             }
         ]
     },

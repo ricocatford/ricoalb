@@ -19,10 +19,7 @@ export const ProjectsCard = ({ section }: ProjectsCardProps) => {
             <Carousel />
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
-                    <div className={cardStyles.labelContainer}>
-                        <h2 className={cardStyles.label}>{section.label}</h2>
-                        <span className={cardStyles.info}>{section.info}</span>
-                    </div>
+                    <h2 className={cardStyles.label}>{section.label}</h2>
                     <span className={cardStyles.icon}>
                         <LinkIcon />
                     </span>

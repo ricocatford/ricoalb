@@ -35,10 +35,8 @@ export const SocialsCard = ({ section }: SocialsCardProps) => {
                 </ul>
             </div>
             <footer className={cardStyles.footer}>
-                <div className={cardStyles.labelContainer}>
-                    <h2 className={cardStyles.label}>{section.label}</h2>
-                    <span className={cardStyles.info}>{section.info}</span>
-                </div>
+                <h2 className={cardStyles.label}>{section.label}</h2>
+                <span className={cardStyles.icon}></span>
             </footer>
         </BentoCard>
     );

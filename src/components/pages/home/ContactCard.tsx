@@ -38,7 +38,7 @@ export const ContactCard = ({ section }: ContactCardProps) => {
             </div>
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
-                    <div></div>
+                    <h2 className={cardStyles.label}>{section.label}</h2>
                     <span className={cardStyles.icon}>
                         <LinkIcon />
                     </span>

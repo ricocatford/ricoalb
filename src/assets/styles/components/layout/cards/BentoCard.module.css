@@ -32,22 +32,16 @@
 .footer {
     display: flex;
     justify-content: space-between;
-}
-
-.labelContainer {
-    display: flex;
-    flex-direction: column;
+    align-items: center;
+    min-height: 36px;
+    padding-left: 0.5rem;
 }
 
 .label {
     color: var(--foreground-light);
     text-transform: uppercase;
     font-weight: 400;
-    font-size: 0.8rem;
-}
-
-.info {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .icon {

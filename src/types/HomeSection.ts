@@ -80,6 +80,7 @@ export type ContactSection = HomeSection & LinkSection & {
     type: "contact";
     heading: string;
     paragraph: string;
+    label: string;
 }
 
 export type Section =
