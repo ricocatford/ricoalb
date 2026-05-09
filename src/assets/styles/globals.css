@@ -26,6 +26,7 @@
     );
     --card-header-border: hsl(190, 98, 42%, 0.1);
     --card-icon-background: hsl(206, 79, 50%, 0.15);
+    --card-icon-background-highlight: hsl(206, 79, 50%, 0.35);
     --card-icon: hsl(190, 98%, 42%);
     --box-shadow: hsla(0, 0%, 80%, 0.6);
     --max-width: 1280px;
@@ -53,6 +54,7 @@ html.light {
     );
     --card-header-border: hsl(206, 79, 50%, 0.1);
     --card-icon-background: hsl(190, 98%, 42%, 0.15);
+    --card-icon-background-highlight: hsl(190, 98%, 42%, 0.35);
     --card-icon: hsl(206, 79%, 50%);
     --box-shadow: hsla(0, 0%, 20%, 0.6);
 }

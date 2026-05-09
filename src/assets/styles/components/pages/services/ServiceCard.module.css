@@ -59,6 +59,7 @@
     border-radius: 1.25rem;
     margin-bottom: 1rem;
     box-shadow: 0 0 14px var(--card-icon-background);
+    transition: all 0.2s ease-in-out;
 }
 
 .icon {
@@ -74,12 +75,27 @@
     line-height: 0.85;
     letter-spacing: -0.035rem;
     text-shadow: 0 0 10px var(--card-icon-background);
+    transition: color 0.2s ease-in-out;
 }
 
 .paragraph {
     font-size: 0.95rem;
     color: var(--foreground-light);
     line-height: 1.5;
+    transition: color 0.2s ease-in-out;
+}
+
+.card:hover .heading {
+    color: var(--foreground-highlight);
+}
+
+.card:hover .paragraph {
+    color: var(--foreground);
+}
+
+.card:hover .iconContainer {
+    transform: scale(1.05);
+    box-shadow: 0 0 14px var(--card-icon-background-highlight);
 }
 
 @media (max-width: 1024px) {
