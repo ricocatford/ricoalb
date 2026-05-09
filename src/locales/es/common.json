@@ -31,7 +31,7 @@
                 "label": "estadísticas",
                 "stats": [
                     { "id": 0, "label": "Años de experiencia", "value": "3" },
-                    { "id": 1, "label": "Proyectos completados", "value": "5" },
+                    { "id": 1, "label": "Proyectos completados", "value": "7" },
                     { "id": 2, "label": "Clientes satisfechos", "value": "2" }
                 ]
             },
