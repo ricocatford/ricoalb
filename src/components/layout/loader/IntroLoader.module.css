@@ -20,19 +20,19 @@
     justify-content: center;
     width: 134px;
     height: 134px;
-    box-shadow: 0 0 30px var(--light-blue-transparent);
+    box-shadow: 0 0 30px var(--color-1-t);
     animation: growGlow 2.5s infinite ease-in-out;
 }
 
 @keyframes growGlow {
     0%,
     100% {
-        box-shadow: 0 0 30px var(--light-blue-transparent);
+        box-shadow: 0 0 30px var(--color-1-t);
     }
     50% {
         box-shadow:
-            0 0 60px var(--light-blue-transparent),
-            0 0 100px var(--light-blue-transparent);
+            0 0 60px var(--color-1-t),
+            0 0 100px var(--color-1-t);
     }
 }
 

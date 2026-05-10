@@ -1,4 +1,7 @@
 :root {
+    --color-1: hsl(96, 100%, 60%);
+    --color-2: hsl(110, 90%, 28%);
+    --color-1-t: hsla(110, 90%, 28%, 0.35);
     --background: hsl(0, 0%, 5%);
     --foreground: hsl(0, 0%, 75%);
     --foreground-light: hsl(0, 0%, 60%);
@@ -9,9 +12,9 @@
         hsl(0, 0%, 10%),
         hsl(0, 0%, 15%)
     );
-    --light-blue: hsl(190, 98%, 42%);
-    --light-blue-transparent: hsla(190, 98%, 42%, 0.35);
-    --marine-blue: hsl(206, 79%, 50%);
+    --logo-gradient-from: var(--color-1);
+    --logo-gradient-to: var(--color-2);
+
     --nav-background-transparent: hsla(0, 0%, 10%, 0.7);
     --nav-menu-background: hsl(0, 0%, 10%);
     --card-background: radial-gradient(
@@ -21,13 +24,13 @@
     );
     --card-header-background: linear-gradient(
         145deg,
-        hsl(190, 98, 42%, 0.08),
-        hsl(206, 79%, 50%, 0.08)
+        hsl(96, 100%, 60%, 0.08),
+        hsl(100, 90%, 28%, 0.08)
     );
-    --card-header-border: hsl(190, 98, 42%, 0.1);
-    --card-icon-background: hsl(206, 79, 50%, 0.15);
-    --card-icon-background-highlight: hsl(206, 79, 50%, 0.35);
-    --card-icon: hsl(190, 98%, 42%);
+    --card-header-border: hsl(96, 100%, 60%, 0.1);
+    --card-icon-background: hsl(110, 90%, 28%, 0.15);
+    --card-icon-background-highlight: hsl(100, 90%, 28%, 0.35);
+    --card-icon: var(--color-1);
     --box-shadow: hsla(0, 0%, 80%, 0.6);
     --max-width: 1280px;
     --animation-slide-in-down: slideInDown;
@@ -35,6 +38,9 @@
 }
 
 html.light {
+    --color-1: hsl(190, 98%, 42%);
+    --color-2: hsl(206, 79%, 50%);
+    --color-1-t: hsla(206, 79%, 50%, 0.35);
     --background: hsl(0, 0%, 95%);
     --foreground: hsl(0, 0%, 25%);
     --foreground-light: hsl(0, 0%, 40%);
@@ -45,6 +51,8 @@ html.light {
         hsl(0, 0%, 90%),
         hsl(0, 0%, 85%)
     );
+    --logo-gradient-from: var(--color-1);
+    --logo-gradient-to: var(--color-2);
     --nav-background-transparent: hsla(0, 0%, 90%, 0.7);
     --nav-menu-background: hsl(0, 0%, 90%);
     --card-background: radial-gradient(
@@ -55,7 +63,7 @@ html.light {
     --card-header-border: hsl(206, 79, 50%, 0.1);
     --card-icon-background: hsl(190, 98%, 42%, 0.15);
     --card-icon-background-highlight: hsl(190, 98%, 42%, 0.35);
-    --card-icon: hsl(206, 79%, 50%);
+    --card-icon: var(--color-1);
     --box-shadow: hsla(0, 0%, 20%, 0.6);
 }
 

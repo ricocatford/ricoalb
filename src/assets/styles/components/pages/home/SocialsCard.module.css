@@ -33,7 +33,7 @@
 }
 
 .socialLink:hover .socialIconContainer {
-    box-shadow: 0 0 20px var(--light-blue-transparent);
+    box-shadow: 0 0 20px var(--color-1-t);
 }
 
 .socialLink:hover .socialIcon {

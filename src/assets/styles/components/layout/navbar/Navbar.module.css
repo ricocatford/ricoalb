@@ -19,7 +19,7 @@
 }
 
 .logoIcon:hover {
-    filter: drop-shadow(0 0 8px var(--light-blue-transparent));
+    filter: drop-shadow(0 0 8px var(--color-1-t));
 }
 
 .clientContainer {
@@ -65,7 +65,7 @@
 .mainLink:hover,
 .socialLink:hover {
     color: var(--foreground-highlight);
-    filter: drop-shadow(0 0 8px var(--light-blue));
+    filter: drop-shadow(0 0 8px var(--color-1));
 }
 
 .socialLinkLabel {
@@ -105,13 +105,14 @@
     transform: translateY(-10px);
     display: flex;
     flex-direction: column;
-    background: var(--background);
+    background: var(--nav-menu-background);
+    border: 1px solid var(--foreground-extra-light);
     border-radius: 0.5rem;
     min-width: 180px;
-    box-shadow: 0 0 8px var(--light-blue-transparent);
+    box-shadow: 0 0 8px var(--foreground-extra-light);
     position: absolute;
-    top: 58px;
-    right: 0;
+    top: 60px;
+    right: 16px;
     z-index: 100;
 }
 
@@ -134,7 +135,7 @@
 
 .settingButton:hover {
     color: var(--foreground-highlight);
-    filter: drop-shadow(0 0 8px var(--light-blue));
+    filter: drop-shadow(0 0 8px var(--color-1));
 }
 
 .optionButton {
@@ -253,6 +254,7 @@
         width: 100%;
         box-shadow: none;
         transform: none;
+        background: var(--card-background);
     }
 
     .optionsContainerActive {

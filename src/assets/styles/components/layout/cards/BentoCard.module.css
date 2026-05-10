@@ -26,7 +26,7 @@
 }
 
 .container:has(.link:hover) {
-    box-shadow: 0 0 12px var(--light-blue-transparent);
+    box-shadow: 0 0 12px var(--color-1-t);
 }
 
 .footer {

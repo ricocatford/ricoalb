@@ -17,7 +17,7 @@
     justify-content: center;
     width: 134px;
     height: 134px;
-    box-shadow: 0 0 2.5rem var(--light-blue-transparent);
+    box-shadow: 0 0 2.5rem var(--color-1-t);
 }
 
 .snake {
@@ -34,19 +34,20 @@
     border: var(--line-width) solid transparent;
     background-image: conic-gradient(
         from 0deg,
-        var(--light-blue) 0deg,
-        rgba(0, 242, 255, 0.3) calc(var(--snake-length) * 0.6),
+        var(--color-1) 0deg,
+        var(--color-1-t) calc(var(--snake-length) * 0.6),
         transparent var(--snake-length)
     );
     background-origin: border-box;
     background-clip: border-box;
-
     -webkit-mask:
         linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: destination-out;
+    mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
     mask-composite: exclude;
-
     pointer-events: none;
     z-index: 2;
 
@@ -63,9 +64,9 @@
     transform: translateX(-50%);
     width: var(--line-width);
     height: var(--line-width);
-    background: var(--light-blue);
+    background: var(--color-1);
     border-radius: 50%;
-    box-shadow: 0 0 8px 1px var(--light-blue);
+    box-shadow: 0 0 8px 1px var(--color-1);
 }
 
 @keyframes rotate {
@@ -81,25 +82,25 @@
     0%,
     100% {
         opacity: 0;
-        filter: drop-shadow(0 0 0px var(--light-blue));
+        filter: drop-shadow(0 0 0px var(--color-1));
     }
     15% {
         opacity: 0.7;
-        filter: drop-shadow(0 0 4px var(--light-blue));
+        filter: drop-shadow(0 0 4px var(--color-1));
     }
     20% {
         opacity: 0.2;
     }
     35% {
         opacity: 0.9;
-        filter: drop-shadow(0 0 6px var(--light-blue));
+        filter: drop-shadow(0 0 6px var(--color-1));
     }
     50% {
         opacity: 0;
     }
     65% {
         opacity: 0.8;
-        filter: drop-shadow(0 0 4px var(--light-blue));
+        filter: drop-shadow(0 0 4px var(--color-1));
     }
     80% {
         opacity: 0.1;

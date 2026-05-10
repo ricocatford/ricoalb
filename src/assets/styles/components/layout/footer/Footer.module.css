@@ -34,7 +34,7 @@
 }
 
 .logoLink:hover .logoIcon {
-    filter: drop-shadow(0 0 8px var(--light-blue-transparent));
+    filter: drop-shadow(0 0 8px var(--color-1-t));
 }
 
 .logoNameWrapper {
@@ -81,7 +81,7 @@
 }
 
 .linkLabel:hover {
-    color: var(--marine-blue);
+    color: var(--color-2);
 }
 
 @media screen and (max-width: 768px) {
