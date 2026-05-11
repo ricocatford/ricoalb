@@ -5,6 +5,7 @@ import { LogoIcon } from "@/components/layout/icons/common/LogoIcon";
 import { LinkIcon } from "@/components/layout/icons/common/LinkIcon";
 import styles from "@/assets/styles/components/pages/home/AboutCard.module.css";
 import cardStyles from "@/assets/styles/components/layout/cards/BentoCard.module.css";
+import { Hex } from "@/components/layout/background/Hex";
 
 interface AboutCardProps {
     section: AboutSection;
@@ -13,9 +14,9 @@ interface AboutCardProps {
 export const AboutCard = ({ section }: AboutCardProps) => {
     return (
         <BentoCard gridArea={section.type}>
+            <Hex color={`var(--color-1)`} />
             <div className={styles.container}>
                 <div className={styles.logoContainer}>
-                    <div className={styles.snake}></div>
                     <span className={styles.logoIcon}>
                         <LogoIcon width={96} height={96} />
                     </span>

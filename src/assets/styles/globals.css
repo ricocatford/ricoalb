@@ -1,8 +1,8 @@
 :root {
     --color-1: hsl(96, 100%, 60%);
-    --color-2: hsl(110, 90%, 28%);
+    --color-2: hsl(110, 83%, 36%);
     --color-1-t: hsla(96, 100%, 60%, 0.5);
-    --color-2-t: hsla(110, 90%, 28%, 0.35);
+    --color-2-t: hsla(110, 83%, 36%, 0.35);
 
     --background: hsl(0, 0%, 5%);
     --foreground: hsl(0, 0%, 75%);
@@ -30,7 +30,7 @@
         hsl(100, 90%, 28%, 0.08)
     );
     --card-header-border: hsl(96, 100%, 60%, 0.1);
-    --card-icon-background: hsl(110, 90%, 28%, 0.15);
+    --card-icon-background: hsl(110, 83%, 36%, 0.15);
     --card-icon-background-highlight: hsl(100, 90%, 28%, 0.35);
     --card-icon: var(--color-1);
     --box-shadow: hsla(0, 0%, 80%, 0.6);
