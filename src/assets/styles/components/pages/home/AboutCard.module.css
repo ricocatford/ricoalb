@@ -17,7 +17,7 @@
     justify-content: center;
     width: 134px;
     height: 134px;
-    box-shadow: 0 0 2.5rem var(--color-1-t);
+    box-shadow: 0 0 30px var(--color-1-t);
 }
 
 .snake {
