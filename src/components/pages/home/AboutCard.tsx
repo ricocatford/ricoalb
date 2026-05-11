@@ -3,9 +3,9 @@ import { BentoCard } from "@/components/layout/cards/BentoCard";
 import { AboutSection } from "@/types/HomeSection";
 import { LogoIcon } from "@/components/layout/icons/common/LogoIcon";
 import { LinkIcon } from "@/components/layout/icons/common/LinkIcon";
+import { Hex } from "@/components/layout/background/Hex";
 import styles from "@/assets/styles/components/pages/home/AboutCard.module.css";
 import cardStyles from "@/assets/styles/components/layout/cards/BentoCard.module.css";
-import { Hex } from "@/components/layout/background/Hex";
 
 interface AboutCardProps {
     section: AboutSection;

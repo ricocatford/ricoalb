@@ -27,7 +27,6 @@ export const Hex: React.FC<HexBackgroundProps> = ({ color }) => {
         const ctx = canvas.getContext("2d", { alpha: true });
         if (!ctx) return;
 
-        // Helper to parse color into HSL for the brightening logic
         const getHSL = (colorStr: string) => {
             const temp = document.createElement("div");
             temp.style.color = colorStr;
@@ -107,11 +106,9 @@ export const Hex: React.FC<HexBackgroundProps> = ({ color }) => {
 
                 let edgeOpacity = 1;
 
-                // Vertical Fades: 5% Top, 20% Bottom
                 const topFadeZone = canvasHeight * 0.05;
                 const bottomFadeZone = canvasHeight * 0.2;
 
-                // Horizontal Fades: 5% Left, 5% Right
                 const sideFadeZone = canvasWidth * 0.05;
 
                 if (this.y < topFadeZone) {

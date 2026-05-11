@@ -18,11 +18,6 @@ export type IntroSection = HomeSection & {
     subheading: string;
     location: string;
     paragraph: string;
-    button: {
-        icon: string;
-        label: string;
-        href: string;
-    }
 }
 
 export type AboutSection = HomeSection & LabelSection & LinkSection & {
