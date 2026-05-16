@@ -1,5 +1,4 @@
 import "@/lib/i18nClient";
-import { Trans } from "react-i18next";
 import { useState } from "react";
 import Link from "next/link";
 import { BentoCard } from "@/components/layout/cards/BentoCard";
@@ -14,29 +13,19 @@ import styles from "@/assets/styles/components/pages/home/ServicesCard.module.cs
 import cardStyles from "@/assets/styles/components/layout/cards/BentoCard.module.css";
 
 const iconList: Record<ServiceIconKey, React.JSX.Element> = {
-    UIUXIcon: <UIUXIcon width={40} height={40} />,
-    DesignIcon: <DesignIcon width={40} height={40} />,
-    FrontendIcon: <FrontendIcon width={40} height={40} />,
-    BackendIcon: <BackendIcon width={40} height={40} />,
-    SEOIcon: <SEOIcon width={40} height={40} />,
+    UIUXIcon: <UIUXIcon width={28} height={28} />,
+    DesignIcon: <DesignIcon width={28} height={28} />,
+    FrontendIcon: <FrontendIcon width={28} height={28} />,
+    BackendIcon: <BackendIcon width={28} height={28} />,
+    SEOIcon: <SEOIcon width={28} height={28} />,
 };
+
 interface ServicesCardProps {
     section: ServicesSection;
 }
 
 export const ServicesCard = ({ section }: ServicesCardProps) => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-    const renderRichText = (content: string) => (
-        <Trans
-            defaults={content}
-            components={{
-                bold: <span className={styles.bold} />,
-            }}
-        >
-            {content}
-        </Trans>
-    );
 
     return (
         <BentoCard gridArea={section.type}>
@@ -49,30 +38,33 @@ export const ServicesCard = ({ section }: ServicesCardProps) => {
                     }
                 }}
             >
-                <dl className={styles.servicesList}>
+                <ul className={styles.hexGrid}>
                     {section.services.map((service, index) => (
-                        <div
+                        <li
                             key={service.id}
-                            className={styles.serviceItem}
+                            className={styles.hexItem}
                             style={{ "--index": index } as React.CSSProperties}
                             onMouseEnter={() => setActiveIndex(index)}
-                            onTouchStart={(e) => {
-                                setActiveIndex(index);
-                            }}
+                            onTouchStart={() => setActiveIndex(index)}
                         >
-                            <dt className={styles.serviceLabel}>
-                                {service.label}
-                            </dt>
-                            <dd className={styles.serviceIcon}>
+                            <svg
+                                className={styles.hexShape}
+                                viewBox="0 0 86.6 100"
+                                preserveAspectRatio="none"
+                                aria-hidden="true"
+                            >
+                                <polygon points="43.3,0 86.6,25 86.6,75 43.3,100 0,75 0,25" />
+                            </svg>
+                            <span className={styles.hexIcon}>
                                 {iconList[service.icon]}
-                            </dd>
-                        </div>
+                            </span>
+                        </li>
                     ))}
-                </dl>
-                <div className={styles.serviceInfoContainer}>
+                </ul>
+                <div className={styles.serviceLabelContainer}>
                     {activeIndex !== null && (
-                        <p className={styles.serviceInfo} key={activeIndex}>
-                            {renderRichText(section.services[activeIndex].info)}
+                        <p className={styles.serviceLabel} key={activeIndex}>
+                            {section.services[activeIndex].label}
                         </p>
                     )}
                 </div>

@@ -2,45 +2,108 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 0.25rem;
+    align-items: center;
+    gap: 1rem;
     padding: 1rem;
     height: 100%;
 }
 
-.servicesList {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+.hexGrid {
+    --hex-w: clamp(45px, 9vw, 64px);
+    --hex-h: calc(var(--hex-w) * 1.1547);
+    --col-step: calc(var(--hex-w) * 0.5);
+    --row-step: calc(var(--hex-w) * 0.866);
+
+    position: relative;
+    width: calc(var(--hex-w) + var(--col-step) * 4);
+    height: calc(var(--hex-h) + var(--row-step));
+    list-style: none;
 }
 
-.serviceItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+.hexItem {
+    position: absolute;
+    width: var(--hex-w);
+    height: var(--hex-h);
     cursor: pointer;
     opacity: 0;
     transform: translateY(-2rem);
     animation: var(--animation-slide-in-down) 0.75s ease forwards;
-    animation-delay: calc(var(--index) * 0.2s);
+    animation-delay: calc(var(--index) * 0.15s);
 }
 
-.serviceLabel {
-    max-width: 80px;
-    font-size: 0.725rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--foreground-light);
+.hexItem:nth-child(1) {
+    left: 0;
+    top: var(--row-step);
 }
 
-.serviceIcon {
-    color: var(--foreground-light);
+.hexItem:nth-child(2) {
+    left: var(--col-step);
+    top: 0;
 }
 
-.serviceInfoContainer {
+.hexItem:nth-child(3) {
+    left: calc(var(--col-step) * 2);
+    top: var(--row-step);
+}
+
+.hexItem:nth-child(4) {
+    left: calc(var(--col-step) * 3);
+    top: 0;
+}
+
+.hexItem:nth-child(5) {
+    left: calc(var(--col-step) * 4);
+    top: var(--row-step);
+}
+
+.hexItem:hover {
+    z-index: 1;
+}
+
+.hexShape {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.hexShape polygon {
+    fill: transparent;
+    stroke: var(--foreground-light);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: scale(calc((var(--hex-w) - 4px) / var(--hex-w)));
+    transition:
+        stroke 0.4s ease-in-out,
+        filter 0.4s ease-in-out;
+}
+
+.hexItem:hover .hexShape polygon {
+    stroke: var(--color-1);
+    filter: drop-shadow(0 0 6px var(--color-1-t));
+}
+
+.hexIcon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--foreground);
+    transition:
+        color 0.4s ease-in-out,
+        filter 0.4s ease-in-out;
+}
+
+.hexItem:hover .hexIcon {
+    color: var(--color-1);
+    filter: drop-shadow(0 0 4px var(--color-1-t));
+}
+
+.serviceLabelContainer {
     min-height: 2rem;
     display: flex;
     align-items: center;
@@ -48,44 +111,25 @@
     padding: 0.25rem;
 }
 
-.serviceInfo {
+.serviceLabel {
     letter-spacing: -0.025rem;
+    color: var(--foreground);
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 1rem;
+    text-align: center;
     animation: var(--animation-reveal-element) 0.5s ease-out forwards;
     -webkit-font-smoothing: antialiased;
 }
 
-.bold {
-    font-weight: 700;
+@media screen and (max-width: 768px) {
+    .hexGrid {
+        --hex-w: clamp(53px, 15.4vw, 76px);
+    }
 }
 
 @media screen and (max-width: 576px) {
     .container {
         padding: 0.5rem;
-    }
-
-    .servicesList {
-        flex-direction: column;
-    }
-
-    .serviceItem {
-        flex-direction: row-reverse;
-        justify-content: start;
-        gap: 1rem;
-        width: 100%;
-    }
-
-    .serviceLabel {
-        max-width: none;
-        font-size: 0.9rem;
-        text-align: left;
-    }
-
-    .serviceIcon svg {
-        width: 28px !important;
-        height: 28px !important;
-    }
-
-    .serviceInfoContainer {
-        display: none;
     }
 }

@@ -46,7 +46,6 @@ export type ServiceItem = {
     id: number;
     label: string;
     icon: ServiceIconKey;
-    info: string;
 }
 
 export type ServicesSection = HomeSection & LabelSection & LinkSection & {

@@ -30,8 +30,8 @@
                 "label": "estadísticas",
                 "stats": [
                     { "id": 0, "label": "Años de experiencia", "value": "3" },
-                    { "id": 1, "label": "Proyectos completados", "value": "7" },
-                    { "id": 2, "label": "Clientes satisfechos", "value": "2" }
+                    { "id": 1, "label": "Proyectos completados", "value": "8" },
+                    { "id": 2, "label": "Clientes satisfechos", "value": "3" }
                 ]
             },
             {
@@ -44,32 +44,27 @@
                     {
                         "id": 0,
                         "label": "Estrategia UI/UX",
-                        "icon": "UIUXIcon",
-                        "info": "<bold>Descubrimiento</bold>: Resolviendo el <bold>porqué</bold> y el <bold>cómo</bold>."
+                        "icon": "UIUXIcon"
                     },
                     {
                         "id": 1,
                         "label": "Diseño Visual",
-                        "icon": "DesignIcon",
-                        "info": "<bold>Estética</bold>: La <bold>apariencia</bold> y la <bold>sensación</bold>."
+                        "icon": "DesignIcon"
                     },
                     {
                         "id": 2,
                         "label": "Desarrollo Frontend",
-                        "icon": "FrontendIcon",
-                        "info": "<bold>Interacción</bold>: Haciéndolo <bold>realidad</bold>."
+                        "icon": "FrontendIcon"
                     },
                     {
                         "id": 3,
                         "label": "Desarrollo Backend",
-                        "icon": "BackendIcon",
-                        "info": "<bold>Lógica</bold>: Toda la <bold>ingeniería</bold> interna."
+                        "icon": "BackendIcon"
                     },
                     {
                         "id": 4,
                         "label": "SEO y Crecimiento",
-                        "icon": "SEOIcon",
-                        "info": "<bold>Éxito</bold>: Logrando que el sitio sea <bold>visto</bold>."
+                        "icon": "SEOIcon"
                     }
                 ]
             },

@@ -30,8 +30,8 @@
                 "label": "stats",
                 "stats": [
                     { "id": 0, "label": "Years of experience", "value": "3" },
-                    { "id": 1, "label": "Projects completed", "value": "7" },
-                    { "id": 2, "label": "Satisfied customers", "value": "2" }
+                    { "id": 1, "label": "Projects completed", "value": "8" },
+                    { "id": 2, "label": "Satisfied customers", "value": "3" }
                 ]
             },
             {
@@ -44,32 +44,27 @@
                     {
                         "id": 0,
                         "label": "UI/UX Strategy",
-                        "icon": "UIUXIcon",
-                        "info": "<bold>Discovery</bold>: Solving the <bold>why</bold> and <bold>how</bold>."
+                        "icon": "UIUXIcon"
                     },
                     {
                         "id": 1,
                         "label": "Visual Design",
-                        "icon": "DesignIcon",
-                        "info": "<bold>Aesthetics</bold>: The <bold>look</bold> and <bold>feel</bold>."
+                        "icon": "DesignIcon"
                     },
                     {
                         "id": 2,
                         "label": "Frontend Development",
-                        "icon": "FrontendIcon",
-                        "info": "<bold>Interaction</bold>: Making it <bold>real</bold>."
+                        "icon": "FrontendIcon"
                     },
                     {
                         "id": 3,
                         "label": "Backend Development",
-                        "icon": "BackendIcon",
-                        "info": "<bold>Logic</bold>: All the internal <bold>engineering</bold>."
+                        "icon": "BackendIcon"
                     },
                     {
                         "id": 4,
                         "label": "SEO & Growth",
-                        "icon": "SEOIcon",
-                        "info": "<bold>Success</bold>: Getting the site <bold>seen</bold>."
+                        "icon": "SEOIcon"
                     }
                 ]
             },

@@ -13,9 +13,6 @@ interface ProjectsCardProps {
 export const ProjectsCard = ({ section }: ProjectsCardProps) => {
     return (
         <BentoCard gridArea={section.type}>
-            <div className={styles.container}>
-                <h3 className={styles.heading}>{section.heading}</h3>
-            </div>
             <Carousel />
             <Link href={section.href} className={cardStyles.link}>
                 <footer className={cardStyles.footer}>
