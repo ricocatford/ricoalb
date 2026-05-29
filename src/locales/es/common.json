@@ -109,6 +109,11 @@
         ]
     },
     "portfolio": {
+        "heading": "Proyectos",
+        "actions": {
+            "live": "Ver en vivo",
+            "repository": "Repositorio"
+        },
         "projects": [
             {
                 "id": 0,
@@ -186,6 +191,135 @@
                 ]
             }
         ]
+    },
+    "contact": {
+        "heading": "Hablemos",
+        "replyWindow": "Respondo en 24h",
+        "schedule": "Lun–Vie · Asturias, ES",
+        "email": "hola@tudominio.com",
+        "terminal": {
+            "windowTitle": "~/contact — message.sh",
+            "ready": "listo",
+            "sending": "transmitiendo…",
+            "sent": "enviado",
+            "lines": [
+                { "kind": "prompt", "text": "whoami" },
+                {
+                    "kind": "output",
+                    "text": "Ricardo Albarenque, desarrollador full-stack (Asturias, ES)"
+                },
+                { "kind": "prompt", "text": "cat ./en_busca_de.txt" },
+                {
+                    "kind": "output",
+                    "text": "Contratos largos, colaboraciones de producto, problemas interesantes."
+                },
+                { "kind": "prompt", "text": "./enviar_mensaje --para=$EMAIL" }
+            ],
+            "awaiting": "▸ esperando entrada ↓",
+            "queued": "▸ mensaje en camino — hablamos pronto.",
+            "failed": "▸ entrega fallida — vuelve a intentar o escríbeme por correo."
+        },
+        "form": {
+            "name": "Nombre",
+            "namePlaceholder": "Juana Pérez",
+            "email": "Correo",
+            "emailPlaceholder": "juana@estudio.co",
+            "subject": "Asunto",
+            "subjectPlaceholder": "Proyecto, rol, idea…",
+            "message": "Mensaje",
+            "messagePlaceholder": "Cuéntame sobre el problema, el equipo, los plazos…",
+            "send": "Enviar mensaje",
+            "sending": "Enviando…",
+            "sent": "Enviado"
+        },
+        "availability": {
+            "heading": "Disponible para nuevos proyectos",
+            "paragraph": "Reservando proyectos desde junio 2026 · ~25 h / semana de capacidad"
+        },
+        "channels": {
+            "heading": "Elige un canal.",
+            "footer": "↗ Todos los canales",
+            "items": {
+                "email": "Correo",
+                "github": "GitHub",
+                "linkedin": "LinkedIn",
+                "discord": "Discord"
+            }
+        }
+    },
+    "about": {
+        "headline": "Construyo productos <highlight>limpios y escalables</highlight> que se sienten <highlight>pixel-perfect</highlight> al usarlos — y se entregan sin dramas.",
+        "paragraphs": [
+            "Soy <bold>Ricardo</bold>, desarrollador full-stack afincado en <bold>Asturias, España</bold>. Los últimos años los he pasado traduciendo diseños en aplicaciones web de producción, con un cariño especial por los detalles donde se cruzan la ingeniería y el oficio — la tipografía de un estado de carga, una transición que por fin encaja, una API que se lee como una frase.",
+            "Trabajo casi todos los días con <bold>TypeScript</bold> en el lado React/Node del stack, con desvíos a Go cuando necesito un CLI o un servicio pequeño. Me importa el <bold>código legible</bold>, los defaults sensatos y las herramientas que desaparecen cuando funcionan.",
+            "Fuera del editor me siento detrás de una <bold>batería</bold>. Es el mejor contrapeso que he encontrado a un trabajo que vive de la paciencia y la precisión — la misma atención, solo que medida en milisegundos y groove en lugar de píxeles y tipos."
+        ],
+        "philosophy": {
+            "heading": "Sota de Todos los Palos",
+            "paragraph": "Aprendiz de todo, maestro de nada, pero mejor que maestro de una sola cosa."
+        },
+        "stack": {
+            "label": "Stack",
+            "rows": [
+                { "key": "TypeScript", "value": "Día a día" },
+                { "key": "React / Next.js", "value": "5 años de experiencia" },
+                { "key": "Node / Fastify", "value": "Backend" },
+                { "key": "PostgreSQL", "value": "BD principal" },
+                { "key": "Tailwind / CSS", "value": "Estilos" },
+                { "key": "Go", "value": "Herramientas y CLIs" }
+            ]
+        },
+        "timeline": {
+            "label": "Trayectoria",
+            "rows": [
+                {
+                    "when": "2024 — Hoy",
+                    "what": "Desarrollador Full-Stack Freelance",
+                    "note": "Productos propios y proyectos de cliente",
+                    "where": "REMOTO"
+                },
+                {
+                    "when": "2022 — 2024",
+                    "what": "Desarrollador Full-Stack",
+                    "note": "Equipo de producto SaaS, 5 ingenieros",
+                    "where": "BARCELONA"
+                },
+                {
+                    "when": "2021 — 2022",
+                    "what": "Desarrollador Frontend",
+                    "note": "Agencia — design system + entrega",
+                    "where": "OVIEDO"
+                },
+                {
+                    "when": "2020",
+                    "what": "Grado en Ingeniería Informática",
+                    "note": "Universidad de Oviedo",
+                    "where": "GRADUADO"
+                }
+            ]
+        }
+    },
+    "blog": {
+        "heading": "Blog",
+        "paragraph": "Apuntes sobre construir cosas — ingeniería, diseño y todo lo que hay entre medias.",
+        "featured": "Destacada",
+        "readPost": "Leer entrada",
+        "readArticle": "Leer entrada",
+        "backToBlog": "Volver al blog",
+        "publishedOn": "Publicado el",
+        "noPostsYet": "Aún no hay entradas. Vuelve pronto.",
+        "noMatches": "Ninguna entrada coincide con tu búsqueda.",
+        "notFoundTitle": "Entrada no encontrada",
+        "notFoundBody": "La entrada que buscas no existe o fue movida.",
+        "search": "Buscar",
+        "searchPlaceholder": "Buscar entradas…",
+        "categories": "Categorías",
+        "allPosts": "Todas",
+        "archive": "Archivo",
+        "tags": "Etiquetas",
+        "postCountOne": "{n} entrada",
+        "postCountMany": "{n} entradas",
+        "minRead": "{n} min de lectura"
     },
     "services": {
         "heading": "Servicios",

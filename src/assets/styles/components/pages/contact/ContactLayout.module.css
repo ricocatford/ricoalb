@@ -1,0 +1,17 @@
+.grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 1.25rem;
+}
+
+.side {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+@media screen and (max-width: 960px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,59 @@
+.card {
+    background: var(--card-background);
+    border: 1px solid var(--foreground-extra-light);
+    border-radius: 1.75rem;
+    padding: 1.5rem 1.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    backdrop-filter: blur(20px);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color-1);
+    box-shadow:
+        0 0 0 4px hsl(96, 100%, 60%, 0.15),
+        0 0 16px var(--color-1-t);
+    animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+html.light .dot {
+    box-shadow:
+        0 0 0 4px hsl(190, 98%, 42%, 0.15),
+        0 0 16px var(--color-1-t);
+}
+
+@keyframes pulse {
+    0%,
+    100% {
+        box-shadow:
+            0 0 0 4px hsl(96, 100%, 60%, 0.15),
+            0 0 16px var(--color-1-t);
+    }
+    50% {
+        box-shadow:
+            0 0 0 8px hsl(96, 100%, 60%, 0.05),
+            0 0 20px var(--color-1-t);
+    }
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.heading {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--foreground-highlight);
+}
+
+.paragraph {
+    font-size: 0.8125rem;
+    color: var(--foreground);
+}
