@@ -3,6 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
 import { siteUrl } from "@/lib/siteConfig";
+import { defaultInitState } from "@/store/GlobalStore";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -59,7 +60,9 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        // Server-render default; LanguageProvider syncs this to the user's
+        // persisted/browser language on the client (see LanguageProvider.tsx).
+        <html lang={defaultInitState.language}>
             <body className={inter.variable}>
                 <Analytics />
                 <SpeedInsights />
