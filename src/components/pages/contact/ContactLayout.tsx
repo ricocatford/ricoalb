@@ -7,7 +7,6 @@ import styles from "@/assets/styles/components/pages/contact/ContactLayout.modul
 export const ContactLayout = (): React.JSX.Element => {
     return (
         <>
-            <ContactHeader />
             <div className={styles.grid}>
                 <ContactForm />
                 <aside className={styles.side}>

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { PostBackLink } from "@/components/pages/blog/PostBackLink";
 import { PostView } from "@/components/pages/blog/PostView";
-import { getAllPostSlugs, getPost } from "@/lib/blog";
+import { getAllPostSlugs, getPost, getPosts } from "@/lib/blog";
 
 interface PageProps {
     params: Promise<{ slug: string }>;
@@ -38,17 +37,26 @@ export default async function BlogPostPage({
     params,
 }: PageProps): Promise<React.JSX.Element> {
     const { slug } = await params;
-    const [enPost, esPost] = await Promise.all([
+    const [enPost, esPost, allEnPosts] = await Promise.all([
         getPost("en", slug),
         getPost("es", slug),
+        getPosts("en"),
     ]);
 
     if (!enPost && !esPost) notFound();
 
+    const currentIndex = allEnPosts.findIndex((p) => p.slug === slug);
+    const prevPost = currentIndex < allEnPosts.length - 1 ? allEnPosts[currentIndex + 1] : null;
+    const nextPost = currentIndex > 0 ? allEnPosts[currentIndex - 1] : null;
+
     return (
         <div className="container">
-            <PostBackLink />
-            <PostView enPost={enPost} esPost={esPost} />
+            <PostView
+                enPost={enPost}
+                esPost={esPost}
+                prevPost={prevPost}
+                nextPost={nextPost}
+            />
         </div>
     );
 }

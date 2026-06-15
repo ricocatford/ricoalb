@@ -14,14 +14,10 @@
     justify-content: space-between;
     padding: 1rem 1.375rem;
     border-bottom: 1px solid var(--foreground-extra-light);
-    background: hsl(0, 0%, 0%, 0.25);
+    background: var(--card-section-background);
     font-size: 0.6875rem;
     letter-spacing: 0.1em;
     color: var(--foreground-light);
-}
-
-html.light .header {
-    background: hsl(0, 0%, 100%, 0.45);
 }
 
 .headerLeft {
@@ -44,11 +40,6 @@ html.light .header {
 
 .dots span:first-child {
     background: var(--color-1);
-}
-
-.badge {
-    text-transform: lowercase;
-    letter-spacing: 0.1em;
 }
 
 .body {
@@ -79,6 +70,24 @@ html.light .header {
 
 .output {
     color: var(--foreground-light);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+.cursor {
+    display: inline-block;
+    width: 0.45rem;
+    height: 1em;
+    margin-left: 2px;
+    background: var(--color-1);
+    vertical-align: text-bottom;
+    animation: terminal-blink 1s steps(1) infinite;
+}
+
+@keyframes terminal-blink {
+    50% {
+        opacity: 0;
+    }
 }
 
 .statusLine {
@@ -89,14 +98,10 @@ html.light .header {
 .form {
     padding: 1.75rem 2rem 2rem;
     border-top: 1px solid var(--foreground-extra-light);
-    background: hsl(0, 0%, 0%, 0.2);
+    background: var(--card-section-footer);
     display: flex;
     flex-direction: column;
     gap: 1rem;
-}
-
-html.light .form {
-    background: hsl(0, 0%, 100%, 0.35);
 }
 
 .row {
@@ -120,7 +125,7 @@ html.light .form {
 
 .field input,
 .field textarea {
-    background: hsl(0, 0%, 100%, 0.03);
+    background: var(--input-background);
     border: 1px solid var(--foreground-extra-light);
     border-radius: 0.625rem;
     padding: 0.75rem 0.875rem;
@@ -133,11 +138,6 @@ html.light .form {
         background 0.18s ease;
 }
 
-html.light .field input,
-html.light .field textarea {
-    background: hsl(0, 0%, 0%, 0.03);
-}
-
 .field input::placeholder,
 .field textarea::placeholder {
     color: var(--foreground-light);
@@ -146,12 +146,7 @@ html.light .field textarea {
 .field input:focus,
 .field textarea:focus {
     border-color: var(--color-1);
-    background: hsl(96, 100%, 60%, 0.04);
-}
-
-html.light .field input:focus,
-html.light .field textarea:focus {
-    background: hsl(190, 98%, 42%, 0.04);
+    background: var(--input-focus-background);
 }
 
 .field textarea {
@@ -161,26 +156,24 @@ html.light .field textarea:focus {
 
 .send {
     align-self: flex-start;
-    margin-top: 0.25rem;
+    margin: 0.25rem auto 0;
     padding: 0.75rem 1.375rem;
-    border-radius: 999px;
-    background: var(--color-1);
+    border-radius: 1rem;
+    background: var(--color-2);
     color: hsl(150, 70%, 8%);
-    font-weight: 600;
+    font-weight: 500;
     font-size: 0.8125rem;
     letter-spacing: 0.04em;
     display: inline-flex;
     align-items: center;
     gap: 0.625rem;
     transition: all 0.18s ease;
-    border: 1px solid var(--color-1);
+    border: 1px solid var(--color-2);
 }
 
 .send:hover:not(:disabled) {
-    background: var(--color-2);
-    border-color: var(--color-2);
+    background: transparent;
     color: var(--foreground-highlight);
-    transform: translateY(-1px);
 }
 
 .send:disabled {

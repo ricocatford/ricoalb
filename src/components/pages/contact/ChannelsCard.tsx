@@ -7,29 +7,19 @@ import { DiscordIcon } from "@/components/layout/icons/navbar/DiscordIcon";
 import { useTranslations } from "@/providers/LanguageProvider";
 import { asTranslations } from "@/lib/asTranslations";
 import type { Translations } from "@/types/Translations";
+import type {
+    HomeData,
+    SocialIconKey,
+    SocialItem,
+    SocialsSection,
+} from "@/types/HomeSection";
 import styles from "@/assets/styles/components/pages/contact/ChannelsCard.module.css";
 
 type ChannelKey = "email" | "linkedin" | "github" | "discord";
 
 interface ChannelsTranslations {
     heading: string;
-    footer: string;
     items: Record<ChannelKey, string>;
-}
-
-interface HeroSocial {
-    id: number;
-    icon: string;
-    href: string;
-}
-
-interface HeroEntry {
-    type?: string;
-    socials?: HeroSocial[];
-}
-
-interface HeroBlock {
-    list?: HeroEntry[];
 }
 
 const ICONS: Record<ChannelKey, React.JSX.Element> = {
@@ -39,7 +29,7 @@ const ICONS: Record<ChannelKey, React.JSX.Element> = {
     discord: <DiscordIcon width={28} height={28} />,
 };
 
-const ICON_KEY_TO_CHANNEL: Record<string, ChannelKey> = {
+const ICON_KEY_TO_CHANNEL: Record<SocialIconKey, ChannelKey> = {
     LinkedinIcon: "linkedin",
     GithubIcon: "github",
     DiscordIcon: "discord",
@@ -51,9 +41,14 @@ export const ChannelsCard = (): React.JSX.Element => {
     const data = asTranslations<ChannelsTranslations>(contact?.channels);
     const email = typeof contact?.email === "string" ? contact.email : "";
 
-    const hero = translations.common?.hero as unknown as HeroBlock | undefined;
-    const socials =
-        hero?.list?.find((entry) => entry.type === "socials")?.socials ?? [];
+    const home = translations.common?.home as unknown as HomeData | undefined;
+    const socials: SocialItem[] =
+        (
+            home?.sections?.find(
+                (section): section is SocialsSection =>
+                    section.type === "socials"
+            )
+        )?.socials ?? [];
 
     const hrefFor = (channel: ChannelKey): string => {
         if (channel === "email") return email ? `mailto:${email}` : "#";
@@ -95,7 +90,6 @@ export const ChannelsCard = (): React.JSX.Element => {
             </ul>
             <footer className={styles.footer}>
                 <span>{email}</span>
-                <span className={styles.footerLink}>{data?.footer}</span>
             </footer>
         </section>
     );

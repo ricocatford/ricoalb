@@ -37,6 +37,37 @@
     --max-width: 1280px;
     --animation-slide-in-down: slideInDown;
     --animation-reveal-element: revealElement;
+
+    /* card sub-panels */
+    --card-glass-panel: var(--card-background);
+    --card-section-background: hsl(0, 0%, 0%, 0.25);
+    --card-section-footer: hsl(0, 0%, 0%, 0.2);
+
+    /* inputs and interactive chips */
+    --input-background: hsl(0, 0%, 100%, 0.03);
+    --input-focus-background: hsl(96, 100%, 60%, 0.04);
+    --kbd-background: hsl(0, 0%, 100%, 0.06);
+    --chip-background: hsl(0, 0%, 100%, 0.04);
+
+    /* accent-tinted surfaces */
+    --accent-subtle-background: hsl(96, 100%, 60%, 0.08);
+    --accent-faint-background: hsl(96, 100%, 60%, 0.1);
+
+    /* image placeholder */
+    --placeholder-stripe: hsl(96, 100%, 60%, 0.08);
+    --placeholder-glow: hsl(96, 100%, 60%, 0.18);
+
+    /* image overlay gradients */
+    --overlay-fade: hsl(0, 0%, 5%, 0.9);
+    --overlay-side: hsl(0, 0%, 5%, 0.6);
+    --action-btn-background: hsl(0, 0%, 6%, 0.85);
+
+    /* availability dot ring */
+    --dot-ring: hsl(96, 100%, 60%, 0.15);
+    --dot-ring-pulse: hsl(96, 100%, 60%, 0.05);
+
+    /* prose hex bullet/heading marker */
+    --hex-bullet-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,3 93,28 93,72 50,97 7,72 7,28' fill='%2322c55e'/%3E%3C/svg%3E");
 }
 
 html.light {
@@ -73,6 +104,37 @@ html.light {
     --card-icon-background-highlight: hsl(190, 98%, 42%, 0.35);
     --card-icon: var(--color-2);
     --box-shadow: hsla(0, 0%, 20%, 0.6);
+
+    /* card sub-panels */
+    --card-glass-panel: hsl(0, 0%, 100%, 0.45);
+    --card-section-background: hsl(0, 0%, 100%, 0.45);
+    --card-section-footer: hsl(0, 0%, 100%, 0.35);
+
+    /* inputs and interactive chips */
+    --input-background: hsl(0, 0%, 0%, 0.03);
+    --input-focus-background: hsl(190, 98%, 42%, 0.04);
+    --kbd-background: hsl(0, 0%, 0%, 0.06);
+    --chip-background: hsl(0, 0%, 0%, 0.04);
+
+    /* accent-tinted surfaces */
+    --accent-subtle-background: hsl(190, 98%, 42%, 0.08);
+    --accent-faint-background: hsl(190, 98%, 42%, 0.1);
+
+    /* image placeholder */
+    --placeholder-stripe: hsl(190, 98%, 42%, 0.1);
+    --placeholder-glow: hsl(190, 98%, 42%, 0.18);
+
+    /* image overlay gradients */
+    --overlay-fade: hsl(0, 0%, 95%, 0.85);
+    --overlay-side: hsl(0, 0%, 95%, 0.5);
+    --action-btn-background: hsl(0, 0%, 95%, 0.85);
+
+    /* availability dot ring */
+    --dot-ring: hsl(190, 98%, 42%, 0.15);
+    --dot-ring-pulse: hsl(190, 98%, 42%, 0.05);
+
+    /* prose hex bullet/heading marker */
+    --hex-bullet-url: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,3 93,28 93,72 50,97 7,72 7,28' fill='%2302b1d4'/%3E%3C/svg%3E");
 }
 
 * {

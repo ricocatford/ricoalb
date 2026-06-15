@@ -1,0 +1,71 @@
+.progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: var(--color-1);
+    box-shadow: 0 0 10px var(--color-1-t);
+    z-index: 50;
+    transition: width 0.1s linear;
+    pointer-events: none;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem 0 1.75rem;
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--foreground-light);
+    transition: color 0.18s;
+}
+
+.backLink:hover {
+    color: var(--color-1);
+}
+
+.backLink:hover .backArrow {
+    transform: translateX(-3px);
+}
+
+.backArrow {
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.barMeta {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: var(--foreground-light);
+}
+
+.barMeta em {
+    color: var(--color-1);
+    font-style: normal;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 3.5rem;
+    align-items: start;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1080px) {
+    .layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

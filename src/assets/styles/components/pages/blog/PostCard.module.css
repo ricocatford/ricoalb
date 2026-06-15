@@ -68,15 +68,11 @@
 .tag {
     padding: 0.125rem 0.5rem;
     border-radius: 999px;
-    background: hsl(0, 0%, 100%, 0.04);
+    background: var(--chip-background);
     font-size: 0.625rem;
     letter-spacing: 0.1em;
     text-transform: lowercase;
     color: var(--foreground);
-}
-
-html.light .tag {
-    background: hsl(0, 0%, 0%, 0.04);
 }
 
 .arrow {
@@ -85,15 +81,11 @@ html.light .tag {
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background: hsl(0, 0%, 100%, 0.04);
+    background: var(--chip-background);
     color: var(--foreground-light);
     transition:
         background 0.22s ease,
         color 0.22s ease;
-}
-
-html.light .arrow {
-    background: hsl(0, 0%, 0%, 0.04);
 }
 
 .card:hover .arrow {

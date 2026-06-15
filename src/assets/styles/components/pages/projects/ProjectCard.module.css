@@ -56,7 +56,7 @@
     letter-spacing: 0.06em;
     padding: 0.375rem 0.625rem;
     border-radius: 999px;
-    background: hsl(0, 0%, 100%, 0.04);
+    background: var(--chip-background);
     border: 1px solid var(--foreground-extra-light);
     color: var(--foreground);
 }
@@ -64,7 +64,7 @@
 .tagAccent {
     color: var(--color-1);
     border-color: var(--color-1-t);
-    background: hsl(96, 100%, 60%, 0.1);
+    background: var(--accent-faint-background);
 }
 
 .visual {
@@ -72,7 +72,7 @@
     grid-column: 2;
     position: relative;
     overflow: hidden;
-    background: hsl(0, 0%, 5%);
+    background: var(--background);
     border-left: 1px solid var(--foreground-extra-light);
 }
 
@@ -88,30 +88,15 @@
     background:
         repeating-linear-gradient(
             135deg,
-            hsl(96, 100%, 60%, 0.08) 0 1px,
+            var(--placeholder-stripe) 0 1px,
             transparent 1px 18px
         ),
         radial-gradient(
             circle at 50% 50%,
-            hsl(96, 100%, 60%, 0.18),
+            var(--placeholder-glow),
             transparent 60%
         ),
-        hsl(0, 0%, 6%);
-}
-
-html.light .placeholder {
-    background:
-        repeating-linear-gradient(
-            135deg,
-            hsl(190, 98%, 42%, 0.1) 0 1px,
-            transparent 1px 18px
-        ),
-        radial-gradient(
-            circle at 50% 50%,
-            hsl(190, 98%, 42%, 0.18),
-            transparent 60%
-        ),
-        hsl(0, 0%, 90%);
+        var(--background);
 }
 
 .image {
@@ -133,21 +118,11 @@ html.light .placeholder {
     background:
         linear-gradient(
             180deg,
-            hsl(0, 0%, 5%, 0) 40%,
-            hsl(0, 0%, 5%, 0.9) 100%
+            transparent 40%,
+            var(--overlay-fade) 100%
         ),
-        linear-gradient(90deg, hsl(0, 0%, 5%, 0.6) 0%, transparent 35%);
+        linear-gradient(90deg, var(--overlay-side) 0%, transparent 35%);
     pointer-events: none;
-}
-
-html.light .overlay {
-    background:
-        linear-gradient(
-            180deg,
-            hsl(0, 0%, 95%, 0) 40%,
-            hsl(0, 0%, 95%, 0.85) 100%
-        ),
-        linear-gradient(90deg, hsl(0, 0%, 95%, 0.5) 0%, transparent 35%);
 }
 
 .domain {
@@ -196,7 +171,7 @@ html.light .overlay {
     border-radius: 1.5rem;
     letter-spacing: 0.01em;
     border: 1px solid var(--foreground-extra-light);
-    background: hsl(0, 0%, 6%, 0.85);
+    background: var(--action-btn-background);
     backdrop-filter: blur(8px);
     color: var(--foreground-highlight);
     transition: all 0.2s ease-in-out;

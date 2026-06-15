@@ -11,14 +11,14 @@ interface ServicesTranslations {
 
 export const ServicesHeader = (): React.JSX.Element => {
     const { translations } = useTranslations();
-    const servicesData = asTranslations<ServicesTranslations>(
+    const data = asTranslations<ServicesTranslations>(
         translations.common?.services
     );
 
     return (
-        <div className={styles.container}>
-            <h1 className={styles.heading}>{servicesData?.heading}</h1>
-            <p className={styles.paragraph}>{servicesData?.paragraph}</p>
-        </div>
+        <header className={styles.container}>
+            <h1 className={styles.heading}>{data?.heading}</h1>
+            <p className={styles.paragraph}>{data?.paragraph}</p>
+        </header>
     );
 };

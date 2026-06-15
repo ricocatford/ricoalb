@@ -14,7 +14,7 @@
     grid-column: 1;
     position: relative;
     overflow: hidden;
-    background: hsl(0, 0%, 5%);
+    background: var(--background);
     border-right: 1px solid var(--foreground-extra-light);
 }
 
@@ -24,30 +24,15 @@
     background:
         repeating-linear-gradient(
             135deg,
-            hsl(96, 100%, 60%, 0.08) 0 1px,
+            var(--placeholder-stripe) 0 1px,
             transparent 1px 18px
         ),
         radial-gradient(
             circle at 30% 50%,
-            hsl(96, 100%, 60%, 0.2),
+            var(--placeholder-glow),
             transparent 60%
         ),
-        hsl(0, 0%, 6%);
-}
-
-html.light .placeholder {
-    background:
-        repeating-linear-gradient(
-            135deg,
-            hsl(190, 98%, 42%, 0.1) 0 1px,
-            transparent 1px 18px
-        ),
-        radial-gradient(
-            circle at 30% 50%,
-            hsl(190, 98%, 42%, 0.2),
-            transparent 60%
-        ),
-        hsl(0, 0%, 90%);
+        var(--background);
 }
 
 .image {

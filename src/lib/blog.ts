@@ -17,7 +17,7 @@ const toMeta = (
     slug: string,
     entry: {
         title: string;
-        publishedAt: string;
+        publishedAt: string | null;
         excerpt: string;
         category: string;
         tags: readonly string[];
@@ -26,7 +26,7 @@ const toMeta = (
 ): PostMeta => ({
     slug,
     title: entry.title,
-    publishedAt: entry.publishedAt,
+    publishedAt: entry.publishedAt ?? "",
     excerpt: entry.excerpt,
     category: entry.category,
     tags: entry.tags,
@@ -38,6 +38,18 @@ export const getPosts = async (locale: PostLocale): Promise<PostMeta[]> => {
     return entries
         .map(({ slug, entry }) => toMeta(slug, entry))
         .sort(sortByDateDesc);
+};
+
+const countWords = (node: RenderableTreeNode): number => {
+    if (typeof node === "string") return node.split(/\s+/).filter(Boolean).length;
+    if (Array.isArray(node))
+        return (node as RenderableTreeNode[]).reduce(
+            (s: number, n) => s + countWords(n),
+            0
+        );
+    if (!node || typeof node !== "object") return 0;
+    const children = (node as { children?: RenderableTreeNode[] }).children ?? [];
+    return children.reduce((s: number, n) => s + countWords(n), 0);
 };
 
 const toRenderableTree = (
@@ -60,7 +72,9 @@ export const getPost = async (
     const entry = await collectionFor(locale).read(slug);
     if (!entry) return null;
     const rawContent = await entry.content();
-    return { ...toMeta(slug, entry), content: toRenderableTree(rawContent) };
+    const content = toRenderableTree(rawContent);
+    const readTimeMinutes = Math.max(1, Math.ceil(countWords(content) / 200));
+    return { ...toMeta(slug, entry), content, readTimeMinutes };
 };
 
 export const getAllPostSlugs = async (): Promise<

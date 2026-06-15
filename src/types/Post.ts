@@ -14,4 +14,5 @@ export type PostMeta = {
 
 export type Post = PostMeta & {
     content: RenderableTreeNode;
+    readTimeMinutes: number;
 };

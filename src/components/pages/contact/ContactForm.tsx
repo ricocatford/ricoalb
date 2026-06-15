@@ -9,12 +9,12 @@ import styles from "@/assets/styles/components/pages/contact/ContactForm.module.
 
 interface TerminalLine {
     kind: "prompt" | "output";
-    text: string;
+    text?: string;
+    bind?: "name" | "message";
 }
 
 interface TerminalTranslations {
     windowTitle: string;
-    ready: string;
     sending: string;
     sent: string;
     lines: TerminalLine[];
@@ -50,6 +50,7 @@ export const ContactForm = (): React.JSX.Element => {
 
     const [values, setValues] = useState(initialForm);
     const [status, setStatus] = useState<FormStatus>("idle");
+    const [focused, setFocused] = useState<TerminalLine["bind"] | null>(null);
 
     const update =
         (key: keyof typeof values) =>
@@ -82,13 +83,6 @@ export const ContactForm = (): React.JSX.Element => {
         }
     };
 
-    const statusBadge =
-        status === "sending"
-            ? terminal?.sending
-            : status === "sent"
-              ? terminal?.sent
-              : terminal?.ready;
-
     const lastLine =
         status === "sent"
             ? terminal?.queued
@@ -114,7 +108,6 @@ export const ContactForm = (): React.JSX.Element => {
                     </div>
                     <span>{terminal?.windowTitle}</span>
                 </div>
-                <span className={styles.badge}>{statusBadge}</span>
             </header>
 
             <div className={styles.body}>
@@ -124,11 +117,16 @@ export const ContactForm = (): React.JSX.Element => {
                             <>
                                 <span className={styles.prompt}>$</span>
                                 <span className={styles.command}>
-                                    {line.text.replace("$EMAIL", email)}
+                                    {(line.text ?? "").replace("$EMAIL", email)}
                                 </span>
                             </>
                         ) : (
-                            <span className={styles.output}>→ {line.text}</span>
+                            <span className={styles.output}>
+                                → {line.bind ? values[line.bind] : line.text}
+                                {line.bind && focused === line.bind && (
+                                    <span className={styles.cursor} />
+                                )}
+                            </span>
                         )}
                     </div>
                 ))}
@@ -144,6 +142,8 @@ export const ContactForm = (): React.JSX.Element => {
                         <input
                             value={values.name}
                             onChange={update("name")}
+                            onFocus={() => setFocused("name")}
+                            onBlur={() => setFocused(null)}
                             placeholder={form?.namePlaceholder}
                             required
                         />
@@ -172,6 +172,8 @@ export const ContactForm = (): React.JSX.Element => {
                     <textarea
                         value={values.message}
                         onChange={update("message")}
+                        onFocus={() => setFocused("message")}
+                        onBlur={() => setFocused(null)}
                         placeholder={form?.messagePlaceholder}
                         required
                     />
@@ -179,7 +181,9 @@ export const ContactForm = (): React.JSX.Element => {
                 <button
                     type="submit"
                     className={styles.send}
-                    disabled={!valid || status === "sending" || status === "sent"}
+                    disabled={
+                        !valid || status === "sending" || status === "sent"
+                    }
                 >
                     {sendLabel}
                     {status === "idle" && (

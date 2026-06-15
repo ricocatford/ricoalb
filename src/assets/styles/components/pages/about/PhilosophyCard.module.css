@@ -42,13 +42,9 @@
     gap: 0.5rem;
     padding: 1rem 1.25rem;
     border-radius: 1rem;
-    background: var(--card-background);
+    background: var(--card-glass-panel);
     border: 1px solid var(--foreground-extra-light);
     backdrop-filter: blur(8px);
-}
-
-html.light .text {
-    background: hsl(0, 0%, 100%, 0.45);
 }
 
 .heading {

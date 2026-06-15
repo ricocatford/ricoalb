@@ -18,16 +18,7 @@ export const ContactHeader = (): React.JSX.Element => {
 
     return (
         <header className={styles.container}>
-            <div className={styles.left}>
-                <h1 className={styles.heading}>
-                    {data?.heading}
-                    <em>.</em>
-                </h1>
-            </div>
-            <div className={styles.right}>
-                <span className={styles.reply}>{data?.replyWindow}</span>
-                <span className={styles.schedule}>{data?.schedule}</span>
-            </div>
+            <h1 className={styles.heading}>{data?.heading}</h1>
         </header>
     );
 };

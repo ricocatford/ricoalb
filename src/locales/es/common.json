@@ -193,26 +193,16 @@
         ]
     },
     "contact": {
-        "heading": "Hablemos",
-        "replyWindow": "Respondo en 24h",
-        "schedule": "Lun–Vie · Asturias, ES",
-        "email": "hola@tudominio.com",
+        "email": "hi@ricoalb.com",
         "terminal": {
             "windowTitle": "~/contact — message.sh",
-            "ready": "listo",
             "sending": "transmitiendo…",
             "sent": "enviado",
             "lines": [
                 { "kind": "prompt", "text": "whoami" },
-                {
-                    "kind": "output",
-                    "text": "Ricardo Albarenque, desarrollador full-stack (Asturias, ES)"
-                },
-                { "kind": "prompt", "text": "cat ./en_busca_de.txt" },
-                {
-                    "kind": "output",
-                    "text": "Contratos largos, colaboraciones de producto, problemas interesantes."
-                },
+                { "kind": "output", "bind": "name" },
+                { "kind": "prompt", "text": "cat ./mensaje.txt" },
+                { "kind": "output", "bind": "message" },
                 { "kind": "prompt", "text": "./enviar_mensaje --para=$EMAIL" }
             ],
             "awaiting": "▸ esperando entrada ↓",
@@ -234,11 +224,10 @@
         },
         "availability": {
             "heading": "Disponible para nuevos proyectos",
-            "paragraph": "Reservando proyectos desde junio 2026 · ~25 h / semana de capacidad"
+            "paragraph": "Reservando proyectos desde Julio 2026"
         },
         "channels": {
             "heading": "Elige un canal.",
-            "footer": "↗ Todos los canales",
             "items": {
                 "email": "Correo",
                 "github": "GitHub",
@@ -248,11 +237,11 @@
         }
     },
     "about": {
-        "headline": "Construyo productos <highlight>limpios y escalables</highlight> que se sienten <highlight>pixel-perfect</highlight> al usarlos — y se entregan sin dramas.",
+        "headline": "Construyo productos <highlight>limpios y escalables</highlight> que se son <highlight>pixel-perfect</highlight>.",
         "paragraphs": [
-            "Soy <bold>Ricardo</bold>, desarrollador full-stack afincado en <bold>Asturias, España</bold>. Los últimos años los he pasado traduciendo diseños en aplicaciones web de producción, con un cariño especial por los detalles donde se cruzan la ingeniería y el oficio — la tipografía de un estado de carga, una transición que por fin encaja, una API que se lee como una frase.",
-            "Trabajo casi todos los días con <bold>TypeScript</bold> en el lado React/Node del stack, con desvíos a Go cuando necesito un CLI o un servicio pequeño. Me importa el <bold>código legible</bold>, los defaults sensatos y las herramientas que desaparecen cuando funcionan.",
-            "Fuera del editor me siento detrás de una <bold>batería</bold>. Es el mejor contrapeso que he encontrado a un trabajo que vive de la paciencia y la precisión — la misma atención, solo que medida en milisegundos y groove en lugar de píxeles y tipos."
+            "Soy <bold>Ricardo</bold>, desarrollador full-stack afincado en <bold>Asturias, España</bold>. Lo que más disfruto es <bold>resolver problemas</bold> y convertir diseños en experiencias <bold>pixel-perfect</bold>, de esas que aguantan cuando las miras de cerca.",
+            "Donde mejor trabajo es formando parte de un <bold>equipo</bold>, y suelo aprender rápido y adaptarme con facilidad — a nuevas herramientas, nuevos stacks o a lo que el proyecto necesite.",
+            "Lejos del teclado me vas a encontrar casi siempre detrás de una <bold>batería</bold>. También soy un poco friki de la <bold>psicología</bold> y la <bold>astrofísica</bold> — puedo perder tranquilamente una tarde leyendo sobre cómo empezó el universo."
         ],
         "philosophy": {
             "heading": "Sota de Todos los Palos",
@@ -261,40 +250,33 @@
         "stack": {
             "label": "Stack",
             "rows": [
-                { "key": "TypeScript", "value": "Día a día" },
-                { "key": "React / Next.js", "value": "5 años de experiencia" },
-                { "key": "Node / Fastify", "value": "Backend" },
+                { "key": "TypeScript", "value": "A diario" },
+                { "key": "React / Next.js", "value": "4 años de experiencia" },
+                { "key": "Node / Nest.js", "value": "Backend" },
                 { "key": "PostgreSQL", "value": "BD principal" },
-                { "key": "Tailwind / CSS", "value": "Estilos" },
-                { "key": "Go", "value": "Herramientas y CLIs" }
+                { "key": "Tailwind / CSS", "value": "Estilos" }
             ]
         },
         "timeline": {
             "label": "Trayectoria",
             "rows": [
                 {
-                    "when": "2024 — Hoy",
-                    "what": "Desarrollador Full-Stack Freelance",
-                    "note": "Productos propios y proyectos de cliente",
+                    "when": "2025 — 2026",
+                    "what": "Desarrollo de Aplicaciones Web",
+                    "note": "Certificado de Profesionalidad nivel 3",
+                    "where": "ASTURIAS, ESPAÑA"
+                },
+                {
+                    "when": "2024 — Ahora",
+                    "what": "Desarrollador Full-Stack",
+                    "note": "Freelancer",
                     "where": "REMOTO"
                 },
                 {
-                    "when": "2022 — 2024",
-                    "what": "Desarrollador Full-Stack",
-                    "note": "Equipo de producto SaaS, 5 ingenieros",
-                    "where": "BARCELONA"
-                },
-                {
-                    "when": "2021 — 2022",
-                    "what": "Desarrollador Frontend",
-                    "note": "Agencia — design system + entrega",
-                    "where": "OVIEDO"
-                },
-                {
-                    "when": "2020",
-                    "what": "Grado en Ingeniería Informática",
-                    "note": "Universidad de Oviedo",
-                    "where": "GRADUADO"
+                    "when": "2022 — 2023",
+                    "what": "Desarrollo de Aplicaciones Web Full-Stack",
+                    "note": "Diploma nivel 5 - Matrícula de Honor",
+                    "where": "BRIGHTON, INGLATERRA"
                 }
             ]
         }
@@ -319,7 +301,13 @@
         "tags": "Etiquetas",
         "postCountOne": "{n} entrada",
         "postCountMany": "{n} entradas",
-        "minRead": "{n} min de lectura"
+        "minRead": "{n} min de lectura",
+        "onThisPage": "En esta página",
+        "share": "Compartir",
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "authorName": "Ricardo Albarenque",
+        "authorBio": "Desarrollador full-stack en Asturias, España. Escribiendo sobre TypeScript, arquitectura y artesanía — entre sesiones de batería."
     },
     "services": {
         "heading": "Servicios",
