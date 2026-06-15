@@ -1,0 +1,94 @@
+.card {
+    background: var(--card-background);
+    border: 1px solid var(--foreground-extra-light);
+    border-radius: 1.75rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    backdrop-filter: blur(20px);
+    flex: 1;
+}
+
+.heading {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--foreground-highlight);
+}
+
+.grid {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.channel {
+    aspect-ratio: 1.1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.625rem;
+    padding: 1rem;
+    border-radius: 1.125rem;
+    background: var(--card-header-background);
+    border: 1px solid var(--card-header-border);
+    color: var(--foreground-light);
+    transition:
+        background 0.2s ease-in-out,
+        border-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+.iconContainer {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--card-icon-background);
+    border: 1px solid var(--card-header-border);
+    border-radius: 1.125rem;
+    box-shadow: 0 0 14px var(--card-icon-background);
+    transition: all 0.2s ease-in-out;
+}
+
+.icon {
+    color: var(--card-icon);
+    display: flex;
+}
+
+.label {
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition: color 0.2s ease-in-out;
+}
+
+.channel:hover {
+    color: var(--foreground-highlight);
+    border-color: var(--color-1-t);
+}
+
+.channel:hover .iconContainer {
+    transform: scale(1.05);
+    box-shadow: 0 0 14px var(--card-icon-background-highlight);
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--foreground-extra-light);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    color: var(--foreground-light);
+}
+
+.footerLink {
+    color: var(--color-1);
+}

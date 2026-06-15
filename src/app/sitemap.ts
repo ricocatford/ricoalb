@@ -1,7 +1,18 @@
-import { MetadataRoute } from "next"
+import { MetadataRoute } from "next";
+import { getAllPostSlugs } from "@/lib/blog";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = "https://ricoalb.vercel.app"
+const baseUrl = "https://ricoalb.vercel.app";
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+    const postSlugs = await getAllPostSlugs();
+    const uniqueSlugs = Array.from(new Set(postSlugs.map((p) => p.slug)));
+
+    const postEntries: MetadataRoute.Sitemap = uniqueSlugs.map((slug) => ({
+        url: `${baseUrl}/blog/${slug}`,
+        lastModified: new Date(),
+        changeFrequency: "monthly",
+        priority: 0.7,
+    }));
 
     return [
         {
@@ -28,6 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "monthly",
             priority: 0.8,
         },
+        ...postEntries,
         {
             url: `${baseUrl}/contact`,
             lastModified: new Date(),
@@ -40,5 +52,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
             changeFrequency: "monthly",
             priority: 0.6,
         },
-    ]
+    ];
 }

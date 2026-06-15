@@ -20,11 +20,17 @@ Path alias: `@/*` → `./src/*`.
 
 ```
 src/
-  app/                          Next.js App Router. One folder per route.
-    layout.tsx                  Root layout; wires all providers.
-    page.tsx                    Home page (uses Hero).
-    {route}/page.tsx            Route entry points (about, blog, contact, projects, services).
-    sitemap.ts, robots.ts       SEO metadata routes.
+  app/                          Next.js App Router.
+    layout.tsx                  Minimal root: <html>, <body>, Inter font, Analytics. NO providers/chrome.
+    icon.svg                    Site favicon.
+    sitemap.ts, robots.ts       SEO metadata routes (live at site root).
+    (site)/                     Route group with the public site chrome.
+      layout.tsx                Wraps GlobalStore → Hydration → Loading → Theme → Language → Smoke/Navbar/Footer.
+      page.tsx                  Home page (uses Hero).
+      {route}/page.tsx          Route entry points (about, blog, contact, projects, services).
+      blog/[slug]/page.tsx      Dynamic blog post page (statically generated).
+    keystatic/[[...params]]/    Admin UI for the CMS (no site chrome).
+    api/keystatic/[...params]/  Keystatic API handler.
   components/
     pages/{page}/               Page-scoped components (e.g. components/pages/services/ServiceCard.tsx).
     layout/                     App-wide layout primitives.
@@ -33,12 +39,16 @@ src/
   providers/                    React context providers (Global store, Theme, Language, Loading).
   store/                        Zustand store factory + hook.
   types/                        TypeScript domain types.
-  lib/                          Pure utility helpers.
+  lib/                          Pure utility helpers (incl. blog reader).
   locales/{lang}/{file}.json    i18n content (en, es).
   assets/styles/                CSS Modules + globals.css.
     globals.css                 CSS variables, theme tokens, resets.
     components/                 Mirrors src/components/ structure exactly.
+content/blog/{en,es}/{slug}/    Markdoc post sources (managed via Keystatic).
+keystatic.config.ts             CMS schema at project root.
 ```
+
+The root `layout.tsx` is intentionally minimal so `/keystatic` (admin) does not inherit the site chrome (Smoke background, Navbar, Footer, IntroLoader). All site routes live inside the `(site)` route group, which adds the chrome layout and **also imports `globals.css`** — so the global resets, CSS variables, and `body` painting only apply to the public site, not the Keystatic admin (whose own UI styles would otherwise collide with the resets). URL paths are unaffected by the group — `(site)/about/page.tsx` still serves `/about`.
 
 **Style files mirror component paths.** A component at `src/components/pages/services/ServiceCard.tsx` has its styles at `src/assets/styles/components/pages/services/ServiceCard.module.css`. Keep this in sync when adding new components.
 
@@ -136,6 +146,20 @@ The home page is a CSS-grid bento layout. Each card lives in `components/pages/h
 - Don't hard-code text — route through the locale JSON files.
 - Don't make components client components unless they need it.
 - Don't import a CSS module from a path that doesn't mirror the component's path under `src/assets/styles/components/`.
+
+## Blog (Keystatic + Markdoc)
+
+- **CMS**: Keystatic in `local` storage mode. Config at `keystatic.config.ts`. Admin UI at `/keystatic`. API handler at `/api/keystatic/[...params]`.
+- **Collections**: `postsEn` and `postsEs` — one collection per language, both with identical schema (title slug, publishedAt, excerpt, tags, coverImage, markdoc content). Posts are folders under `content/blog/{en,es}/{slug}/` with an `index.mdoc` body and any uploaded images alongside.
+- **Reader**: `src/lib/blog.ts` exposes `getPosts(locale)`, `getPost(locale, slug)`, `getAllPostSlugs()`, and `findPostByAnyLocale(slug, preferred)`. It transforms the Markdoc AST returned by Keystatic (`{ node }`) via `Markdoc.transform()` + JSON round-trip so the result is a plain `RenderableTreeNode` safe to pass from server to client components.
+- **Routing**:
+  - `/blog` is a server component that loads both locales' post lists and hands them to a client `<PostList>` that selects by current language.
+  - `/blog/[slug]` is statically generated via `generateStaticParams` (one entry per unique slug across both locales). At render time it loads both language variants if present and lets a client `<PostView>` pick the right one based on the global store.
+- **Paired translations share a slug**: to make `/blog/[slug]` swap content seamlessly when the user toggles language, the EN and ES versions of the same post must live at the same slug (e.g. `content/blog/en/hello-world/` and `content/blog/es/hello-world/`). `<PostView>` then renders the locale that matches the user's language and falls back to the other if missing. A post that exists in only one language still works — its URL just doesn't change content on toggle.
+- **Rendering**: `<PostBody>` uses `Markdoc.renderers.react(content, React)`. Typography lives in `PostBody.module.css` (`.prose` scope), styled to match the futuristic vocabulary (uppercase headings, glowing accents on code/links, gradient-clipped post title via `<PostHeader>`).
+- **Translations**: `blog.heading`, `blog.paragraph`, `blog.readPost`, `blog.publishedOn`, `blog.backToBlog`, `blog.noPostsYet`, `blog.notFoundTitle`, `blog.notFoundBody` in `locales/{en,es}/common.json`.
+- **Sitemap**: `src/app/sitemap.ts` is now `async` and includes one entry per unique post slug.
+- **Deployment note**: `storage: { kind: "local" }` makes the admin read-only on Vercel (read-only FS). To edit posts on the deployed site, switch to `{ kind: "github", repo: "owner/repo" }` and configure the Keystatic GitHub App.
 
 ## Branching
 

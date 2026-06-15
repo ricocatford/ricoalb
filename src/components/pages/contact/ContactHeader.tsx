@@ -2,23 +2,23 @@
 
 import { useTranslations } from "@/providers/LanguageProvider";
 import { asTranslations } from "@/lib/asTranslations";
-import styles from "@/assets/styles/components/pages/services/ServicesHeader.module.css";
+import styles from "@/assets/styles/components/pages/contact/ContactHeader.module.css";
 
-interface ServicesTranslations {
+interface ContactHeaderTranslations {
     heading: string;
-    paragraph: string;
+    replyWindow: string;
+    schedule: string;
 }
 
-export const ServicesHeader = (): React.JSX.Element => {
+export const ContactHeader = (): React.JSX.Element => {
     const { translations } = useTranslations();
-    const data = asTranslations<ServicesTranslations>(
-        translations.common?.services
+    const data = asTranslations<ContactHeaderTranslations>(
+        translations.common?.contact
     );
 
     return (
         <header className={styles.container}>
             <h1 className={styles.heading}>{data?.heading}</h1>
-            <p className={styles.paragraph}>{data?.paragraph}</p>
         </header>
     );
 };

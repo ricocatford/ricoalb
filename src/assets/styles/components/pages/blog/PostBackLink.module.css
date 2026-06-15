@@ -1,0 +1,30 @@
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    color: var(--foreground-light);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05rem;
+    transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+    width: fit-content;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid var(--foreground-extra-light);
+    border-radius: 0.75rem;
+    background: var(--background-gradient);
+}
+
+.link:hover {
+    color: var(--color-1);
+    box-shadow: 0 0 12px var(--color-1-t);
+}
+
+.link:hover .arrow {
+    transform: translateX(-0.25rem);
+}
+
+.arrow {
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}

@@ -109,6 +109,11 @@
         ]
     },
     "portfolio": {
+        "heading": "Projects",
+        "actions": {
+            "live": "Live preview",
+            "repository": "Repository"
+        },
         "projects": [
             {
                 "id": 0,
@@ -186,6 +191,123 @@
                 ]
             }
         ]
+    },
+    "contact": {
+        "email": "hi@ricoalb.com",
+        "terminal": {
+            "windowTitle": "~/contact — message.sh",
+            "sending": "transmitting…",
+            "sent": "sent",
+            "lines": [
+                { "kind": "prompt", "text": "whoami" },
+                { "kind": "output", "bind": "name" },
+                { "kind": "prompt", "text": "cat ./message.txt" },
+                { "kind": "output", "bind": "message" },
+                { "kind": "prompt", "text": "./send_message --to=$EMAIL" }
+            ],
+            "awaiting": "▸ awaiting input ↓",
+            "queued": "▸ message queued — talk soon.",
+            "failed": "▸ delivery failed — try again or email me directly."
+        },
+        "form": {
+            "name": "Name",
+            "namePlaceholder": "Jane Doe",
+            "email": "Email",
+            "emailPlaceholder": "jane@studio.co",
+            "subject": "Subject",
+            "subjectPlaceholder": "Project, role, idea…",
+            "message": "Message",
+            "messagePlaceholder": "Tell me about the problem, the team, the timeline…",
+            "send": "Send message",
+            "sending": "Sending…",
+            "sent": "Sent"
+        },
+        "availability": {
+            "heading": "Currently available for new work",
+            "paragraph": "Booking projects starting July 2026"
+        },
+        "channels": {
+            "heading": "Pick a channel.",
+            "items": {
+                "email": "Email",
+                "github": "GitHub",
+                "linkedin": "LinkedIn",
+                "discord": "Discord"
+            }
+        }
+    },
+    "about": {
+        "headline": "I build <highlight>clean, scalable</highlight> products that are <highlight>pixel-perfect</highlight>.",
+        "paragraphs": [
+            "I'm <bold>Ricardo</bold>, a full-stack developer based in <bold>Asturias, Spain</bold>. What I enjoy most is <bold>solving problems</bold> and turning designs into <bold>pixel-perfect</bold> experiences — the kind that still hold up when you look closely.",
+            "I do my best work as part of a <bold>team</bold>, and I tend to learn fast and adapt easily — to new tools, new stacks, or whatever a project ends up needing.",
+            "Away from the keyboard you'll usually find me behind a <bold>drum kit</bold>. I'm also a bit of a nerd about <bold>psychology</bold> and <bold>astrophysics</bold> — I can happily lose an evening reading about how the universe began."
+        ],
+        "philosophy": {
+            "heading": "Jack of All Trades",
+            "paragraph": "A jack of all trades is a master of none, but oftentimes better than a master of one."
+        },
+        "stack": {
+            "label": "Stack",
+            "rows": [
+                { "key": "TypeScript", "value": "Daily driver" },
+                { "key": "React / Next.js", "value": "4y experience" },
+                { "key": "Node / Nest.js", "value": "Backend" },
+                { "key": "PostgreSQL", "value": "Primary DB" },
+                { "key": "Tailwind / CSS", "value": "Styling" }
+            ]
+        },
+        "timeline": {
+            "label": "Timeline",
+            "rows": [
+                {
+                    "when": "2025 — 2026",
+                    "what": "Web Application Development",
+                    "note": "Professional Certificate level 3",
+                    "where": "ASTURIAS, SPAIN"
+                },
+                {
+                    "when": "2024 — Now",
+                    "what": "Full-Stack Developer",
+                    "note": "Freelancer",
+                    "where": "REMOTE"
+                },
+                {
+                    "when": "2022 — 2023",
+                    "what": "Full-Stack Web Application Development",
+                    "note": "Diploma level 5 - Distinction Grade",
+                    "where": "BRIGHTON, ENGLAND"
+                }
+            ]
+        }
+    },
+    "blog": {
+        "heading": "Blog",
+        "paragraph": "Notes on building things — engineering, design, and everything in between.",
+        "featured": "Featured",
+        "readPost": "Read post",
+        "readArticle": "Read article",
+        "backToBlog": "Back to blog",
+        "publishedOn": "Published on",
+        "noPostsYet": "No posts yet. Check back soon.",
+        "noMatches": "No posts match your search.",
+        "notFoundTitle": "Post not found",
+        "notFoundBody": "The post you're looking for doesn't exist or was moved.",
+        "search": "Search",
+        "searchPlaceholder": "Search posts…",
+        "categories": "Categories",
+        "allPosts": "All posts",
+        "archive": "Archive",
+        "tags": "Tags",
+        "postCountOne": "{n} post",
+        "postCountMany": "{n} posts",
+        "minRead": "{n} min read",
+        "onThisPage": "On this page",
+        "share": "Share",
+        "previous": "Previous",
+        "next": "Next",
+        "authorName": "Ricardo Albarenque",
+        "authorBio": "Full-stack developer based in Asturias, Spain. Writing about TypeScript, architecture, and craft — between drum practice sessions."
     },
     "services": {
         "heading": "Services",

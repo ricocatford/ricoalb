@@ -109,6 +109,11 @@
         ]
     },
     "portfolio": {
+        "heading": "Proyectos",
+        "actions": {
+            "live": "Ver en vivo",
+            "repository": "Repositorio"
+        },
         "projects": [
             {
                 "id": 0,
@@ -186,6 +191,123 @@
                 ]
             }
         ]
+    },
+    "contact": {
+        "email": "hi@ricoalb.com",
+        "terminal": {
+            "windowTitle": "~/contact — message.sh",
+            "sending": "transmitiendo…",
+            "sent": "enviado",
+            "lines": [
+                { "kind": "prompt", "text": "whoami" },
+                { "kind": "output", "bind": "name" },
+                { "kind": "prompt", "text": "cat ./mensaje.txt" },
+                { "kind": "output", "bind": "message" },
+                { "kind": "prompt", "text": "./enviar_mensaje --para=$EMAIL" }
+            ],
+            "awaiting": "▸ esperando entrada ↓",
+            "queued": "▸ mensaje en camino — hablamos pronto.",
+            "failed": "▸ entrega fallida — vuelve a intentar o escríbeme por correo."
+        },
+        "form": {
+            "name": "Nombre",
+            "namePlaceholder": "Juana Pérez",
+            "email": "Correo",
+            "emailPlaceholder": "juana@estudio.co",
+            "subject": "Asunto",
+            "subjectPlaceholder": "Proyecto, rol, idea…",
+            "message": "Mensaje",
+            "messagePlaceholder": "Cuéntame sobre el problema, el equipo, los plazos…",
+            "send": "Enviar mensaje",
+            "sending": "Enviando…",
+            "sent": "Enviado"
+        },
+        "availability": {
+            "heading": "Disponible para nuevos proyectos",
+            "paragraph": "Reservando proyectos desde Julio 2026"
+        },
+        "channels": {
+            "heading": "Elige un canal.",
+            "items": {
+                "email": "Correo",
+                "github": "GitHub",
+                "linkedin": "LinkedIn",
+                "discord": "Discord"
+            }
+        }
+    },
+    "about": {
+        "headline": "Construyo productos <highlight>limpios y escalables</highlight> que se son <highlight>pixel-perfect</highlight>.",
+        "paragraphs": [
+            "Soy <bold>Ricardo</bold>, desarrollador full-stack afincado en <bold>Asturias, España</bold>. Lo que más disfruto es <bold>resolver problemas</bold> y convertir diseños en experiencias <bold>pixel-perfect</bold>, de esas que aguantan cuando las miras de cerca.",
+            "Donde mejor trabajo es formando parte de un <bold>equipo</bold>, y suelo aprender rápido y adaptarme con facilidad — a nuevas herramientas, nuevos stacks o a lo que el proyecto necesite.",
+            "Lejos del teclado me vas a encontrar casi siempre detrás de una <bold>batería</bold>. También soy un poco friki de la <bold>psicología</bold> y la <bold>astrofísica</bold> — puedo perder tranquilamente una tarde leyendo sobre cómo empezó el universo."
+        ],
+        "philosophy": {
+            "heading": "Sota de Todos los Palos",
+            "paragraph": "Aprendiz de todo, maestro de nada, pero mejor que maestro de una sola cosa."
+        },
+        "stack": {
+            "label": "Stack",
+            "rows": [
+                { "key": "TypeScript", "value": "A diario" },
+                { "key": "React / Next.js", "value": "4 años de experiencia" },
+                { "key": "Node / Nest.js", "value": "Backend" },
+                { "key": "PostgreSQL", "value": "BD principal" },
+                { "key": "Tailwind / CSS", "value": "Estilos" }
+            ]
+        },
+        "timeline": {
+            "label": "Trayectoria",
+            "rows": [
+                {
+                    "when": "2025 — 2026",
+                    "what": "Desarrollo de Aplicaciones Web",
+                    "note": "Certificado de Profesionalidad nivel 3",
+                    "where": "ASTURIAS, ESPAÑA"
+                },
+                {
+                    "when": "2024 — Ahora",
+                    "what": "Desarrollador Full-Stack",
+                    "note": "Freelancer",
+                    "where": "REMOTO"
+                },
+                {
+                    "when": "2022 — 2023",
+                    "what": "Desarrollo de Aplicaciones Web Full-Stack",
+                    "note": "Diploma nivel 5 - Matrícula de Honor",
+                    "where": "BRIGHTON, INGLATERRA"
+                }
+            ]
+        }
+    },
+    "blog": {
+        "heading": "Blog",
+        "paragraph": "Apuntes sobre construir cosas — ingeniería, diseño y todo lo que hay entre medias.",
+        "featured": "Destacada",
+        "readPost": "Leer entrada",
+        "readArticle": "Leer entrada",
+        "backToBlog": "Volver al blog",
+        "publishedOn": "Publicado el",
+        "noPostsYet": "Aún no hay entradas. Vuelve pronto.",
+        "noMatches": "Ninguna entrada coincide con tu búsqueda.",
+        "notFoundTitle": "Entrada no encontrada",
+        "notFoundBody": "La entrada que buscas no existe o fue movida.",
+        "search": "Buscar",
+        "searchPlaceholder": "Buscar entradas…",
+        "categories": "Categorías",
+        "allPosts": "Todas",
+        "archive": "Archivo",
+        "tags": "Etiquetas",
+        "postCountOne": "{n} entrada",
+        "postCountMany": "{n} entradas",
+        "minRead": "{n} min de lectura",
+        "onThisPage": "En esta página",
+        "share": "Compartir",
+        "previous": "Anterior",
+        "next": "Siguiente",
+        "authorName": "Ricardo Albarenque",
+        "authorBio": "Desarrollador full-stack en Asturias, España. Escribiendo sobre TypeScript, arquitectura y artesanía — entre sesiones de batería."
     },
     "services": {
         "heading": "Servicios",

@@ -1,0 +1,71 @@
+.card {
+    background: var(--card-background);
+    border: 1px solid var(--foreground-extra-light);
+    border-radius: 1.75rem;
+    padding: 3rem;
+    min-height: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+    backdrop-filter: blur(20px);
+}
+
+.headline {
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--foreground-highlight);
+    text-wrap: balance;
+}
+
+.highlight {
+    color: var(--color-2);
+    background: linear-gradient(45deg, var(--color-2), var(--color-1));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+}
+
+.body {
+    color: var(--foreground);
+    font-size: 1rem;
+    line-height: 1.65;
+    max-width: 60ch;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    text-wrap: pretty;
+}
+
+.paragraph {
+    color: inherit;
+}
+
+.bold {
+    color: var(--foreground-highlight);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) {
+    .card {
+        padding: 2rem;
+        min-height: 0;
+    }
+
+    .headline {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .card {
+        padding: 1.5rem;
+    }
+
+    .headline {
+        font-size: 1.625rem;
+    }
+}

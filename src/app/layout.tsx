@@ -1,16 +1,7 @@
-import "@/assets/styles/globals.css";
 import type { Metadata, Viewport } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Inter } from "next/font/google";
-import { HydrationClient } from "@/components/layout/HydrationClient";
-import { GlobalStoreProvider } from "@/providers/GlobalStoreProvider";
-import { ThemeProvider } from "@/providers/ThemeProvider";
-import { LanguageProvider } from "@/providers/LanguageProvider";
-import { Smoke } from "@/components/layout/background/Smoke";
-import { Navbar } from "@/components/layout/navbar/Navbar";
-import { Footer } from "@/components/layout/footer/Footer";
-import { LoadingProvider } from "@/providers/LoadingProvider";
 
 const inter = Inter({
     variable: "--font-inter",
@@ -59,20 +50,7 @@ export default function RootLayout({
             <body className={inter.variable}>
                 <Analytics />
                 <SpeedInsights />
-                <GlobalStoreProvider>
-                    <HydrationClient>
-                        <LoadingProvider>
-                            <ThemeProvider>
-                                <LanguageProvider>
-                                    <Smoke nav={<Navbar />}>
-                                        <main role="main">{children}</main>
-                                        <Footer />
-                                    </Smoke>
-                                </LanguageProvider>
-                            </ThemeProvider>
-                        </LoadingProvider>
-                    </HydrationClient>
-                </GlobalStoreProvider>
+                {children}
             </body>
         </html>
     );

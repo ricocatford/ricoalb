@@ -1,0 +1,70 @@
+.card {
+    position: relative;
+    overflow: hidden;
+    background: var(--card-background);
+    border: 1px solid var(--foreground-extra-light);
+    border-radius: 1.75rem;
+    padding: 1.75rem;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    backdrop-filter: blur(20px);
+}
+
+.logoStage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -65%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.logoBubble {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 134px;
+    height: 134px;
+    border-radius: 50%;
+    background: var(--background-gradient);
+    box-shadow: 0 0 30px var(--color-1-t);
+}
+
+.text {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    border-radius: 1rem;
+    background: var(--card-glass-panel);
+    border: 1px solid var(--foreground-extra-light);
+    backdrop-filter: blur(8px);
+}
+
+.heading {
+    color: var(--foreground-highlight);
+    font-size: 1.125rem;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+}
+
+.paragraph {
+    color: var(--foreground);
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    text-wrap: pretty;
+}
+
+.label {
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--foreground-light);
+    margin-top: 0.5rem;
+}

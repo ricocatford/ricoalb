@@ -1,0 +1,46 @@
+.card {
+    background: var(--card-background);
+    border: 1px solid var(--foreground-extra-light);
+    border-radius: 1.75rem;
+    padding: 1.75rem;
+    backdrop-filter: blur(20px);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: var(--foreground-light);
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed var(--foreground-extra-light);
+    font-size: 0.875rem;
+}
+
+.row:last-child {
+    border-bottom: 0;
+}
+
+.key {
+    color: var(--foreground-highlight);
+}
+
+.value {
+    font-size: 0.8275rem;
+    color: var(--foreground-light);
+}
