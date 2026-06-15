@@ -1,7 +1,8 @@
 import { MetadataRoute } from "next";
 import { getAllPostSlugs } from "@/lib/blog";
+import { siteUrl } from "@/lib/siteConfig";
 
-const baseUrl = "https://ricoalb.vercel.app";
+const baseUrl = siteUrl;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const postSlugs = await getAllPostSlugs();
