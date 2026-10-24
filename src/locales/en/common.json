@@ -44,27 +44,37 @@
                     {
                         "id": 0,
                         "label": "UI/UX Strategy",
-                        "icon": "UIUXIcon"
+                        "icon": "UIUXIcon",
+                        "description": "Flows that make sense from the first click. No confusion, no dead ends.",
+                        "tags": ["User flows", "Wireframes", "Accessibility"]
                     },
                     {
                         "id": 1,
                         "label": "Visual Design",
-                        "icon": "DesignIcon"
+                        "icon": "DesignIcon",
+                        "description": "Clean, bold interfaces backed by a consistent design system.",
+                        "tags": ["Figma", "Design systems", "Branding"]
                     },
                     {
                         "id": 2,
                         "label": "Frontend Development",
-                        "icon": "FrontendIcon"
+                        "icon": "FrontendIcon",
+                        "description": "Fast, responsive, pixel-perfect interfaces that work on every screen.",
+                        "tags": ["React", "Next.js", "TypeScript"]
                     },
                     {
                         "id": 3,
                         "label": "Backend Development",
-                        "icon": "BackendIcon"
+                        "icon": "BackendIcon",
+                        "description": "Solid APIs, clean databases and integrations users never see but always rely on.",
+                        "tags": ["Node.js", "NestJS", "PostgreSQL"]
                     },
                     {
                         "id": 4,
                         "label": "SEO & Growth",
-                        "icon": "SEOIcon"
+                        "icon": "SEOIcon",
+                        "description": "Technical SEO and performance tuning so the product shows up where it matters.",
+                        "tags": ["Core Web Vitals", "Metadata", "Analytics"]
                     }
                 ]
             },

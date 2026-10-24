@@ -1,135 +1,212 @@
 .container {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+    gap: 1rem;
+    height: 100%;
+}
+
+.tabList {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    height: 100%;
-}
-
-.hexGrid {
-    --hex-w: clamp(45px, 9vw, 64px);
-    --hex-h: calc(var(--hex-w) * 1.1547);
-    --col-step: calc(var(--hex-w) * 0.5);
-    --row-step: calc(var(--hex-w) * 0.866);
-
-    position: relative;
-    width: calc(var(--hex-w) + var(--col-step) * 4);
-    height: calc(var(--hex-h) + var(--row-step));
+    gap: 0.25rem;
     list-style: none;
 }
 
-.hexItem {
-    position: absolute;
-    width: var(--hex-w);
-    height: var(--hex-h);
-    cursor: pointer;
+.tabItem {
     opacity: 0;
     transform: translateY(-2rem);
     animation: var(--animation-slide-in-down) 0.75s ease forwards;
-    animation-delay: calc(var(--index) * 0.15s);
+    animation-delay: calc(var(--index) * 0.1s);
 }
 
-.hexItem:nth-child(1) {
-    left: 0;
-    top: var(--row-step);
-}
-
-.hexItem:nth-child(2) {
-    left: var(--col-step);
-    top: 0;
-}
-
-.hexItem:nth-child(3) {
-    left: calc(var(--col-step) * 2);
-    top: var(--row-step);
-}
-
-.hexItem:nth-child(4) {
-    left: calc(var(--col-step) * 3);
-    top: 0;
-}
-
-.hexItem:nth-child(5) {
-    left: calc(var(--col-step) * 4);
-    top: var(--row-step);
-}
-
-.hexItem:hover {
-    z-index: 1;
-}
-
-.hexShape {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    overflow: visible;
-}
-
-.hexShape polygon {
-    fill: transparent;
-    stroke: var(--foreground-light);
-    stroke-width: 1;
-    vector-effect: non-scaling-stroke;
-    transform-box: fill-box;
-    transform-origin: center;
-    transform: scale(calc((var(--hex-w) - 4px) / var(--hex-w)));
-    transition:
-        stroke 0.4s ease-in-out,
-        filter 0.4s ease-in-out;
-}
-
-.hexItem:hover .hexShape polygon {
-    stroke: var(--color-1);
-    filter: drop-shadow(0 0 6px var(--color-1-t));
-}
-
-.hexIcon {
-    position: absolute;
-    inset: 0;
+.tab {
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    color: var(--foreground);
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid transparent;
+    border-radius: 0.875rem;
+    background: transparent;
+    color: var(--foreground-light);
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    overflow: hidden;
     transition:
-        color 0.4s ease-in-out,
-        filter 0.4s ease-in-out;
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
 }
 
-.hexItem:hover .hexIcon {
+.tab:hover {
+    color: var(--foreground);
+}
+
+.tab[data-active="true"] {
+    color: var(--foreground-highlight);
+    background: var(--accent-subtle-background);
+    border-color: var(--card-header-border);
+}
+
+.tab:focus-visible {
+    outline: 1px solid var(--color-1);
+    outline-offset: 2px;
+}
+
+.tabIcon {
+    display: flex;
+    flex-shrink: 0;
+    transition:
+        color 0.3s ease,
+        filter 0.3s ease;
+}
+
+.tab[data-active="true"] .tabIcon {
     color: var(--color-1);
     filter: drop-shadow(0 0 4px var(--color-1-t));
 }
 
-.serviceLabelContainer {
-    min-height: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.25rem;
-}
-
-.serviceLabel {
-    letter-spacing: -0.025rem;
-    color: var(--foreground);
-    font-weight: 600;
-    text-transform: capitalize;
-    font-size: 1rem;
-    text-align: center;
-    animation: var(--animation-reveal-element) 0.5s ease-out forwards;
+.tabLabel {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: -0.0125rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     -webkit-font-smoothing: antialiased;
 }
 
-@media screen and (max-width: 768px) {
-    .hexGrid {
-        --hex-w: clamp(53px, 15.4vw, 76px);
+.panel {
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    border-radius: 1.25rem;
+    border: 1px solid var(--foreground-extra-light);
+    background:
+        radial-gradient(
+            circle at 100% 0%,
+            var(--placeholder-glow),
+            transparent 55%
+        ),
+        var(--card-section-background);
+    overflow: hidden;
+}
+
+.panel::before {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background: repeating-linear-gradient(
+        135deg,
+        var(--placeholder-stripe) 0 1px,
+        transparent 1px 18px
+    );
+    mask-image: linear-gradient(200deg, black, transparent 60%);
+    pointer-events: none;
+}
+
+.panelContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1.25rem;
+    animation: var(--animation-reveal-element) 0.5s ease-out forwards;
+}
+
+.panelIcon {
+    display: flex;
+    color: var(--color-1);
+    filter: drop-shadow(0 0 8px var(--color-1-t));
+    margin-bottom: auto;
+    padding-bottom: 1rem;
+}
+
+.panelHeading {
+    text-transform: uppercase;
+    letter-spacing: -0.05rem;
+    line-height: 1;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--foreground-highlight);
+}
+
+.panelDescription {
+    color: var(--foreground);
+    font-size: 0.95rem;
+    line-height: 1.45;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.375rem;
+    margin-top: 0.25rem;
+    list-style: none;
+}
+
+.tag {
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    border: 1px solid var(--foreground-extra-light);
+    background: var(--chip-background);
+    color: var(--foreground-light);
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .tabList {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tab {
+        justify-content: center;
+        padding: 0.625rem;
+    }
+
+    .tabLabel {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
     }
 }
 
 @media screen and (max-width: 576px) {
     .container {
-        padding: 0.5rem;
+        grid-template-columns: 1fr;
+    }
+
+    .tabList {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tab {
+        justify-content: center;
+        padding: 0.625rem;
+    }
+
+    .tabLabel {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+    }
+
+    .panelHeading {
+        font-size: 1.25rem;
     }
 }

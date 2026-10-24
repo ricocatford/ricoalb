@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { ArrowUpRightIcon } from "@/components/layout/icons/common/ArrowUpRightIcon";
 import { GithubIcon } from "@/components/layout/icons/navbar/GithubIcon";
-import type { Project, ProjectLink } from "@/types/Project";
+import type { Project } from "@/types/Project";
+import { isRepoLink, normalizeImagePath } from "@/lib/project";
 import styles from "@/assets/styles/components/pages/projects/ProjectCard.module.css";
 
 interface ProjectCardProps {
@@ -12,12 +13,6 @@ interface ProjectCardProps {
     liveLabel: string;
     repositoryLabel: string;
 }
-
-const isRepoLink = (link: ProjectLink): boolean =>
-    /github|repo/i.test(link.label) || /github\.com/i.test(link.href);
-
-const normalizeImagePath = (raw: string): string =>
-    raw.replace(/^(\.\.\/)?public\//, "/");
 
 export const ProjectCard = ({
     project,

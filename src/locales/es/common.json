@@ -44,27 +44,41 @@
                     {
                         "id": 0,
                         "label": "Estrategia UI/UX",
-                        "icon": "UIUXIcon"
+                        "icon": "UIUXIcon",
+                        "description": "Flujos que tienen sentido desde el primer clic. Sin confusión ni callejones sin salida.",
+                        "tags": [
+                            "Flujos de usuario",
+                            "Wireframes",
+                            "Accesibilidad"
+                        ]
                     },
                     {
                         "id": 1,
                         "label": "Diseño Visual",
-                        "icon": "DesignIcon"
+                        "icon": "DesignIcon",
+                        "description": "Interfaces limpias y con carácter, respaldadas por un sistema de diseño coherente.",
+                        "tags": ["Figma", "Sistemas de diseño", "Branding"]
                     },
                     {
                         "id": 2,
                         "label": "Desarrollo Frontend",
-                        "icon": "FrontendIcon"
+                        "icon": "FrontendIcon",
+                        "description": "Interfaces rápidas, responsive y precisas que funcionan en cualquier pantalla.",
+                        "tags": ["React", "Next.js", "TypeScript"]
                     },
                     {
                         "id": 3,
                         "label": "Desarrollo Backend",
-                        "icon": "BackendIcon"
+                        "icon": "BackendIcon",
+                        "description": "APIs sólidas, bases de datos limpias e integraciones que nadie ve pero todos usan.",
+                        "tags": ["Node.js", "NestJS", "PostgreSQL"]
                     },
                     {
                         "id": 4,
                         "label": "SEO y Crecimiento",
-                        "icon": "SEOIcon"
+                        "icon": "SEOIcon",
+                        "description": "SEO técnico y rendimiento para que el producto aparezca donde importa.",
+                        "tags": ["Core Web Vitals", "Metadatos", "Analítica"]
                     }
                 ]
             },
