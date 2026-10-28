@@ -3,6 +3,7 @@ import styles from "@/assets/styles/components/layout/background/Hex.module.css"
 
 interface HexBackgroundProps {
     color: string;
+    className?: string;
 }
 
 interface HexagonConfig {
@@ -17,7 +18,7 @@ interface HexagonConfig {
     gap: number;
 }
 
-export const Hex: React.FC<HexBackgroundProps> = ({ color }) => {
+export const Hex: React.FC<HexBackgroundProps> = ({ color, className }) => {
     const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
     useEffect(() => {
@@ -242,5 +243,10 @@ export const Hex: React.FC<HexBackgroundProps> = ({ color }) => {
         };
     }, [color]);
 
-    return <canvas ref={canvasRef} className={styles.canvas} />;
+    return (
+        <canvas
+            ref={canvasRef}
+            className={`${styles.canvas}${className ? ` ${className}` : ""}`}
+        />
+    );
 };

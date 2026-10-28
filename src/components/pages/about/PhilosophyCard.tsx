@@ -20,7 +20,7 @@ export const PhilosophyCard = (): React.JSX.Element => {
 
     return (
         <section className={styles.card}>
-            <Hex color="var(--color-1)" />
+            <Hex color="var(--color-1)" className={styles.hex} />
             <div className={styles.logoStage}>
                 <span className={styles.logoBubble}>
                     <LogoIcon width={96} height={96} />

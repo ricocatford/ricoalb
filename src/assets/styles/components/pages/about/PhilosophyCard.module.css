@@ -13,6 +13,17 @@
     backdrop-filter: blur(20px);
 }
 
+/* Keep the hexagons in a soft circle around the logo, fading out towards the card edges.
+   The logo sits 15% of its height (134px) above the card centre, so the mask follows it. */
+.hex {
+    mask-image: radial-gradient(
+        circle 170px at 50% calc(50% - 20px),
+        black 45%,
+        hsl(0, 0%, 0%, 0.45) 70%,
+        transparent 100%
+    );
+}
+
 .logoStage {
     position: absolute;
     top: 50%;

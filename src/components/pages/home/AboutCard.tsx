@@ -14,8 +14,8 @@ interface AboutCardProps {
 export const AboutCard = ({ section }: AboutCardProps) => {
     return (
         <BentoCard gridArea={section.type}>
-            <Hex color={`var(--color-1)`} />
             <div className={styles.container}>
+                <Hex color={`var(--color-1)`} className={styles.hex} />
                 <div className={styles.logoContainer}>
                     <span className={styles.logoIcon}>
                         <LogoIcon width={96} height={96} />

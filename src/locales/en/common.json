@@ -29,9 +29,9 @@
                 "type": "stats",
                 "label": "stats",
                 "stats": [
-                    { "id": 0, "label": "Years of experience", "value": "3" },
-                    { "id": 1, "label": "Projects completed", "value": "8" },
-                    { "id": 2, "label": "Satisfied customers", "value": "3" }
+                    { "id": 0, "label": "Years of experience", "value": "4" },
+                    { "id": 1, "label": "Projects completed", "value": "4" },
+                    { "id": 2, "label": "Sites migrated", "value": "14" }
                 ]
             },
             {
@@ -43,37 +43,37 @@
                 "services": [
                     {
                         "id": 0,
-                        "label": "UI/UX Strategy",
+                        "label": "UI/UX & Design",
                         "icon": "UIUXIcon",
-                        "description": "Flows that make sense from the first click. No confusion, no dead ends.",
-                        "tags": ["User flows", "Wireframes", "Accessibility"]
+                        "description": "Mapping out logical user journeys and clean interfaces built on reusable components.",
+                        "tags": ["User flows", "Figma", "Design systems"]
                     },
                     {
                         "id": 1,
-                        "label": "Visual Design",
-                        "icon": "DesignIcon",
-                        "description": "Clean, bold interfaces backed by a consistent design system.",
-                        "tags": ["Figma", "Design systems", "Branding"]
-                    },
-                    {
-                        "id": 2,
                         "label": "Frontend Development",
                         "icon": "FrontendIcon",
-                        "description": "Fast, responsive, pixel-perfect interfaces that work on every screen.",
+                        "description": "Writing clean, snappy UI components that actually feel good to use.",
                         "tags": ["React", "Next.js", "TypeScript"]
                     },
                     {
-                        "id": 3,
+                        "id": 2,
                         "label": "Backend Development",
                         "icon": "BackendIcon",
-                        "description": "Solid APIs, clean databases and integrations users never see but always rely on.",
+                        "description": "Building reliable APIs and schemas that won't break under pressure.",
                         "tags": ["Node.js", "NestJS", "PostgreSQL"]
+                    },
+                    {
+                        "id": 3,
+                        "label": "Infrastructure & Migrations",
+                        "icon": "InfraIcon",
+                        "description": "Moving sites between servers and setting up Cloudflare and DNS without losing a single byte.",
+                        "tags": ["Cloudflare", "DNS", "Linux VPS"]
                     },
                     {
                         "id": 4,
                         "label": "SEO & Growth",
                         "icon": "SEOIcon",
-                        "description": "Technical SEO and performance tuning so the product shows up where it matters.",
+                        "description": "Tuning performance and metadata so search engines can actually read your app.",
                         "tags": ["Core Web Vitals", "Metadata", "Analytics"]
                     }
                 ]
@@ -114,7 +114,7 @@
                 "isLink": true,
                 "href": "/contact",
                 "heading": "Let's work <highlight>together!</highlight>",
-                "paragraph": "Have a challenging <bold>problem</bold> or an exciting <bold>idea</bold> that needs a clean, scalable solution? I'm eager to connect with clients and fellow developers. Let’s start turning <bold>concepts into reality</bold>."
+                "paragraph": "Hiring for a full-stack role, or have a challenging <bold>problem</bold> or an exciting <bold>idea</bold> that needs a clean, scalable solution? I'm eager to connect with teams, clients and fellow developers. Let’s start turning <bold>concepts into reality</bold>."
             }
         ]
     },
@@ -127,6 +127,50 @@
         "projects": [
             {
                 "id": 0,
+                "name": "Mejores Clínicas Dentales",
+                "description": "Directory of dental clinics across Spain, built and shipped at a web agency. Clinic listings, search by location and SEO-friendly pages.",
+                "stack": ["SEO", "Cloudflare", "VPS"],
+                "image_url": "../public/portfolio/mejoresclinicasdentales_thumbnail.webp",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "Live",
+                        "href": "https://mejoresclinicasdentales.com"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "Zapp",
+                "description": "WhatsApp business bot that turns customer messages into cases, notifies the team and sends scheduled message templates.",
+                "stack": ["TypeScript", "WhatsApp Cloud API", "Cron jobs"],
+                "image_url": "../public/portfolio/zapp_thumbnail.png",
+                "links": []
+            },
+            {
+                "id": 2,
+                "name": "AutoSEO",
+                "description": "Content CRM for a marketing agency. Editors set each client's blog context, tone, keywords and publishing cadence; a scheduled pipeline writes articles with Gemini, sends them to WordPress as drafts, and editors approve, publish or reject them.",
+                "stack": [
+                    "Next.js",
+                    "NestJS",
+                    "PostgreSQL",
+                    "Prisma",
+                    "Google Gemini",
+                    "WordPress API",
+                    "Docker"
+                ],
+                "image_url": "../public/portfolio/autoseo_thumbnail.webp",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "Live",
+                        "href": "https://autoseo.ricoalb.com"
+                    }
+                ]
+            },
+            {
+                "id": 3,
                 "name": "PulseFlow",
                 "description": "AI-native scraping engine that monitors web signals and triggers LLM-summarized alerts.",
                 "stack": [
@@ -150,53 +194,6 @@
                         "id": 1,
                         "label": "GitHub Repository",
                         "href": "https://github.com/ricocatford/pulseflow"
-                    }
-                ]
-            },
-            {
-                "id": 1,
-                "name": "Coinmaster",
-                "description": "A dynamic cryptocurrency dashboard with real-time data, interactive graphs, asset tracking, and SSR for performance.",
-                "stack": ["Next.js", "TypeScript", "Zustand", "REST API"],
-                "image_url": "../public/portfolio/coinmaster_thumbnail.png",
-                "links": [
-                    {
-                        "id": 0,
-                        "label": "Live",
-                        "href": "https://coinmaster-delta.vercel.app"
-                    },
-                    {
-                        "id": 1,
-                        "label": "GitHub Repository",
-                        "href": "https://github.com/ricocatford/coinmaster"
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "name": "Blackdog Shop",
-                "description": "An eCommerce platform with image uploads, secure payment integration, and an admin panel for inventory control.",
-                "stack": ["Django", "MongoDB", "AWS S3", "Stripe API"],
-                "image_url": "../public/portfolio/blackdog_thumbnail.png",
-                "links": [
-                    {
-                        "id": 0,
-                        "label": "GitHub Repository",
-                        "href": "https://github.com/ricocatford/black-dog-shop"
-                    }
-                ]
-            },
-            {
-                "id": 3,
-                "name": "PizzaHub",
-                "description": "RESTful API using hexagonal architecture and JWT-based authentication. Includes complete order management.",
-                "stack": ["Nest.js", "TypeScript", "MySQL", "Docker"],
-                "image_url": "../public/portfolio/pizzahub_thumbnail.png",
-                "links": [
-                    {
-                        "id": 0,
-                        "label": "GitHub Repository",
-                        "href": "https://github.com/ricocatford/shop-backend"
                     }
                 ]
             }
@@ -233,8 +230,8 @@
             "sent": "Sent"
         },
         "availability": {
-            "heading": "Currently available for new work",
-            "paragraph": "Booking projects starting July 2026"
+            "heading": "Open to full-time roles",
+            "paragraph": "Available now · Asturias or remote"
         },
         "channels": {
             "heading": "Pick a channel.",
@@ -264,12 +261,20 @@
                 { "key": "React / Next.js", "value": "4y experience" },
                 { "key": "Node / Nest.js", "value": "Backend" },
                 { "key": "PostgreSQL", "value": "Primary DB" },
-                { "key": "Tailwind / CSS", "value": "Styling" }
+                { "key": "Tailwind / CSS", "value": "Styling" },
+                { "key": "Cloudflare / DNS / VPS", "value": "Infra" },
+                { "key": "Docker", "value": "Containers" }
             ]
         },
         "timeline": {
             "label": "Timeline",
             "rows": [
+                {
+                    "when": "Jun 2026 — Oct 2026",
+                    "what": "Web Developer",
+                    "note": "Digital agency · Intern → Developer",
+                    "where": "ASTURIAS, SPAIN"
+                },
                 {
                     "when": "2025 — 2026",
                     "what": "Web Application Development",
@@ -277,7 +282,7 @@
                     "where": "ASTURIAS, SPAIN"
                 },
                 {
-                    "when": "2024 — Now",
+                    "when": "2024 — 2026",
                     "what": "Full-Stack Developer",
                     "note": "Freelancer",
                     "where": "REMOTE"
@@ -326,26 +331,26 @@
             {
                 "id": 0,
                 "icon": "UIUXIcon",
-                "heading": "UI/UX Strategy",
-                "paragraph": "I map out flows that just make sense — no confusion, no dead ends. Good UX is invisible, and that's exactly the point."
+                "heading": "UI/UX & Design",
+                "paragraph": "I map out flows that just make sense and turn them into clean, bold interfaces. Good UX is invisible, and that's exactly the point."
             },
             {
                 "id": 1,
-                "icon": "DesignIcon",
-                "heading": "Visual Design",
-                "paragraph": "Clean, bold, and built to last. I craft interfaces and brand identities that actually look like someone cared."
-            },
-            {
-                "id": 2,
                 "icon": "FrontendIcon",
                 "heading": "Frontend Development",
                 "paragraph": "Fast, responsive, pixel-perfect. I turn designs into real code that works great on every screen."
             },
             {
-                "id": 3,
+                "id": 2,
                 "icon": "BackendIcon",
                 "heading": "Backend Development",
                 "paragraph": "Solid APIs, clean databases, zero drama. I build the stuff users never see but always rely on."
+            },
+            {
+                "id": 3,
+                "icon": "InfraIcon",
+                "heading": "Infrastructure & Migrations",
+                "paragraph": "Site migrations between hosts and VPSs, Cloudflare proxying, SSL and DNS records. The unglamorous work that keeps everything online."
             },
             {
                 "id": 4,

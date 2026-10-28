@@ -40,7 +40,7 @@ export type StatsSection = HomeSection & LabelSection & {
     stats: StatItem[];
 }
 
-export type ServiceIconKey = "UIUXIcon" | "DesignIcon" | "FrontendIcon" | "BackendIcon" | "SEOIcon";
+export type ServiceIconKey = "UIUXIcon" | "DesignIcon" | "FrontendIcon" | "BackendIcon" | "InfraIcon" | "SEOIcon";
 
 export type ServiceItem = {
     id: number;

@@ -8,6 +8,7 @@ import { UIUXIcon } from "@/components/layout/icons/services/UIUXIcon";
 import { DesignIcon } from "@/components/layout/icons/services/DesignIcon";
 import { FrontendIcon } from "@/components/layout/icons/services/FrontendIcon";
 import { BackendIcon } from "@/components/layout/icons/services/BackendIcon";
+import { InfraIcon } from "@/components/layout/icons/services/InfraIcon";
 import { SEOIcon } from "@/components/layout/icons/services/SEOIcon";
 import styles from "@/assets/styles/components/pages/home/ServicesCard.module.css";
 import cardStyles from "@/assets/styles/components/layout/cards/BentoCard.module.css";
@@ -17,6 +18,7 @@ const iconList: Record<ServiceIconKey, React.JSX.Element> = {
     DesignIcon: <DesignIcon width={22} height={22} />,
     FrontendIcon: <FrontendIcon width={22} height={22} />,
     BackendIcon: <BackendIcon width={22} height={22} />,
+    InfraIcon: <InfraIcon width={22} height={22} />,
     SEOIcon: <SEOIcon width={22} height={22} />,
 };
 
@@ -25,6 +27,7 @@ const largeIconList: Record<ServiceIconKey, React.JSX.Element> = {
     DesignIcon: <DesignIcon width={40} height={40} />,
     FrontendIcon: <FrontendIcon width={40} height={40} />,
     BackendIcon: <BackendIcon width={40} height={40} />,
+    InfraIcon: <InfraIcon width={40} height={40} />,
     SEOIcon: <SEOIcon width={40} height={40} />,
 };
 
@@ -35,7 +38,6 @@ interface ServicesCardProps {
 export const ServicesCard = ({ section }: ServicesCardProps) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const services = section.services;
-    const active = services[activeIndex];
 
     const onKeyDown = (event: React.KeyboardEvent<HTMLUListElement>) => {
         const step =
@@ -100,25 +102,39 @@ export const ServicesCard = ({ section }: ServicesCardProps) => {
                 <div
                     id="service-panel"
                     role="tabpanel"
-                    aria-labelledby={`service-tab-${active.id}`}
+                    aria-labelledby={`service-tab-${services[activeIndex].id}`}
                     className={styles.panel}
                 >
-                    <div className={styles.panelContent} key={activeIndex}>
-                        <span className={styles.panelIcon}>
-                            {largeIconList[active.icon]}
-                        </span>
-                        <h3 className={styles.panelHeading}>{active.label}</h3>
-                        <p className={styles.panelDescription}>
-                            {active.description}
-                        </p>
-                        <ul className={styles.tags}>
-                            {active.tags.map((tag) => (
-                                <li key={tag} className={styles.tag}>
-                                    {tag}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
+                    {/* Every service is rendered in the same grid cell so the
+                        panel always takes the height of the tallest one. */}
+                    {services.map((service, index) => {
+                        const isActive = index === activeIndex;
+                        return (
+                            <div
+                                key={service.id}
+                                className={styles.panelContent}
+                                data-active={isActive}
+                                aria-hidden={!isActive}
+                            >
+                                <span className={styles.panelIcon}>
+                                    {largeIconList[service.icon]}
+                                </span>
+                                <h3 className={styles.panelHeading}>
+                                    {service.label}
+                                </h3>
+                                <p className={styles.panelDescription}>
+                                    {service.description}
+                                </p>
+                                <ul className={styles.tags}>
+                                    {service.tags.map((tag) => (
+                                        <li key={tag} className={styles.tag}>
+                                            {tag}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
             <Link href={section.href} className={cardStyles.link}>

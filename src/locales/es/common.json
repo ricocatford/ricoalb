@@ -29,9 +29,9 @@
                 "type": "stats",
                 "label": "estadísticas",
                 "stats": [
-                    { "id": 0, "label": "Años de experiencia", "value": "3" },
-                    { "id": 1, "label": "Proyectos completados", "value": "8" },
-                    { "id": 2, "label": "Clientes satisfechos", "value": "3" }
+                    { "id": 0, "label": "Años de experiencia", "value": "4" },
+                    { "id": 1, "label": "Proyectos completados", "value": "4" },
+                    { "id": 2, "label": "Webs migradas", "value": "14" }
                 ]
             },
             {
@@ -43,42 +43,38 @@
                 "services": [
                     {
                         "id": 0,
-                        "label": "Estrategia UI/UX",
+                        "label": "UI/UX y Diseño",
                         "icon": "UIUXIcon",
-                        "description": "Flujos que tienen sentido desde el primer clic. Sin confusión ni callejones sin salida.",
-                        "tags": [
-                            "Flujos de usuario",
-                            "Wireframes",
-                            "Accesibilidad"
-                        ]
+                        "description": "Defino recorridos de usuario lógicos e interfaces limpias sobre componentes reutilizables.",
+                        "tags": ["User flows", "Figma", "Design systems"]
                     },
                     {
                         "id": 1,
-                        "label": "Diseño Visual",
-                        "icon": "DesignIcon",
-                        "description": "Interfaces limpias y con carácter, respaldadas por un sistema de diseño coherente.",
-                        "tags": ["Figma", "Sistemas de diseño", "Branding"]
-                    },
-                    {
-                        "id": 2,
                         "label": "Desarrollo Frontend",
                         "icon": "FrontendIcon",
-                        "description": "Interfaces rápidas, responsive y precisas que funcionan en cualquier pantalla.",
+                        "description": "Escribo componentes de UI fluidos y limpios que da gusto usar.",
                         "tags": ["React", "Next.js", "TypeScript"]
                     },
                     {
-                        "id": 3,
+                        "id": 2,
                         "label": "Desarrollo Backend",
                         "icon": "BackendIcon",
-                        "description": "APIs sólidas, bases de datos limpias e integraciones que nadie ve pero todos usan.",
+                        "description": "Construyo APIs y bases de datos fiables, diseñadas para escalar.",
                         "tags": ["Node.js", "NestJS", "PostgreSQL"]
+                    },
+                    {
+                        "id": 3,
+                        "label": "Infraestructura y Migraciones",
+                        "icon": "InfraIcon",
+                        "description": "Migro sitios entre servidores y configuro Cloudflare y DNS sin perder ni un byte.",
+                        "tags": ["Cloudflare", "DNS", "VPS Linux"]
                     },
                     {
                         "id": 4,
                         "label": "SEO y Crecimiento",
                         "icon": "SEOIcon",
-                        "description": "SEO técnico y rendimiento para que el producto aparezca donde importa.",
-                        "tags": ["Core Web Vitals", "Metadatos", "Analítica"]
+                        "description": "Ajusto el rendimiento y los metadatos para que los buscadores entiendan tu app.",
+                        "tags": ["Core Web Vitals", "Metadatos", "Analytics"]
                     }
                 ]
             },
@@ -118,7 +114,7 @@
                 "isLink": true,
                 "href": "/contact",
                 "heading": "Trabajemos <highlight>juntos.</highlight>",
-                "paragraph": "¿Tiene un <bold>problema</bold> desafiante o una <bold>idea</bold> emocionante que necesita una solución limpia y escalable? Estoy deseando conectar tanto con clientes como con otros desarrolladores. Empecemos a convertir los <bold>conceptos en realidad</bold>."
+                "paragraph": "¿Buscas un desarrollador full-stack para tu equipo, o tienes un <bold>problema</bold> desafiante o una <bold>idea</bold> emocionante que necesita una solución limpia y escalable? Estoy deseando conectar con equipos, clientes y otros desarrolladores. Empecemos a convertir los <bold>conceptos en realidad</bold>."
             }
         ]
     },
@@ -131,8 +127,52 @@
         "projects": [
             {
                 "id": 0,
+                "name": "Mejores Clínicas Dentales",
+                "description": "Directorio de clínicas dentales de toda España, desarrollado y desplegado en una agencia web. Fichas de clínicas, búsqueda por ubicación y páginas optimizadas para SEO.",
+                "stack": ["SEO", "Cloudflare", "VPS"],
+                "image_url": "../public/portfolio/mejoresclinicasdentales_thumbnail.webp",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "En vivo",
+                        "href": "https://mejoresclinicasdentales.com"
+                    }
+                ]
+            },
+            {
+                "id": 1,
+                "name": "Zapp",
+                "description": "Bot de WhatsApp para empresas que convierte los mensajes de clientes en casos, avisa al equipo y envía plantillas de mensajes programadas.",
+                "stack": ["TypeScript", "WhatsApp Cloud API", "Cron jobs"],
+                "image_url": "../public/portfolio/zapp_thumbnail.png",
+                "links": []
+            },
+            {
+                "id": 2,
+                "name": "AutoSEO",
+                "description": "CRM de contenidos para una agencia de marketing. Los editores configuran la temática, el tono, las palabras clave y la frecuencia de publicación de cada blog; un proceso programado redacta artículos con Gemini, los envía a WordPress como borradores y los editores los aprueban, publican o rechazan.",
+                "stack": [
+                    "Next.js",
+                    "NestJS",
+                    "PostgreSQL",
+                    "Prisma",
+                    "Google Gemini",
+                    "WordPress API",
+                    "Docker"
+                ],
+                "image_url": "../public/portfolio/autoseo_thumbnail.webp",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "En vivo",
+                        "href": "https://autoseo.ricoalb.com"
+                    }
+                ]
+            },
+            {
+                "id": 3,
                 "name": "PulseFlow",
-                "description": "AI-native scraping engine that monitors web signals and triggers LLM-summarized alerts.",
+                "description": "Motor de scraping con IA que monitoriza señales web y lanza alertas resumidas por un LLM.",
                 "stack": [
                     "Next.js",
                     "TypeScript",
@@ -154,53 +194,6 @@
                         "id": 1,
                         "label": "GitHub Repository",
                         "href": "https://github.com/ricocatford/pulseflow"
-                    }
-                ]
-            },
-            {
-                "id": 1,
-                "name": "Coinmaster",
-                "description": "A dynamic cryptocurrency dashboard with real-time data, interactive graphs, asset tracking, and SSR for performance.",
-                "stack": ["Next.js", "TypeScript", "Zustand", "REST API"],
-                "image_url": "../public/portfolio/coinmaster_thumbnail.png",
-                "links": [
-                    {
-                        "id": 0,
-                        "label": "Live",
-                        "href": "https://coinmaster-delta.vercel.app"
-                    },
-                    {
-                        "id": 1,
-                        "label": "GitHub Repository",
-                        "href": "https://github.com/ricocatford/coinmaster"
-                    }
-                ]
-            },
-            {
-                "id": 2,
-                "name": "Blackdog Shop",
-                "description": "An eCommerce platform with image uploads, secure payment integration, and an admin panel for inventory control.",
-                "stack": ["Django", "MongoDB", "AWS S3", "Stripe API"],
-                "image_url": "../public/portfolio/blackdog_thumbnail.png",
-                "links": [
-                    {
-                        "id": 0,
-                        "label": "GitHub Repository",
-                        "href": "https://github.com/ricocatford/black-dog-shop"
-                    }
-                ]
-            },
-            {
-                "id": 3,
-                "name": "PizzaHub",
-                "description": "RESTful API using hexagonal architecture and JWT-based authentication. Includes complete order management.",
-                "stack": ["Nest.js", "TypeScript", "MySQL", "Docker"],
-                "image_url": "../public/portfolio/pizzahub_thumbnail.png",
-                "links": [
-                    {
-                        "id": 0,
-                        "label": "GitHub Repository",
-                        "href": "https://github.com/ricocatford/shop-backend"
                     }
                 ]
             }
@@ -237,8 +230,8 @@
             "sent": "Enviado"
         },
         "availability": {
-            "heading": "Disponible para nuevos proyectos",
-            "paragraph": "Reservando proyectos desde Julio 2026"
+            "heading": "Abierto a puestos a tiempo completo",
+            "paragraph": "Disponible ya · Asturias o remoto"
         },
         "channels": {
             "heading": "Elige un canal.",
@@ -268,12 +261,20 @@
                 { "key": "React / Next.js", "value": "4 años de experiencia" },
                 { "key": "Node / Nest.js", "value": "Backend" },
                 { "key": "PostgreSQL", "value": "BD principal" },
-                { "key": "Tailwind / CSS", "value": "Estilos" }
+                { "key": "Tailwind / CSS", "value": "Estilos" },
+                { "key": "Cloudflare / DNS / VPS", "value": "Infraestructura" },
+                { "key": "Docker", "value": "Contenedores" }
             ]
         },
         "timeline": {
             "label": "Trayectoria",
             "rows": [
+                {
+                    "when": "Jun 2026 — Oct 2026",
+                    "what": "Desarrollador Web",
+                    "note": "Agencia digital · Becario → Desarrollador",
+                    "where": "ASTURIAS, ESPAÑA"
+                },
                 {
                     "when": "2025 — 2026",
                     "what": "Desarrollo de Aplicaciones Web",
@@ -281,7 +282,7 @@
                     "where": "ASTURIAS, ESPAÑA"
                 },
                 {
-                    "when": "2024 — Ahora",
+                    "when": "2024 — 2026",
                     "what": "Desarrollador Full-Stack",
                     "note": "Freelancer",
                     "where": "REMOTO"
@@ -330,26 +331,26 @@
             {
                 "id": 0,
                 "icon": "UIUXIcon",
-                "heading": "Estrategia UI/UX",
-                "paragraph": "Diseño flujos que tienen sentido desde el primer clic — sin confusión ni callejones sin salida. El buen UX no se nota, y eso es justo lo que busco."
+                "heading": "UI/UX y Diseño",
+                "paragraph": "Diseño flujos que tienen sentido desde el primer clic y los convierto en interfaces limpias y con carácter. El buen UX no se nota, y eso es justo lo que busco."
             },
             {
                 "id": 1,
-                "icon": "DesignIcon",
-                "heading": "Diseño Visual",
-                "paragraph": "Limpio, atrevido y con personalidad. Creo interfaces e identidades de marca que parecen hechas con cariño — porque lo están."
-            },
-            {
-                "id": 2,
                 "icon": "FrontendIcon",
                 "heading": "Desarrollo Frontend",
                 "paragraph": "Rápido, responsivo y pixel-perfect. Convierto diseños en código real que funciona bien en cualquier pantalla."
             },
             {
-                "id": 3,
+                "id": 2,
                 "icon": "BackendIcon",
                 "heading": "Desarrollo Backend",
                 "paragraph": "APIs sólidas, bases de datos limpias, cero dramas. Construyo lo que el usuario no ve pero en lo que siempre confía."
+            },
+            {
+                "id": 3,
+                "icon": "InfraIcon",
+                "heading": "Infraestructura y Migraciones",
+                "paragraph": "Migraciones de sitios entre hostings y VPS, proxy de Cloudflare, SSL y registros DNS. El trabajo poco vistoso que mantiene todo en línea."
             },
             {
                 "id": 4,

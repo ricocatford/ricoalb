@@ -1,4 +1,4 @@
-export type ServiceIconKey = "UIUXIcon" | "DesignIcon" | "FrontendIcon" | "BackendIcon" | "SEOIcon";
+export type ServiceIconKey = "UIUXIcon" | "DesignIcon" | "FrontendIcon" | "BackendIcon" | "InfraIcon" | "SEOIcon";
 
 export type Service = {
     id: number;
