@@ -129,7 +129,13 @@
                 "id": 0,
                 "name": "Mejores Clínicas Dentales",
                 "description": "Directorio de clínicas dentales de toda España, desarrollado y desplegado en una agencia web. Fichas de clínicas, búsqueda por ubicación y páginas optimizadas para SEO.",
-                "stack": ["SEO", "Cloudflare", "VPS"],
+                "stack": [
+                    "Next.js",
+                    "TypeScript",
+                    "PostgreSQL",
+                    "Prisma",
+                    "Docker"
+                ],
                 "image_url": "../public/portfolio/mejoresclinicasdentales_thumbnail.webp",
                 "links": [
                     {
@@ -143,7 +149,18 @@
                 "id": 1,
                 "name": "Zapp",
                 "description": "Bot de WhatsApp para empresas que convierte los mensajes de clientes en casos, avisa al equipo y envía plantillas de mensajes programadas.",
-                "stack": ["TypeScript", "WhatsApp Cloud API", "Cron jobs"],
+                "stack": [
+                    "Next.js",
+                    "TypeScript",
+                    "Fastify",
+                    "Meta Cloud API",
+                    "PostgreSQL",
+                    "Prisma",
+                    "LLM",
+                    "BullMQ",
+                    "Redis",
+                    "Docker"
+                ],
                 "image_url": "../public/portfolio/zapp_thumbnail.webp",
                 "links": [
                     {
@@ -160,10 +177,10 @@
                 "stack": [
                     "Next.js",
                     "NestJS",
+                    "WordPress API",
                     "PostgreSQL",
                     "Prisma",
-                    "Google Gemini",
-                    "WordPress API",
+                    "LLM",
                     "Docker"
                 ],
                 "image_url": "../public/portfolio/autoseo_thumbnail.webp",
@@ -182,12 +199,10 @@
                 "stack": [
                     "Next.js",
                     "TypeScript",
-                    "TailwindCSS",
-                    "ShadcnUI",
                     "Supabase",
                     "Prisma",
                     "Inngest",
-                    "Google Gemini"
+                    "LLM"
                 ],
                 "image_url": "../public/portfolio/pulseflow_thumbnail.png",
                 "links": [
