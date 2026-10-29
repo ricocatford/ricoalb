@@ -144,8 +144,14 @@
                 "name": "Zapp",
                 "description": "Bot de WhatsApp para empresas que convierte los mensajes de clientes en casos, avisa al equipo y envía plantillas de mensajes programadas.",
                 "stack": ["TypeScript", "WhatsApp Cloud API", "Cron jobs"],
-                "image_url": "../public/portfolio/zapp_thumbnail.png",
-                "links": []
+                "image_url": "../public/portfolio/zapp_thumbnail.webp",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "En vivo",
+                        "href": "https://zapp.ricoalb.com"
+                    }
+                ]
             },
             {
                 "id": 2,

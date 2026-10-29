@@ -129,7 +129,13 @@
                 "id": 0,
                 "name": "Mejores Clínicas Dentales",
                 "description": "Directory of dental clinics across Spain, built and shipped at a web agency. Clinic listings, search by location and SEO-friendly pages.",
-                "stack": ["SEO", "Cloudflare", "VPS"],
+                "stack": [
+                    "Next.js",
+                    "TypeScript",
+                    "PostgreSQL",
+                    "Prisma",
+                    "Docker"
+                ],
                 "image_url": "../public/portfolio/mejoresclinicasdentales_thumbnail.webp",
                 "links": [
                     {
@@ -143,9 +149,26 @@
                 "id": 1,
                 "name": "Zapp",
                 "description": "WhatsApp business bot that turns customer messages into cases, notifies the team and sends scheduled message templates.",
-                "stack": ["TypeScript", "WhatsApp Cloud API", "Cron jobs"],
-                "image_url": "../public/portfolio/zapp_thumbnail.png",
-                "links": []
+                "stack": [
+                    "Next.js",
+                    "TypeScript",
+                    "Fastify",
+                    "Meta Cloud API",
+                    "PostgreSQL",
+                    "Prisma",
+                    "LLM",
+                    "BullMQ",
+                    "Redis",
+                    "Docker"
+                ],
+                "image_url": "../public/portfolio/zapp_thumbnail.webp",
+                "links": [
+                    {
+                        "id": 0,
+                        "label": "Live",
+                        "href": "https://zapp.ricoalb.com"
+                    }
+                ]
             },
             {
                 "id": 2,
@@ -154,10 +177,10 @@
                 "stack": [
                     "Next.js",
                     "NestJS",
+                    "WordPress API",
                     "PostgreSQL",
                     "Prisma",
-                    "Google Gemini",
-                    "WordPress API",
+                    "LLM",
                     "Docker"
                 ],
                 "image_url": "../public/portfolio/autoseo_thumbnail.webp",
@@ -176,12 +199,10 @@
                 "stack": [
                     "Next.js",
                     "TypeScript",
-                    "TailwindCSS",
-                    "ShadcnUI",
                     "Supabase",
                     "Prisma",
                     "Inngest",
-                    "Google Gemini"
+                    "LLM"
                 ],
                 "image_url": "../public/portfolio/pulseflow_thumbnail.png",
                 "links": [
